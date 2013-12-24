@@ -1,0 +1,217 @@
+00:03:14.241 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+00:03:14.253 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {4.2.5.Final}
+00:03:14.256 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+00:03:14.257 [main] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+00:03:14.283 [main] INFO  org.hibernate.ejb.Ejb3Configuration - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+00:03:14.428 [main] INFO  o.h.s.j.c.i.ConnectionProviderInitiator - HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+00:03:14.468 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+00:03:14.665 [main] INFO  o.h.e.t.i.TransactionFactoryInitiator - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+00:03:14.671 [main] INFO  o.h.h.i.a.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+00:03:14.737 [main] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 4.3.1.Final
+00:03:15.208 [main] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000228: Running hbm2ddl schema update
+00:03:15.209 [main] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000102: Fetching database metadata
+00:03:15.211 [main] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000396: Updating schema
+00:03:15.228 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000261: Table found: CLPGX.PUBLIC.CLPGX_COMPANY
+00:03:15.228 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [logo, sssf, clsj, fax, net_adress, sscs, lx, id, shore_name, lxr, address, email, lxdh, full_name]
+00:03:15.229 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: []
+00:03:15.229 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [primary_key_e]
+00:03:15.233 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000261: Table found: CLPGX.PUBLIC.CLPGX_DEPT
+00:03:15.233 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [id, remark, name, code]
+00:03:15.233 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: []
+00:03:15.233 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [primary_key_b14]
+00:03:15.237 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000261: Table found: CLPGX.PUBLIC.CLPGX_MODULE
+00:03:15.237 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [id, name, parent, url]
+00:03:15.238 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: [fk_tdfx1vkminhh0crte53g3u4b9]
+00:03:15.238 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [primary_key_8, fk_tdfx1vkminhh0crte53g3u4b9_index_8]
+00:03:15.241 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000261: Table found: CLPGX.PUBLIC.CLPGX_ROLE
+00:03:15.241 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [id, remark, name]
+00:03:15.241 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: []
+00:03:15.241 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [primary_key_b1]
+00:03:15.244 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000261: Table found: CLPGX.PUBLIC.CLPGX_TASK
+00:03:15.245 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [id, title, description, user_id]
+00:03:15.245 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: [fk_e3r9c605soxhr0qas6x5oabmo]
+00:03:15.245 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [fk_e3r9c605soxhr0qas6x5oabmo_index_b, primary_key_b]
+00:03:15.248 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000261: Table found: CLPGX.PUBLIC.CLPGX_USER
+00:03:15.249 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [id, register_date, company, roles, name, login_name, password, salt]
+00:03:15.249 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: [fk_ba9hf1jdsdcqagp79rhy6463r]
+00:03:15.249 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [fk_ba9hf1jdsdcqagp79rhy6463r_index_b, constraint_b14_index_1, primary_key_1]
+00:03:15.250 [main] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000232: Schema update complete
+02:26:15.568 [main] INFO  org.hibernate.ejb.Ejb3Configuration - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+02:26:15.588 [main] INFO  o.h.s.j.c.i.ConnectionProviderInitiator - HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+02:26:15.590 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+02:26:15.608 [main] INFO  o.h.e.t.i.TransactionFactoryInitiator - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+02:26:15.608 [main] INFO  o.h.h.i.a.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+02:26:15.678 [main] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000228: Running hbm2ddl schema update
+02:26:15.678 [main] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000102: Fetching database metadata
+02:26:15.681 [main] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000396: Updating schema
+02:26:15.688 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000261: Table found: CLPGX.PUBLIC.CLPGX_COMPANY
+02:26:15.688 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [logo, sssf, clsj, fax, net_adress, sscs, lx, id, shore_name, lxr, address, email, lxdh, full_name]
+02:26:15.688 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: []
+02:26:15.688 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [primary_key_e]
+02:26:15.691 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000261: Table found: CLPGX.PUBLIC.CLPGX_DEPT
+02:26:15.691 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [id, remark, name, code]
+02:26:15.691 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: []
+02:26:15.691 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [primary_key_b14]
+02:26:15.694 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000261: Table found: CLPGX.PUBLIC.CLPGX_MODULE
+02:26:15.694 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [id, name, parent, url]
+02:26:15.694 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: [fk_tdfx1vkminhh0crte53g3u4b9]
+02:26:15.695 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [primary_key_8, fk_tdfx1vkminhh0crte53g3u4b9_index_8]
+02:26:15.697 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000261: Table found: CLPGX.PUBLIC.CLPGX_ROLE
+02:26:15.698 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [id, remark, name]
+02:26:15.698 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: []
+02:26:15.698 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [primary_key_b1]
+02:26:15.701 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000261: Table found: CLPGX.PUBLIC.CLPGX_TASK
+02:26:15.701 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [id, title, description, user_id]
+02:26:15.701 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: [fk_e3r9c605soxhr0qas6x5oabmo]
+02:26:15.702 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [fk_e3r9c605soxhr0qas6x5oabmo_index_b, primary_key_b]
+02:26:15.705 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000261: Table found: CLPGX.PUBLIC.CLPGX_USER
+02:26:15.705 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [id, register_date, company, roles, name, login_name, password, salt]
+02:26:15.706 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: [fk_ba9hf1jdsdcqagp79rhy6463r]
+02:26:15.706 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [fk_ba9hf1jdsdcqagp79rhy6463r_index_b, constraint_b14_index_1, primary_key_1]
+02:26:15.706 [main] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000232: Schema update complete
+02:26:31.779 [qtp4480904-28] WARN  o.s.web.servlet.PageNotFound - Request method 'GET' not supported
+02:27:05.154 [qtp4480904-26] WARN  o.s.web.servlet.PageNotFound - Request method 'GET' not supported
+02:33:21.210 [main] INFO  org.hibernate.ejb.Ejb3Configuration - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+02:33:21.230 [main] INFO  o.h.s.j.c.i.ConnectionProviderInitiator - HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+02:33:21.232 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+02:33:21.246 [main] INFO  o.h.e.t.i.TransactionFactoryInitiator - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+02:33:21.246 [main] INFO  o.h.h.i.a.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+02:33:21.292 [main] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000228: Running hbm2ddl schema update
+02:33:21.293 [main] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000102: Fetching database metadata
+02:33:21.293 [main] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000396: Updating schema
+02:33:21.296 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000261: Table found: CLPGX.PUBLIC.CLPGX_COMPANY
+02:33:21.297 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [logo, sssf, clsj, fax, net_adress, sscs, lx, id, shore_name, lxr, address, email, lxdh, full_name]
+02:33:21.297 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: []
+02:33:21.297 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [primary_key_e]
+02:33:21.299 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000261: Table found: CLPGX.PUBLIC.CLPGX_DEPT
+02:33:21.299 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [id, remark, name, code]
+02:33:21.299 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: []
+02:33:21.299 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [primary_key_b14]
+02:33:21.301 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000261: Table found: CLPGX.PUBLIC.CLPGX_MODULE
+02:33:21.301 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [id, name, parent, url]
+02:33:21.301 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: [fk_tdfx1vkminhh0crte53g3u4b9]
+02:33:21.302 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [primary_key_8, fk_tdfx1vkminhh0crte53g3u4b9_index_8]
+02:33:21.304 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000261: Table found: CLPGX.PUBLIC.CLPGX_ROLE
+02:33:21.304 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [id, remark, name]
+02:33:21.304 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: []
+02:33:21.305 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [primary_key_b1]
+02:33:21.307 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000261: Table found: CLPGX.PUBLIC.CLPGX_TASK
+02:33:21.308 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [id, title, description, user_id]
+02:33:21.308 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: [fk_e3r9c605soxhr0qas6x5oabmo]
+02:33:21.308 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [fk_e3r9c605soxhr0qas6x5oabmo_index_b, primary_key_b]
+02:33:21.311 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000261: Table found: CLPGX.PUBLIC.CLPGX_USER
+02:33:21.311 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [id, register_date, company, roles, name, login_name, password, salt]
+02:33:21.311 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: [fk_ba9hf1jdsdcqagp79rhy6463r]
+02:33:21.311 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [fk_ba9hf1jdsdcqagp79rhy6463r_index_b, constraint_b14_index_1, primary_key_1]
+02:33:21.312 [main] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000232: Schema update complete
+02:36:24.368 [main] INFO  org.hibernate.ejb.Ejb3Configuration - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+02:36:24.386 [main] INFO  o.h.s.j.c.i.ConnectionProviderInitiator - HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+02:36:24.387 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+02:36:24.402 [main] INFO  o.h.e.t.i.TransactionFactoryInitiator - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+02:36:24.402 [main] INFO  o.h.h.i.a.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+02:36:24.446 [main] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000228: Running hbm2ddl schema update
+02:36:24.447 [main] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000102: Fetching database metadata
+02:36:24.447 [main] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000396: Updating schema
+02:36:24.451 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000261: Table found: CLPGX.PUBLIC.CLPGX_COMPANY
+02:36:24.451 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [logo, sssf, clsj, fax, net_adress, sscs, lx, id, shore_name, lxr, address, email, lxdh, full_name]
+02:36:24.451 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: []
+02:36:24.451 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [primary_key_e]
+02:36:24.453 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000261: Table found: CLPGX.PUBLIC.CLPGX_DEPT
+02:36:24.454 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [id, remark, name, code]
+02:36:24.454 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: []
+02:36:24.454 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [primary_key_b14]
+02:36:24.456 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000261: Table found: CLPGX.PUBLIC.CLPGX_MODULE
+02:36:24.456 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [id, name, parent, url]
+02:36:24.457 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: [fk_tdfx1vkminhh0crte53g3u4b9]
+02:36:24.457 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [primary_key_8, fk_tdfx1vkminhh0crte53g3u4b9_index_8]
+02:36:24.460 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000261: Table found: CLPGX.PUBLIC.CLPGX_ROLE
+02:36:24.460 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [id, remark, name]
+02:36:24.460 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: []
+02:36:24.460 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [primary_key_b1]
+02:36:24.462 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000261: Table found: CLPGX.PUBLIC.CLPGX_TASK
+02:36:24.462 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [id, title, description, user_id]
+02:36:24.463 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: [fk_e3r9c605soxhr0qas6x5oabmo]
+02:36:24.463 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [fk_e3r9c605soxhr0qas6x5oabmo_index_b, primary_key_b]
+02:36:24.465 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000261: Table found: CLPGX.PUBLIC.CLPGX_USER
+02:36:24.466 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [id, register_date, company, roles, name, login_name, password, salt]
+02:36:24.466 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: [fk_ba9hf1jdsdcqagp79rhy6463r]
+02:36:24.466 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [fk_ba9hf1jdsdcqagp79rhy6463r_index_b, constraint_b14_index_1, primary_key_1]
+02:36:24.466 [main] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000232: Schema update complete
+02:37:10.362 [main] INFO  org.hibernate.ejb.Ejb3Configuration - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+02:37:10.377 [main] INFO  o.h.s.j.c.i.ConnectionProviderInitiator - HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+02:37:10.378 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+02:37:10.389 [main] INFO  o.h.e.t.i.TransactionFactoryInitiator - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+02:37:10.390 [main] INFO  o.h.h.i.a.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+02:37:10.434 [main] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000228: Running hbm2ddl schema update
+02:37:10.435 [main] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000102: Fetching database metadata
+02:37:10.435 [main] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000396: Updating schema
+02:37:10.438 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000261: Table found: CLPGX.PUBLIC.CLPGX_COMPANY
+02:37:10.438 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [logo, sssf, clsj, fax, net_adress, sscs, lx, id, shore_name, lxr, address, email, lxdh, full_name]
+02:37:10.438 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: []
+02:37:10.438 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [primary_key_e]
+02:37:10.440 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000261: Table found: CLPGX.PUBLIC.CLPGX_DEPT
+02:37:10.440 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [id, remark, name, code]
+02:37:10.440 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: []
+02:37:10.440 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [primary_key_b14]
+02:37:10.442 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000261: Table found: CLPGX.PUBLIC.CLPGX_MODULE
+02:37:10.443 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [id, name, parent, url]
+02:37:10.443 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: [fk_tdfx1vkminhh0crte53g3u4b9]
+02:37:10.443 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [primary_key_8, fk_tdfx1vkminhh0crte53g3u4b9_index_8]
+02:37:10.445 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000261: Table found: CLPGX.PUBLIC.CLPGX_ROLE
+02:37:10.446 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [id, remark, name]
+02:37:10.446 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: []
+02:37:10.446 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [primary_key_b1]
+02:37:10.448 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000261: Table found: CLPGX.PUBLIC.CLPGX_TASK
+02:37:10.448 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [id, title, description, user_id]
+02:37:10.448 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: [fk_e3r9c605soxhr0qas6x5oabmo]
+02:37:10.449 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [fk_e3r9c605soxhr0qas6x5oabmo_index_b, primary_key_b]
+02:37:10.451 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000261: Table found: CLPGX.PUBLIC.CLPGX_USER
+02:37:10.451 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [id, register_date, company, roles, name, login_name, password, salt]
+02:37:10.452 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: [fk_ba9hf1jdsdcqagp79rhy6463r]
+02:37:10.452 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [fk_ba9hf1jdsdcqagp79rhy6463r_index_b, constraint_b14_index_1, primary_key_1]
+02:37:10.452 [main] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000232: Schema update complete
+02:38:06.213 [main] INFO  org.hibernate.ejb.Ejb3Configuration - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+02:38:06.228 [main] INFO  o.h.s.j.c.i.ConnectionProviderInitiator - HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+02:38:06.229 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+02:38:06.240 [main] INFO  o.h.e.t.i.TransactionFactoryInitiator - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+02:38:06.240 [main] INFO  o.h.h.i.a.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+02:38:06.281 [main] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000228: Running hbm2ddl schema update
+02:38:06.281 [main] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000102: Fetching database metadata
+02:38:06.281 [main] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000396: Updating schema
+02:38:06.284 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000261: Table found: CLPGX.PUBLIC.CLPGX_COMPANY
+02:38:06.284 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [logo, sssf, clsj, fax, net_adress, sscs, lx, id, shore_name, lxr, address, email, lxdh, full_name]
+02:38:06.284 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: []
+02:38:06.284 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [primary_key_e]
+02:38:06.286 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000261: Table found: CLPGX.PUBLIC.CLPGX_DEPT
+02:38:06.287 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [id, remark, name, code]
+02:38:06.287 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: []
+02:38:06.287 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [primary_key_b14]
+02:38:06.290 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000261: Table found: CLPGX.PUBLIC.CLPGX_MODULE
+02:38:06.290 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [id, name, parent, url]
+02:38:06.290 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: [fk_tdfx1vkminhh0crte53g3u4b9]
+02:38:06.290 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [primary_key_8, fk_tdfx1vkminhh0crte53g3u4b9_index_8]
+02:38:06.293 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000261: Table found: CLPGX.PUBLIC.CLPGX_ROLE
+02:38:06.294 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [id, remark, name]
+02:38:06.294 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: []
+02:38:06.294 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [primary_key_b1]
+02:38:06.297 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000261: Table found: CLPGX.PUBLIC.CLPGX_TASK
+02:38:06.297 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [id, title, description, user_id]
+02:38:06.297 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: [fk_e3r9c605soxhr0qas6x5oabmo]
+02:38:06.297 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [fk_e3r9c605soxhr0qas6x5oabmo_index_b, primary_key_b]
+02:38:06.300 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000261: Table found: CLPGX.PUBLIC.CLPGX_USER
+02:38:06.301 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [id, register_date, company, roles, name, login_name, password, salt]
+02:38:06.301 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: [fk_ba9hf1jdsdcqagp79rhy6463r]
+02:38:06.301 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [fk_ba9hf1jdsdcqagp79rhy6463r_index_b, constraint_b14_index_1, primary_key_1]
+02:38:06.301 [main] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000232: Schema update complete
