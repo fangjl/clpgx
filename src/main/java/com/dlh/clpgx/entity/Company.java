@@ -13,7 +13,7 @@ public class Company  extends IdEntity{
 
 	
 	private String fullName;
-	private String shoreName;
+	private String shortName;
 	private byte[] Logo;
 	private String lxr;
 	private String lxdh;
@@ -31,11 +31,11 @@ public class Company  extends IdEntity{
 	public void setFullName(String fullName) {
 		this.fullName = fullName;
 	}
-	public String getShoreName() {
-		return shoreName;
+	public String getShortName() {
+		return shortName;
 	}
-	public void setShoreName(String shoreName) {
-		this.shoreName = shoreName;
+	public void setShortName(String shortName) {
+		this.shortName = shortName;
 	}
 	public byte[] getLogo() {
 		return Logo;

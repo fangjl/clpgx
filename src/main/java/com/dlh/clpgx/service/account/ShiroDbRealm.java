@@ -33,7 +33,10 @@ import org.apache.shiro.authz.SimpleAuthorizationInfo;
 import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.subject.PrincipalCollection;
 import org.apache.shiro.util.ByteSource;
+
+import com.dlh.clpgx.entity.Company;
 import com.dlh.clpgx.entity.User;
+
 import org.springside.modules.utils.Encodes;
 
 import com.google.common.base.Objects;
@@ -51,7 +54,7 @@ public class ShiroDbRealm extends AuthorizingRealm {
 		User user = accountService.findUserByLoginName(token.getUsername());
 		if (user != null) {
 			byte[] salt = Encodes.decodeHex(user.getSalt());
-			return new SimpleAuthenticationInfo(new ShiroUser(user.getId(), user.getLoginName(), user.getName()),
+			return new SimpleAuthenticationInfo(new ShiroUser(user.getId(),user.getCompany(), user.getLoginName(), user.getName()),
 					user.getPassword(), ByteSource.Util.bytes(salt), getName());
 		} else {
 			return null;
@@ -67,6 +70,7 @@ public class ShiroDbRealm extends AuthorizingRealm {
 		User user = accountService.findUserByLoginName(shiroUser.loginName);
 		SimpleAuthorizationInfo info = new SimpleAuthorizationInfo();
 		info.addRoles(user.getRoleList());
+		info.addRole("admin");
 		return info;
 	}
 
@@ -93,11 +97,18 @@ public class ShiroDbRealm extends AuthorizingRealm {
 		public Long id;
 		public String loginName;
 		public String name;
+		public Company company;
 
 		public ShiroUser(Long id, String loginName, String name) {
 			this.id = id;
 			this.loginName = loginName;
 			this.name = name;
+		}
+		public ShiroUser(Long id,Company company ,String loginName, String name) {
+			this.id = id;
+			this.loginName = loginName;
+			this.name = name;
+			this.company = company;
 		}
 
 		public String getName() {

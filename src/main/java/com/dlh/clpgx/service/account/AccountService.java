@@ -9,11 +9,15 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
+
+import com.dlh.clpgx.entity.Company;
 import com.dlh.clpgx.entity.User;
+import com.dlh.clpgx.repository.CompanyDao;
 import com.dlh.clpgx.repository.TaskDao;
 import com.dlh.clpgx.repository.UserDao;
 import com.dlh.clpgx.service.ServiceException;
 import com.dlh.clpgx.service.account.ShiroDbRealm.ShiroUser;
+
 import org.springside.modules.security.utils.Digests;
 import org.springside.modules.utils.Clock;
 import org.springside.modules.utils.Encodes;
@@ -33,6 +37,7 @@ public class AccountService {
 	private static final int SALT_SIZE = 8;
 	private static Logger logger = LoggerFactory.getLogger(AccountService.class);
 	private UserDao userDao;
+	private CompanyDao companyDao;
 	private TaskDao taskDao;
 	private Clock clock = Clock.DEFAULT;
 
@@ -53,7 +58,9 @@ public class AccountService {
 		entryptPassword(user);
 		user.setRoles("user");
 		user.setRegisterDate(clock.getCurrentDate());
-
+		Company company = new Company();
+		companyDao.save(company);
+		user.setCompany(company);
 		userDao.save(user);
 	}
 
@@ -112,6 +119,10 @@ public class AccountService {
 
 	public void setClock(Clock clock) {
 		this.clock = clock;
+	}
+	@Autowired
+	public void setCompanyDao(CompanyDao companyDao) {
+		this.companyDao = companyDao;
 	}
 
 	

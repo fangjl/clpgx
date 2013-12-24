@@ -47,8 +47,14 @@
 	</bean>
 
 	<!-- Spring Data Jpa配置 -->
- 	<jpa:repositories base-package="com.dlh.clpgx"  transaction-manager-ref="transactionManager" entity-manager-factory-ref="entityManagerFactory"/>
-   
+ 	<jpa:repositories base-package="com.dlh.clpgx" 
+ 	 transaction-manager-ref="transactionManager" 
+ 	 entity-manager-factory-ref="entityManagerFactory"
+ 	 repository-impl-postfix="impl"
+ 	 factory-class="com.dlh.clpgx.freamwork.repository.DcoreJpaRepositoryFactoryBean"
+ 	 
+ 	 />
+
 	<!-- Jpa 事务配置 -->
 	<bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
 		<property name="entityManagerFactory" ref="entityManagerFactory"/>
