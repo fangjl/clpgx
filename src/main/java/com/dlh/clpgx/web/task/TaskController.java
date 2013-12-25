@@ -15,11 +15,14 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+
 import com.dlh.clpgx.entity.Task;
 import com.dlh.clpgx.entity.User;
 import com.dlh.clpgx.service.account.ShiroDbRealm.ShiroUser;
 import com.dlh.clpgx.service.task.TaskService;
+
 import org.springside.modules.web.Servlets;
 
 import com.google.common.collect.Maps;
@@ -33,24 +36,19 @@ import com.google.common.collect.Maps;
  * Update page : GET /task/update/{id}
  * Update action : POST /task/update
  * Delete action : GET /task/delete/{id}
- * 
  * @author calvin
  */
 @Controller
 @RequestMapping(value = "/task")
 public class TaskController {
-
 	private static final String PAGE_SIZE = "3";
-
 	private static Map<String, String> sortTypes = Maps.newLinkedHashMap();
 	static {
 		sortTypes.put("auto", "自动");
 		sortTypes.put("title", "标题");
 	}
-
 	@Autowired
 	private TaskService taskService;
-
 	@RequestMapping(method = RequestMethod.GET)
 	public String list(@RequestParam(value = "page", defaultValue = "1") int pageNumber,
 			@RequestParam(value = "page.size", defaultValue = PAGE_SIZE) int pageSize,
@@ -58,15 +56,12 @@ public class TaskController {
 			ServletRequest request) {
 		Map<String, Object> searchParams = Servlets.getParametersStartingWith(request, "search_");
 		Long userId = getCurrentUserId();
-
 		Page<Task> tasks = taskService.getUserTask(userId, searchParams, pageNumber, pageSize, sortType);
-
 		model.addAttribute("tasks", tasks);
 		model.addAttribute("sortType", sortType);
 		model.addAttribute("sortTypes", sortTypes);
 		// 将搜索条件编码成字符串，用于排序，分页的URL
 		model.addAttribute("searchParams", Servlets.encodeParameterStringWithPrefix(searchParams, "search_"));
-
 		return "task/taskList";
 	}
 
@@ -78,13 +73,30 @@ public class TaskController {
 	}
 
 	@RequestMapping(value = "create", method = RequestMethod.POST)
-	public String create(@Valid Task newTask, RedirectAttributes redirectAttributes) {
+	public ModelAndView create(@Valid Task newTask, RedirectAttributes redirectAttributes, Model model,ServletRequest request) {
 		User user = new User(getCurrentUserId());
 		newTask.setUser(user);
 
 		taskService.saveTask(newTask);
-		redirectAttributes.addFlashAttribute("message", "创建任务成功");
-		return "redirect:/task/";
+		redirectAttributes.addFlashAttribute("messages", "创建任务成功");
+		//return "redirect:/task/";
+		ModelAndView mav = new ModelAndView("JsonMessage");
+	
+		mav.addObject("success", true);
+		mav.addObject("message","保存成功!");
+		mav.addObject("forward",request.getParameter("forward"));
+		
+		
+		mav.addObject("ref",request.getParameter("ref"));
+		
+		System.out.println("forward:"+request.getParameter("forward"));
+		System.out.println("ref:"+request.getParameter("ref"));
+
+		return mav;
+		
+		
+		
+		
 	}
 
 	@RequestMapping(value = "update/{id}", method = RequestMethod.GET)

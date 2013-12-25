@@ -1,12 +1,8 @@
 package com.dlh.clpgx.repository;
-
-import org.springframework.data.repository.CrudRepository;
-
 import com.dlh.clpgx.entity.Role;
+import com.dlh.clpgx.freamwork.repository.DcoreJpaRepository;
+public interface RoleDao extends DcoreJpaRepository<Role, Long> {
 
-public interface RoleDao extends CrudRepository<Role, Long> {
-
-	
 	
 	
 	//findRoleByCompany()

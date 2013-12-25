@@ -1,11 +1,7 @@
 package com.dlh.clpgx.freamwork.repository;
 import java.io.Serializable;
-import java.util.List;
-
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.repository.NoRepositoryBean;
-@NoRepositoryBean
-public interface DcoreJpaRepository<T, ID extends Serializable> extends JpaRepository<T, ID> {
+import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
+public interface DcoreJpaRepository<T, ID extends Serializable> extends JpaRepository<T, ID>,JpaSpecificationExecutor<T> {
 	
-	public List queryBySql(String sql);
 }

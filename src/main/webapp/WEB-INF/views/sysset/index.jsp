@@ -15,7 +15,7 @@
 				<button href="${ctx}/admin/role" target="ajax" ref="sysset-container-id" type="button" class="btn btn-default  btn-xs">角色信息</button>
 				<button href="${ctx}/admin/module" target="ajax" ref="sysset-container-id" type="button" class="btn btn-default  btn-xs">应用设置</button>
 				<button href="${ctx}/admin/module" target="ajax" ref="sysset-container-id" type="button" class="btn btn-default  btn-xs">提示设置</button>
-				<button href="${ctx}/admin/module" target="ajax" ref="sysset-container-id" type="button" class="btn btn-default  btn-xs">提示设置</button>
+				<button href="${ctx}/task" target="ajax" ref="sysset-container-id" type="button" class="btn btn-default  btn-xs">提示设置</button>
 				
 			</div>
 		</div>

@@ -136,6 +136,9 @@
 		<div id="gloab-container" class="clpg-Contentbox">
 			
 			
+			
+			
+			  
 				<div align="left" id="message" class="alert alert-success alert-dismissable" style="width:50%;display:none">
 
 		</div>

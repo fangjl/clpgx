@@ -7,8 +7,9 @@
 </head>
 
 <body>
-	<form id="inputForm" action="${ctx}/task/${action}" method="post" class="form-horizontal">
+	<form  onsubmit="return Dcore.validateCallback(this)" action="${ctx}/task/${action}" forward="${ctx}/task" ref="sysset-container-id" method="post" class="form-horizontal">
 		<input type="hidden" name="id" value="${task.id}"/>
+		
 		<fieldset>
 			<legend><small>管理任务</small></legend>
 			<div class="control-group">
@@ -29,13 +30,6 @@
 			</div>
 		</fieldset>
 	</form>
-	<script>
-		$(document).ready(function() {
-			//聚焦第一个输入框
-			$("#task_title").focus();
-			//为inputForm注册validate函数
-			$("#inputForm").validate();
-		});
-	</script>
+	
 </body>
 </html>

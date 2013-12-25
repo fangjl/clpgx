@@ -1,25 +1,15 @@
 package com.dlh.clpgx.service;
-
-import javax.annotation.Resource;
-
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
-
-import com.dlh.clpgx.entity.Dept;
+import com.dlh.clpgx.freamwork.service.DcoreJpaService;
 import com.dlh.clpgx.repository.DeptDao;
 
 
 @Service
-public class DeptService {
-	@Resource
-	private DeptDao deptDao;
-	
-	@Transactional
-	public void save(Dept dept){
-		
-		 deptDao.save(dept);
+public class DeptService extends DcoreJpaService {
+	@Autowired
+	public DeptService(DeptDao deptDao) {
+		super(deptDao);
+		// TODO Auto-generated constructor stub
 	}
-	
-	
-	
 }

@@ -9,11 +9,7 @@ Dcore={
 	version:"1.0",
 	initUI:function(_box){
 		$p = $(_box||document);
-		
-		
-		
-		
-		
+	
 		/**
 		 * 
 		 */
@@ -78,11 +74,76 @@ Dcore={
 			event.preventDefault();
 		});
 		*/
-		
 		//end
+	},
+	
+	
+	/**
+	 * 普通ajax表单提交
+	 * @param {Object} form
+	 * @param {Object} callback
+	 * @param {String} confirmMsg 提示确认信息
+ 	 */
+	validateCallback:function(form, callback, confirmMsg) {
+		var $form = $(form);
+		if (!$form.valid()) {
+			return false;
+		}
+		
+		
+		
+		var params =  $form.serializeArray();
+		params.push({
+			name:"ref",
+			value:$form.attr("ref")
+		},{
+			name:"forward",
+			value:$form.attr("forward")
+		});
+					
+		
+		
+		var _submitFn = function(){
+			$.ajax({
+				type: form.method || 'POST',
+				url:$form.attr("action"),
+				data:params,
+				dataType:"json",
+				cache: false,
+				success: callback || Dcore.ajaxRefDone,
+				error: Dcore.ajaxError
+			});
+		}
+		
+		if (confirmMsg) {
+			alert(confirmMsg);
+			//alertMsg.confirm(confirmMsg, {okCall: _submitFn});
+		} else {
+			_submitFn();
+		}
+		return false;
+	},
+	/**
+	 * 提交后灰掉
+	 */
+	ajaxError:function(){
+		alert("Ajax错误");
+	},
+	ajaxDone:function(){
+		alert("form 回掉");
+	},
+	ajaxRefDone:function(json){
+		
+		alert(json.message);
+		var forward = json.forward;
+		var ref = json.ref;
+		var $rel = $("#"+ref);
+		$rel.loadUrl(forward, {}, function(){});
 	}
 	
 };
+
+
 
 
 

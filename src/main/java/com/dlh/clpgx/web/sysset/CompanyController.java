@@ -20,7 +20,7 @@ public class CompanyController {
 	}
 	@RequestMapping(method = RequestMethod.GET)
 	public String index(Model model){
-		model.addAttribute("company",companyService.get(getCurrentUser().company.getId()));
+		model.addAttribute("company",companyService.findOne(getCurrentUser().company.getId()));
 		return "sysset/company/index";
 	}
 	@RequestMapping(method=RequestMethod.POST)

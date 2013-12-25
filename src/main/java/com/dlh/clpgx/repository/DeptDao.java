@@ -1,6 +1,6 @@
 package com.dlh.clpgx.repository;
-import org.springframework.data.repository.CrudRepository;
 import com.dlh.clpgx.entity.Dept;
-public interface DeptDao   extends CrudRepository<Dept, Long> {
+import com.dlh.clpgx.freamwork.repository.DcoreJpaRepository;
+public interface DeptDao   extends DcoreJpaRepository<Dept, Long> {
 
 }

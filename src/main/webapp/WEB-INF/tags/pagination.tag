@@ -3,6 +3,7 @@
 <%@ attribute name="paginationSize" type="java.lang.Integer" required="true"%>
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<c:set var="ctx" value="${pageContext.request.contextPath}"/>
 
 <%
 int current =  page.getNumber() + 1;
@@ -14,11 +15,11 @@ request.setAttribute("begin", begin);
 request.setAttribute("end", end);
 %>
 
-<div class="pagination">
-	<ul>
+
+	<ul class="pagination">
 		 <% if (page.hasPreviousPage()){%>
-               	<li><a href="?page=1&sortType=${sortType}&${searchParams}">&lt;&lt;</a></li>
-                <li><a href="?page=${current-1}&sortType=${sortType}&${searchParams}">&lt;</a></li>
+               	<li><a target="ajax" ref="sysset-container-id" href="${ctx}/task?page=1&sortType=${sortType}&${searchParams}">&lt;&lt;</a></li>
+                <li><a target="ajax" ref="sysset-container-id" href="${ctx}/task?page=${current-1}&sortType=${sortType}&${searchParams}">&lt;</a></li>
          <%}else{%>
                 <li class="disabled"><a href="#">&lt;&lt;</a></li>
                 <li class="disabled"><a href="#">&lt;</a></li>
@@ -27,22 +28,21 @@ request.setAttribute("end", end);
 		<c:forEach var="i" begin="${begin}" end="${end}">
             <c:choose>
                 <c:when test="${i == current}">
-                    <li class="active"><a href="?page=${i}&sortType=${sortType}&${searchParams}">${i}</a></li>
+                    <li class="active"><a target="ajax" ref="sysset-container-id" href="${ctx}/task?page=${i}&sortType=${sortType}&${searchParams}">${i}</a></li>
                 </c:when>
                 <c:otherwise>
-                    <li><a href="?page=${i}&sortType=${sortType}&${searchParams}">${i}</a></li>
+                    <li><a target="ajax" ref="sysset-container-id" href="${ctx}/task?page=${i}&sortType=${sortType}&${searchParams}">${i}</a></li>
                 </c:otherwise>
             </c:choose>
         </c:forEach>
 	  
 	  	 <% if (page.hasNextPage()){%>
-               	<li><a href="?page=${current+1}&sortType=${sortType}&${searchParams}">&gt;</a></li>
-                <li><a href="?page=${page.totalPages}&sortType=${sortType}&${searchParams}">&gt;&gt;</a></li>
+               	<li><a target="ajax" ref="sysset-container-id" href="${ctx}/task?page=${current+1}&sortType=${sortType}&${searchParams}">&gt;</a></li>
+                <li><a target="ajax" ref="sysset-container-id" href="${ctx}/task?page=${page.totalPages}&sortType=${sortType}&${searchParams}">&gt;&gt;</a></li>
          <%}else{%>
                 <li class="disabled"><a href="#">&gt;</a></li>
                 <li class="disabled"><a href="#">&gt;&gt;</a></li>
          <%} %>
 
 	</ul>
-</div>
 
