@@ -17,7 +17,7 @@ import org.springside.modules.test.category.Smoke;
  * @author calvin
  */
 public class TaskGuiFT extends BaseSeleniumTestCase {
-
+ 
 	/**
 	 * 浏览任务列表.
 	 */

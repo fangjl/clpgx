@@ -54,8 +54,8 @@ public class TaskRestController {
 		if (task == null) {
 			String message = "任务不存在(id:" + id + ")";
 			logger.warn(message);
-			throw new RestException(HttpStatus.NOT_FOUND, message);
-		}
+		//	throw new RestException(HttpStatus.NOT_FOUND, message);
+		}  
 		return task;
 	}
 

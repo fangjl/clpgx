@@ -3,8 +3,6 @@
 
 
 
-
-
 Dcore={
 	version:"1.0",
 	initUI:function(_box){
@@ -18,6 +16,10 @@ Dcore={
 			$(this).click(function(event){
 			var $this = $(this);
 			var ref = $this.attr("ref");
+			var restmethod = $this.attr("restmethod");
+			if(restmethod){
+				return Dcore.doRestDelete(this);
+			}
 			if (ref) {
 				var $rel = $("#"+ref);
 				
@@ -77,7 +79,35 @@ Dcore={
 		//end
 	},
 	
+	validateGetCallback:function(form, callback){
+		var $form = $(form);
+		if (!$form.valid()) {
+			return false;
+		}
+		var params =  $form.serializeArray();
+		
 	
+					
+		
+		
+		var _submitFn = function(){
+			$.ajax({
+				type: form.method || 'POST',
+				url:$form.attr("action"),
+				data:params,
+				dataType:"html",
+				cache: false,
+				success:function(data,textStatus,jqXHR ){
+					$("#"+$form.attr("ref")).html(data).initUI();
+					
+				},
+				error: Dcore.ajaxError
+			});
+		}
+		_submitFn();
+		
+		return false;
+	},
 	/**
 	 * 普通ajax表单提交
 	 * @param {Object} form
@@ -134,14 +164,35 @@ Dcore={
 	},
 	ajaxRefDone:function(json){
 		
-		alert(json.message);
+		
 		var forward = json.forward;
 		var ref = json.ref;
 		var $rel = $("#"+ref);
 		$rel.loadUrl(forward, {}, function(){});
+	},
+	
+	
+	
+	doRestDelete:function(anchor) {
+		var f = document.createElement("form");
+		f.style.display = "none";
+		anchor.parentNode.appendChild(f);
+		f.method = "POST";
+		f.ref = anchor.ref;
+		f.action = anchor.href;
+		f.target=anchor.target;
+		var m = document.createElement("input");
+		m.setAttribute("type", "hidden");
+		m.setAttribute("name", "_method");
+		m.setAttribute("value", "delete");
+		f.appendChild(m);
+		//f.submit();
+		return Dcore.validateGetCallback($(f));
 	}
+
 	
 };
+
 
 
 
@@ -163,12 +214,13 @@ Dcore={
 				data: op.data,
 				cache: true,
 				success: function(response){
+				
 					$this.html(response).initUI();
 					if ($.isFunction(op.callback)) op.callback(response);
 					
 				},
 				error: function(){
-				
+			
 				},
 				statusCode: {
 					503: function(xhr, ajaxOptions, thrownError) {

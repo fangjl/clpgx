@@ -8,7 +8,7 @@ public class CompanyService extends DcoreJpaService{
 	@Autowired
 	public CompanyService(CompanyDao companyDao) {
 		super(companyDao);
-		System.out.println("autowired--------");
+		
 	}
 	
 }

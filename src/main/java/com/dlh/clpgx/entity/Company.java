@@ -1,16 +1,10 @@
 package com.dlh.clpgx.entity;
-
 import java.util.Date;
-
 import javax.persistence.Entity;
 import javax.persistence.Table;
-
-
-
 @Entity
 @Table(name = "clpgx_company")
 public class Company  extends IdEntity{
-
 	
 	private String fullName;
 	private String shortName;

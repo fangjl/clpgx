@@ -22,7 +22,7 @@ img{
 	display:inline;
 }
 .clpg-Menubox{
-	width:100%
+	
 	height:25px;
 	line-height:25px;
 }
@@ -105,19 +105,13 @@ line-height:25px;
 }
 
 .left-header-1-b{
-	height:50px;
-	width:68px;
+	
 	margin-top:15px;
 	float:left;
 }
 
 
-#Tab2{
-	width:auto;
-	height:25px;
-	float:right;
-	display:inline;
-}
+
 
 .right-header{
 	width:300px;
@@ -126,7 +120,6 @@ line-height:25px;
 }
 
 .right-header-1{
-	width:160px;
 	height:60px;
 	margin-top:20px;
 	float:right;
@@ -149,23 +142,24 @@ line-height:25px;
 } 
 
 .left-main{
-	width:1000px;
-	background:url(../images/line.jpg) repeat-y;
 	background-color:#FFF;
 	height:auto;
+	
+	width:100%;
 	float:left;
 }
 
 .left-main-di{
-	width:1000px;
+	width:100%;
 	height:15px;
-	background:url(../images/linedi.jpg);
+	background-color:#FFF;
+
 	float:left;
 }
 
 
 .left-main-1{
-	width:992px;
+	width:100%;
 	height:44px;
 	line-height:44px;
 	float:left;

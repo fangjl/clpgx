@@ -20,7 +20,7 @@ import org.springside.modules.utils.PropertiesLoader;
  * 在整个测试期间启动一次Jetty Server和 Selenium，在JVM退出时关闭两者。
  * 在每个TestCase Class执行前重新载入默认数据.
  * 
- * @author calvin
+ * @author calvin 
  */
 public class BaseFunctionalTestCase {
 

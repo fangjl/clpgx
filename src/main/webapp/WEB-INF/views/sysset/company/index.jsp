@@ -1,159 +1,108 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page contentType="text/html;charset=UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="tags" tagdir="/WEB-INF/tags"%>
 <c:set var="ctx" value="${pageContext.request.contextPath}" />
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
-
-<script type="text/javascript">
-function _company_onsubmit(){
-	var params =$("#company_form").serialize();;
-	
-	
-	$.post("${ctx}/admin/company",params,function(data, textStatus, jqXHR){
-		$("#message").text(jsonEval(data).message);
-		$("#message").fadeIn("3000",function(){
-			$("#message").fadeOut("3000");
-		});
-		
-	});
-}
-
-<!--
-
-//-->
-</script>
-<div class="container">
-		<form id="company_form" class="form-horizontal row">
-				<input type="hidden" id="id" name="id" value="${company.id}"/>
-					<!-- Text input-->
-					<label class="control-label" for="input01">企业名称</label>
-					<div class="controls">
-						<input class="span3" type="text" name="fullName" value="${company.fullName}" placeholder="" class="input-xlarge"/>
-					</div>
-					<!-- Text input-->
-					<label class="control-label" for="input01">企业简称</label>
-					<div class="controls">
-						<input type="text" name="shortName" value="${company.shortName}" placeholder="" class="input-xlarge">
-					</div>
-				
-
-					<!-- Text input-->
-					<label class="control-label" for="input01">企业LOGO</label>
-					<div class="controls">
-						<input type="text" placeholder="" class="input-xlarge">
-					</div>
-			
-					<!-- Text input-->
-					<label class="control-label" for="input01">联系人</label>
-					<div class="controls">
-						<input type="text" name="lxr" value="${company.lxr}" placeholder="" class="input-xlarge">
-					</div>
-				
-
-					<!-- Text input-->
-					<label class="control-label" for="input01">职务</label>
-					<div class="controls">
-						<input type="text" placeholder="" class="input-xlarge">
-					</div>
-				
-
-					<!-- Text input-->
-					<label class="control-label" for="input01">联系电话</label>
-					<div class="controls">
-						<input type="text" name="lxdh" value="${company.lxr }" placeholder="" class="input-xlarge">
-					</div>
-				
-
-					<!-- Text input-->
-					<label class="control-label" for="input01">移动电话</label>
-					<div class="controls">
-						<input type="text" placeholder="" class="input-xlarge">
-					</div>
-			
-
-					<!-- Text input-->
-					<label class="control-label" for="input01">电子邮箱</label>
-					<div class="controls">
-						<input type="text" placeholder="" class="input-xlarge">
-					</div>
-					<!-- Text input-->
-					<label class="control-label" for="input01">企业传真</label>
-					<div class="controls">
-						<input type="text" placeholder="" class="input-xlarge">
-					</div>
-
-					<!-- Select Basic -->
-					<label class="control-label">企业类型</label>
-					<div class="controls">
-						<select class="input-xlarge">
-							<option>私营企业</option>
-							<option>国营企业</option>
-							<option>合作企业</option>
-							<option>合伙企业</option>
-						</select>
-					</div>
-
-
-					<div class="control-inline">
-						<!-- Select Basic -->
-						<label class="control-label">成立时间</label>
-						<div class="controls">
-							<select class="input-xlarge">
-								<option>私营企业</option>
-								<option>国营企业</option>
-								<option>合作企业</option>
-								<option>合伙企业</option>
-							</select> <select class="input-xlarge">
-								<option>私营企业</option>
-								<option>国营企业</option>
-								<option>合作企业</option>
-								<option>合伙企业</option>
-							</select>
+<div class="col-md-12">
+	<!-- top -->
+	<form  onsubmit="return Dcore.validateGetCallback(this)" action="${ctx}${action}"  ref="sysset-container-id" class="form-horizontal" role="form">
+	<div class="row">
+		<div class=col-md-10 col-md-offset-1" style="padding-top: 20px">
+				<div class="row">
+					<div class="col-md-4">
+						<div class="form-group">
+							<label  class="col-sm-4 control-label">fullName</label>
+							<div class="col-sm-8">
+								<input name="fullName"  class="form-control">
+							</div>
+						</div>
+						<div class="form-group">
+							<label  class="col-sm-4 control-label">shortName</label>
+							<div class="col-sm-8">
+								<input name="shortName" class="form-control">
+							</div>
 						</div>
 					</div>
-
-					<div class="control-inline">
-						<!-- Select Basic -->
-						<label class="control-label">所属城市</label>
-						<div class="controls">
-							<select class="input-xlarge">
-								<option>私营企业</option>
-								<option>国营企业</option>
-								<option>合作企业</option>
-								<option>合伙企业</option>
-							</select> <select class="input-xlarge">
-								<option>私营企业</option>
-								<option>国营企业</option>
-								<option>合作企业</option>
-								<option>合伙企业</option>
-							</select>
+					<div class="col-md-4">
+						<div class="form-group">
+							<label  class="col-sm-4 control-label">address</label>
+							<div class="col-sm-8">
+								<input name="address"  class="form-control"">
+							</div>
+						</div>
+						<div class="form-group">
+							<label  class="col-sm-4 control-label">netAdress</label>
+							<div class="col-sm-8">
+								<input name="netAdress" class="form-control" >
+							</div>
 						</div>
 					</div>
-					
-					<!-- Text input-->
-					<label class="control-label" for="input01">通讯地址</label>
-					<div class="controls">
-						<input type="text" name="address" value="${company.address }" placeholder="" class="input-xlarge">
-					</div>
-					<!-- Text input-->
-					<label class="control-label" for="input01">邮政编码</label>
-					<div class="controls">
-						<input type="text" placeholder="" class="input-xlarge">
-					</div>
-					<!-- Text input-->
-					<label class="control-label" for="input01">网站地址</label>
-					<div class="controls">
-						<input type="text" name="netAdress" value="${company.netAdress }" placeholder="" class="input-xlarge">
-					</div>
-					
-					
-
-				          <!-- Button -->
-				           
-
-	</form>
-	 <button onclick="_company_onsubmit()" class="btn btn-success">提交</button>
+				</div>
+			
+		</div>
 	</div>
 	
+	<!-- m button-->
+	<div class="row">
+		<div class="col-md-11 col-md-offset-1">
+			<button type="submit" class="btn btn-primary">查询</button>
+			<button href="${ctx}/web/company/new" target="ajax" ref="sysset-container-id" type="button" class="btn btn-primary">添加</button>
+			<button type="button" class="btn btn-primary">删除</button>|
+			<div class="btn-group">
+				  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+				   	排序|<span class="caret"></span>
+				  </button>
+				  <ul class="dropdown-menu" role="menu">
+				  
+				   	<c:forEach items="${fields}" var="field">
+				   		<li><a target="ajax" ref="sysset-container-id" href="${ctx}${action}?sortFiled=${field.name}&${searchParams}">${field.name}</a></li>
+					</c:forEach>
+				    
+				  </ul>
+			</div>
+		</div>
+	</div>
+	</form>
+	
+	
+	<!-- grid -->
+	<div class="row">
+		<div class="col-md-10 col-md-offset-1 " style="padding-top: 5px">
+			<table class="table table-responsive table-striped table-bordered table-condensed">
+				<thead>
+				
+					<tr>
+						<td>序号</td>
+						<td>fullName</td>
+						<td>shortName</td>
+						<td>address</td>
+						<td>netAdress</td>
+						<td>操作</td>
+					</tr>
+				</thead>
+ 				<tbody>
+ 					<c:forEach items="${pages.content}" var="companyVo"  varStatus="status">
+						<tr>
+							<td>${status.index + 1}</td>
+							<td>${companyVo.fullName}</td>
+							<td>${companyVo.shortName}</td>
+							<td>${companyVo.address}</td>
+							<td>${companyVo.netAdress}</td>
+							<td>
+								<a target="ajax" ref="sysset-container-id" href="${ctx}${action}/delete/${companyVo.id}">删除</a>
+								<a target="ajax" ref="sysset-container-id" href="${ctx}${action}/${companyVo.id}/edit">修改</a>
+								
+							</td>
+						</tr>
+					</c:forEach>
+ 				</tbody>
+			</table>
+		</div>
+	</div>
+	<!-- pagebar -->
+	<div class="row">
+		<div class="col-md-10 col-md-offset-1 " >
+			<tags:pagination page="${pages}" paginationSize="5"/>
+		</div>
+	</div>
+	<!-- end -->
+</div>

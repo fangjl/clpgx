@@ -2,31 +2,24 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="tags" tagdir="/WEB-INF/tags" %>
 <c:set var="ctx" value="${pageContext.request.contextPath}"/>
-	<c:if test="${not empty message}">
-		<div id="message" class="alert alert-success"><button data-dismiss="alert" class="close">×</button>${message}</div>
-	</c:if>
-	
-	
+<div class="col-md-12">
 	<div class="row">
-		<div class="span4 offset7">
-			<form class="form-search" action="#">
+			<div class="col-md-12">
+				<form method="GET" onsubmit="return Dcore.validateGetCallback(this)" action="${ctx}/task" ref="sysset-container-id" class="form-search" >
 				<label>名称：</label> <input type="text" name="search_LIKE_title" class="input-medium" value="${param.search_LIKE_title}"> 
 				<button type="submit" class="btn" id="search_btn">Search</button>
 		    </form>
-	    </div>
-	   
-	   
+			</div>
 	  </div>
-	  <div class="row">
-	  	<div class="span4 offset7">
-	     <tags:sort/>
-	    </div>
-	  </div>
+	
+	  	
+	  
+	    <tags:sort/>
+	 
 		 
-	 <button class="btn" href="${ctx}/task/create" target="ajax" ref="sysset-container-id">创建任务</button>
 	
 	
-		<table class="table table-striped table-bordered table-condensed" style="width:70%">
+		<table class="table table-striped table-bordered table-condensed">
 		<thead><tr><th>任务</th><th>管理</th></tr></thead>
 		<tbody>
 		<c:forEach items="${tasks.content}" var="task">
@@ -39,6 +32,7 @@
 	</table>
 	
 <tags:pagination page="${tasks}" paginationSize="5"/>
+	 <button class="btn" href="${ctx}/task/create" target="ajax" ref="sysset-container-id">创建任务</button>
 
-	
+</div>	
 	

@@ -44,10 +44,6 @@
 		</div>
 	</form>
 
-	<script>
-		$(document).ready(function() {
-			$("#loginForm").validate();
-		});
-	</script>
+	
 </body>
 </html>
