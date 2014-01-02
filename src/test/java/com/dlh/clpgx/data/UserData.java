@@ -1,7 +1,8 @@
 package com.dlh.clpgx.data;
 
-import com.dlh.clpgx.entity.User;
 import org.springside.modules.test.data.RandomData;
+
+import com.dlh.clpgx.modules.sys.entity.User;
 
 public class UserData {
 

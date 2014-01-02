@@ -1,11 +1,8 @@
 package com.dlh.clpgx.freamwork.domain;
-import java.lang.reflect.Field;
 import java.util.Enumeration;
 import java.util.Map;
 import java.util.TreeMap;
-
 import javax.servlet.ServletRequest;
-
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
@@ -14,11 +11,9 @@ import org.springframework.data.jpa.domain.Specification;
 import org.springside.modules.domain.BaseQuery;
 import org.springside.modules.persistence.DynamicSpecifications;
 import org.springside.modules.persistence.SearchFilter;
-
-import com.google.common.collect.Maps;
 public class DatatablesQuery extends BaseQuery {
 	private int pageNumber=1;
-	private int pageSize=10;
+	private int pageSize=20;
 	private String sortFiled="id";
 	private String sortType="DESC";
 	private final String prefix="mDataProp_";
@@ -27,11 +22,8 @@ public class DatatablesQuery extends BaseQuery {
 	public DatatablesQuery(ServletRequest request, Object bean) {
 		super(request, bean);
 		this.pageSize =   StringUtils.isBlank(request.getParameter("iDisplayLength"))?10:Integer.parseInt(request.getParameter("iDisplayLength"));
-
 		int start = StringUtils.isBlank(request.getParameter("iDisplayStart"))?1:Integer.parseInt(request.getParameter("iDisplayStart"));
 		pageNumber = start/this.pageSize+1;
-
-		
 		this.sortFiled =(String) (StringUtils.isBlank(request.getParameter("sortFiled"))?"id":request.getParameter("sortFiled"));
 		this.sortType = (String) (StringUtils.isBlank(request.getParameter("sortType"))?"DESC":request.getParameter("sortType"));
 		this.request = request;
@@ -61,20 +53,15 @@ public class DatatablesQuery extends BaseQuery {
 		// TODO Auto-generated method stub
 		Enumeration paramNames = request.getParameterNames();
 		Map<String, Object> searchParams = new TreeMap<String, Object>();
-		
 		while ((paramNames != null) && paramNames.hasMoreElements()) {
 			String paramName = (String) paramNames.nextElement();
 			if ("".equals(prefix) || paramName.startsWith(prefix)) {
-				String unprefixed = paramName.substring(prefix.length());
 				String value = request.getParameter(paramName);
 				searchParams.put("LIKE_"+value, request.getParameter(sSearch_value_params));
-				
 			}
-			
-		}
+		};
 		
 		Map<String, SearchFilter> filters = SearchFilter.parse(searchParams);
-		
 		return DynamicSpecifications.byOrSearchFilter(filters.values(), getVo().getClass());
 	}
 

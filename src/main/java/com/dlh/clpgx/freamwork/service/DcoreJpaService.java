@@ -1,7 +1,8 @@
 package com.dlh.clpgx.freamwork.service;
 import java.io.Serializable;
 import java.util.List;
-
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
@@ -9,9 +10,12 @@ import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 import org.springside.modules.domain.BaseQuery;
 import org.springside.modules.persistence.DcoreJpaRepository;
+
 @Service
 @SuppressWarnings("rawtypes")
 public class DcoreJpaService  implements IDcoreJpaService {
+	public static Logger logger = LoggerFactory.getLogger(DcoreJpaService.class.getClass());
+
 	private DcoreJpaRepository<Object, Serializable> dcoreJpaRepository;
 	@SuppressWarnings("unchecked")
 	public DcoreJpaService(DcoreJpaRepository dcoreJpaRepository){

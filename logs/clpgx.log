@@ -3091,3 +3091,565 @@ java.lang.IllegalArgumentException: Page size must not be less than zero!
 	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608) ~[jetty-webapp-7.6.12.v20130726.jar:7.6.12.v20130726]
 	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543) ~[jetty-webapp-7.6.12.v20130726.jar:7.6.12.v20130726]
 	at java.lang.Thread.run(Thread.java:724) ~[na:1.7.0_25]
+12:34:31.045 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+12:34:31.052 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {4.2.5.Final}
+12:34:31.054 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+12:34:31.058 [main] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+12:34:31.074 [main] INFO  org.hibernate.ejb.Ejb3Configuration - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+12:34:31.164 [main] INFO  o.h.s.j.c.i.ConnectionProviderInitiator - HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+12:34:31.192 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+12:34:31.199 [main] INFO  o.h.e.j.internal.LobCreatorBuilder - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+12:34:31.322 [main] INFO  o.h.e.t.i.TransactionFactoryInitiator - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+12:34:31.325 [main] INFO  o.h.h.i.a.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+12:34:31.361 [main] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 4.3.1.Final
+12:34:31.672 [main] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000228: Running hbm2ddl schema update
+12:34:31.673 [main] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000102: Fetching database metadata
+12:34:31.675 [main] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000396: Updating schema
+12:34:31.690 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000261: Table found: lpgx.clpgx_company
+12:34:31.690 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [logo, sssf, clsj, fax, net_adress, sscs, short_name, lx, id, lxr, address, email, lxdh, full_name]
+12:34:31.690 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: []
+12:34:31.690 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [primary]
+12:34:31.696 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000261: Table found: lpgx.clpgx_dept
+12:34:31.696 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [id, remark, name, code]
+12:34:31.696 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: []
+12:34:31.697 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [primary]
+12:34:31.704 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000261: Table found: lpgx.clpgx_sysmodule
+12:34:31.704 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [id, name, parent, code, url]
+12:34:31.704 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: [fk_8m2ebrwdmdsbl75bgub61gkl0]
+12:34:31.704 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [primary, fk_8m2ebrwdmdsbl75bgub61gkl0]
+12:34:31.710 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000261: Table found: lpgx.clpgx_task
+12:34:31.710 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [id, title, description, user_id]
+12:34:31.710 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: [fk_e3r9c605soxhr0qas6x5oabmo]
+12:34:31.710 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [fk_e3r9c605soxhr0qas6x5oabmo, primary]
+12:34:31.716 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000261: Table found: lpgx.clpgx_user
+12:34:31.717 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [id, register_date, company, roles, name, login_name, password, salt]
+12:34:31.717 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: [fk_ba9hf1jdsdcqagp79rhy6463r]
+12:34:31.717 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [fk_ba9hf1jdsdcqagp79rhy6463r, primary]
+12:34:31.723 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000261: Table found: lpgx.fill_records
+12:34:31.724 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [starttime, clientcode, revdata, desweight, normalfill, initweight, c_index, id, departcode, duration, filltype, worker, chipcode, producdate, fillweight, gascylindercode]
+12:34:31.724 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: []
+12:34:31.724 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [primary]
+12:34:31.731 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000261: Table found: lpgx.gas_tank
+12:34:31.731 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [gpid, gplx, jdsj, id, xpbm, ywzt, last_check_time, ggxh, ssqy, sssf, gpbm, fpr, czsj, barcode, qjzq, sscs, medium, jdr, khbm, pz, jdfs, qybm, zdbm, abarcode, next_check_time, scrq, synx, sccj, fpsj]
+12:34:31.731 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: []
+12:34:31.732 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [primary]
+12:34:31.732 [main] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000232: Schema update complete
+12:34:47.592 [qtp15956463-17] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:34:47.592 [qtp15956463-17] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/login;jsessionid=gf83q6hewisd168tq5p1yrnlv
+12:34:49.199 [qtp15956463-23] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:34:49.200 [qtp15956463-23] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/plugins/font-awesome/css/font-awesome.min.css
+12:34:49.233 [qtp15956463-23] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:34:49.233 [qtp15956463-23] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/css/style-responsive.css
+12:34:49.235 [qtp15956463-22] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:34:49.235 [qtp15956463-22] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/plugins/uniform/css/uniform.default.css
+12:34:49.237 [qtp15956463-21] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:34:49.237 [qtp15956463-21] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/plugins/bootstrap/css/bootstrap.min.css
+12:34:49.243 [qtp15956463-22] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:34:49.243 [qtp15956463-22] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/css/plugins.css
+12:34:49.254 [qtp15956463-20] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:34:49.254 [qtp15956463-20] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/plugins/select2/select2_metro.css
+12:34:49.255 [qtp15956463-17] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:34:49.256 [qtp15956463-21] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:34:49.256 [qtp15956463-17] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/css/style-metronic.css
+12:34:49.256 [qtp15956463-21] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/css/themes/default.css
+12:34:49.258 [qtp15956463-22] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:34:49.258 [qtp15956463-22] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/css/pages/login.css
+12:34:49.263 [qtp15956463-18] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:34:49.263 [qtp15956463-18] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/css/style.css
+12:34:49.269 [qtp15956463-23] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:34:49.269 [qtp15956463-23] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/css/custom.css
+12:34:49.274 [qtp15956463-22] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:34:49.274 [qtp15956463-22] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/images/favicon.ico
+12:34:49.282 [qtp15956463-21] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:34:49.282 [qtp15956463-21] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/plugins/jquery-slimscroll/jquery.slimscroll.min.js
+12:34:49.286 [qtp15956463-20] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:34:49.286 [qtp15956463-20] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/plugins/bootstrap-hover-dropdown/twitter-bootstrap-hover-dropdown.min.js
+12:34:49.288 [qtp15956463-17] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:34:49.289 [qtp15956463-17] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/plugins/jquery.blockui.min.js
+12:34:49.289 [qtp15956463-22] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:34:49.289 [qtp15956463-22] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/plugins/jquery.cookie.min.js
+12:34:49.291 [qtp15956463-21] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:34:49.291 [qtp15956463-21] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/plugins/jquery-1.10.2.min.js
+12:34:49.293 [qtp15956463-17] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:34:49.293 [qtp15956463-17] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/plugins/uniform/jquery.uniform.min.js
+12:34:49.297 [qtp15956463-22] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:34:49.298 [qtp15956463-22] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/plugins/jquery-validation/dist/jquery.validate.min.js
+12:34:49.298 [qtp15956463-17] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:34:49.298 [qtp15956463-17] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/scripts/app.js
+12:34:49.300 [qtp15956463-23] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:34:49.301 [qtp15956463-23] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/plugins/bootstrap/js/bootstrap.min.js
+12:34:49.301 [qtp15956463-17] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:34:49.302 [qtp15956463-17] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/scripts/login.js
+12:34:49.303 [qtp15956463-22] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:34:49.303 [qtp15956463-22] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/plugins/select2/select2.min.js
+12:34:49.334 [qtp15956463-18] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:34:49.334 [qtp15956463-18] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/plugins/jquery-migrate-1.2.1.min.js
+12:34:49.337 [qtp15956463-22] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:34:49.337 [qtp15956463-22] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/img/logo-big.png
+12:34:49.380 [qtp15956463-21] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:34:49.380 [qtp15956463-21] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/fonts/font.css
+12:34:54.625 [qtp15956463-17] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:34:54.625 [qtp15956463-17] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/img/syncfusion-icons-white.png
+12:34:54.730 [qtp15956463-22] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:34:54.731 [qtp15956463-22] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/fonts/DXI1ORHCpsQm3Vp6mXoaTXhCUOGz7vYGh680lGh-uXM.woff
+12:34:54.733 [qtp15956463-23] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:34:54.733 [qtp15956463-23] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/fonts/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.woff
+12:34:54.761 [qtp15956463-21] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:34:54.761 [qtp15956463-21] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/plugins/font-awesome/font/fontawesome-webfont.woff
+12:34:54.891 [qtp15956463-18] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:34:54.891 [qtp15956463-18] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/plugins/uniform/images/sprite.png
+12:35:01.554 [qtp15956463-23] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:35:01.555 [qtp15956463-23] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/
+12:35:01.618 [qtp15956463-23] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:35:01.618 [qtp15956463-23] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/admin/index
+12:35:02.200 [qtp15956463-17] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:35:02.200 [qtp15956463-17] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/plugins/data-tables/DT_bootstrap.css
+12:35:02.204 [qtp15956463-17] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:35:02.204 [qtp15956463-17] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/css/themes/light.css
+12:35:02.209 [qtp15956463-21] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:35:02.209 [qtp15956463-21] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/plugins/data-tables/DT_bootstrap.js
+12:35:02.212 [qtp15956463-21] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:35:02.212 [qtp15956463-21] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/img/avatar2.jpg
+12:35:02.223 [qtp15956463-22] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:35:02.224 [qtp15956463-22] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/plugins/data-tables/jquery.dataTables.min.js
+12:35:02.227 [qtp15956463-22] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:35:02.227 [qtp15956463-22] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/plugins/jquery-ui/jquery-ui-1.10.3.custom.min.js
+12:35:02.234 [qtp15956463-22] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:35:02.234 [qtp15956463-22] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/scripts/table-advanced.js
+12:35:02.236 [qtp15956463-22] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:35:02.237 [qtp15956463-22] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/img/menu-toggler.png
+12:35:02.242 [qtp15956463-18] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:35:02.242 [qtp15956463-18] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/img/logo.png
+12:35:02.245 [qtp15956463-18] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:35:02.246 [qtp15956463-18] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/img/avatar3.jpg
+12:35:02.248 [qtp15956463-20] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:35:02.248 [qtp15956463-20] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/img/avatar1_small.jpg
+12:35:02.251 [qtp15956463-20] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:35:02.252 [qtp15956463-20] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/img/avatar1.jpg
+12:35:02.315 [qtp15956463-17] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:35:02.315 [qtp15956463-17] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/img/search-icon-white.png
+12:35:02.318 [qtp15956463-23] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:35:02.318 [qtp15956463-23] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/img/sidebar-toggler-light.jpg
+12:35:02.319 [qtp15956463-17] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:35:02.319 [qtp15956463-17] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/img/icon-color.png
+12:35:05.374 [qtp15956463-18] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:35:05.374 [qtp15956463-18] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/img/sidebar-menu-arrow-green.png
+12:35:05.375 [qtp15956463-23] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:35:05.375 [qtp15956463-23] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/admin/assets/img/ajax-loading.gif
+12:35:05.377 [qtp15956463-18] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+12:35:05.377 [qtp15956463-18] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/web/fillrecords
+12:35:05.877 [qtp15956463-22] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:35:05.877 [qtp15956463-22] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/fonts/MTP_ySUJH_bn48VBG8sNSnhCUOGz7vYGh680lGh-uXM.woff
+12:35:05.881 [qtp15956463-22] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:35:05.881 [qtp15956463-22] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/plugins/data-tables/images/sort_both.png
+12:35:05.885 [qtp15956463-22] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:35:05.885 [qtp15956463-22] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/plugins/data-tables/images/sort_asc.png
+12:35:05.888 [qtp15956463-22] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+12:35:05.888 [qtp15956463-22] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/web/fillrecords/grid
+12:35:09.401 [qtp15956463-23] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+12:35:09.401 [qtp15956463-23] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/web/fillrecords/grid
+12:35:10.860 [qtp15956463-20] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+12:35:10.860 [qtp15956463-20] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/web/fillrecords/grid
+12:35:19.174 [qtp15956463-21] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+12:35:19.174 [qtp15956463-21] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/web/fillrecords/grid
+12:35:20.794 [qtp15956463-23] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+12:35:20.794 [qtp15956463-23] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/web/fillrecords/grid
+12:35:23.368 [qtp15956463-22] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+12:35:23.368 [qtp15956463-22] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/web/fillrecords/grid
+12:35:25.642 [qtp15956463-17] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+12:35:25.642 [qtp15956463-17] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/web/fillrecords/grid
+12:36:31.529 [qtp15956463-18] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+12:36:31.529 [qtp15956463-17] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:36:31.529 [qtp15956463-18] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/web/fillrecords
+12:36:31.529 [qtp15956463-17] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/admin/assets/img/ajax-loading.gif
+12:36:31.648 [qtp15956463-23] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+12:36:31.649 [qtp15956463-23] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/web/fillrecords/grid
+12:36:32.404 [qtp15956463-22] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+12:36:32.404 [qtp15956463-22] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/admin/index
+12:36:32.404 [qtp15956463-21] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:36:32.404 [qtp15956463-21] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/admin/assets/img/ajax-loading.gif
+12:36:32.967 [qtp15956463-18] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:36:32.967 [qtp15956463-23] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+12:36:32.967 [qtp15956463-18] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/admin/assets/img/ajax-loading.gif
+12:36:32.967 [qtp15956463-23] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/web/fillrecords
+12:36:33.063 [qtp15956463-20] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+12:36:33.063 [qtp15956463-20] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/web/fillrecords/grid
+12:37:09.549 [qtp15956463-17] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+12:37:09.549 [qtp15956463-17] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/web/fillrecords/grid
+12:37:11.527 [qtp15956463-21] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+12:37:11.528 [qtp15956463-21] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/web/fillrecords/grid
+12:37:12.574 [qtp15956463-17] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+12:37:12.574 [qtp15956463-17] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/web/fillrecords/grid
+12:37:13.510 [qtp15956463-18] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+12:37:13.510 [qtp15956463-18] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/web/fillrecords/grid
+12:37:14.379 [qtp15956463-23] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+12:37:14.380 [qtp15956463-23] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/web/fillrecords/grid
+12:37:16.146 [qtp15956463-18] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+12:37:16.146 [qtp15956463-18] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/web/fillrecords/grid
+12:37:20.678 [qtp15956463-17] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+12:37:20.678 [qtp15956463-17] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/web/fillrecords/grid
+12:37:21.837 [qtp15956463-20] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+12:37:21.837 [qtp15956463-20] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/web/fillrecords/grid
+12:37:22.061 [qtp15956463-20] ERROR 500.jsp - Page size must not be less than zero!
+java.lang.IllegalArgumentException: Page size must not be less than zero!
+	at org.springframework.data.domain.PageRequest.<init>(PageRequest.java:72) ~[spring-data-commons-1.6.1.RELEASE.jar:na]
+	at com.dlh.clpgx.freamwork.domain.DatatablesQuery.buildPageRequest(DatatablesQuery.java:55) ~[classes/:na]
+	at com.dlh.clpgx.freamwork.domain.DatatablesQuery.buildPageRequest(DatatablesQuery.java:45) ~[classes/:na]
+	at com.dlh.clpgx.freamwork.service.DcoreJpaService.findPageByFieldsOrCriteria(DcoreJpaService.java:146) ~[classes/:na]
+	at com.dlh.clpgx.web.FillRecordsController.grid(FillRecordsController.java:100) ~[classes/:na]
+	at sun.reflect.GeneratedMethodAccessor70.invoke(Unknown Source) ~[na:na]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.7.0_25]
+	at java.lang.reflect.Method.invoke(Method.java:606) ~[na:1.7.0_25]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:219) ~[spring-web-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:132) ~[spring-web-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104) ~[spring-webmvc-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandleMethod(RequestMappingHandlerAdapter.java:745) ~[spring-webmvc-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:686) ~[spring-webmvc-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:80) ~[spring-webmvc-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:925) [spring-webmvc-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:856) [spring-webmvc-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:936) ~[spring-webmvc-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:827) ~[spring-webmvc-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:707) ~[servlet-api-2.5.jar:2.5]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:812) ~[spring-webmvc-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820) ~[servlet-api-2.5.jar:2.5]
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:654) ~[jetty-webapp-7.6.12.v20130726.jar:7.6.12.v20130726]
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1320) ~[jetty-webapp-7.6.12.v20130726.jar:7.6.12.v20130726]
+	at org.springside.modules.web.filter.SiteMeshWrapperFilter.doFilter(SiteMeshWrapperFilter.java:32) ~[classes/:na]
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1291) ~[jetty-webapp-7.6.12.v20130726.jar:7.6.12.v20130726]
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:61) ~[shiro-web-1.2.2.jar:1.2.2]
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108) ~[shiro-web-1.2.2.jar:1.2.2]
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137) ~[shiro-web-1.2.2.jar:1.2.2]
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125) ~[shiro-web-1.2.2.jar:1.2.2]
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66) ~[shiro-web-1.2.2.jar:1.2.2]
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449) ~[shiro-web-1.2.2.jar:1.2.2]
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365) ~[shiro-web-1.2.2.jar:1.2.2]
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90) ~[shiro-core-1.2.2.jar:1.2.2]
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83) ~[shiro-core-1.2.2.jar:1.2.2]
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:383) ~[shiro-core-1.2.2.jar:1.2.2]
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362) ~[shiro-web-1.2.2.jar:1.2.2]
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125) ~[shiro-web-1.2.2.jar:1.2.2]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:343) ~[spring-web-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:260) ~[spring-web-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1291) ~[jetty-webapp-7.6.12.v20130726.jar:7.6.12.v20130726]
+	at org.springframework.orm.jpa.support.OpenEntityManagerInViewFilter.doFilterInternal(OpenEntityManagerInViewFilter.java:180) ~[spring-orm-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1291) ~[jetty-webapp-7.6.12.v20130726.jar:7.6.12.v20130726]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:88) ~[spring-web-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1291) ~[jetty-webapp-7.6.12.v20130726.jar:7.6.12.v20130726]
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:443) ~[jetty-webapp-7.6.12.v20130726.jar:7.6.12.v20130726]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137) ~[jetty-webapp-7.6.12.v20130726.jar:7.6.12.v20130726]
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:556) ~[jetty-webapp-7.6.12.v20130726.jar:7.6.12.v20130726]
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:227) ~[jetty-webapp-7.6.12.v20130726.jar:7.6.12.v20130726]
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1044) ~[jetty-webapp-7.6.12.v20130726.jar:7.6.12.v20130726]
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:372) ~[jetty-webapp-7.6.12.v20130726.jar:7.6.12.v20130726]
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:189) ~[jetty-webapp-7.6.12.v20130726.jar:7.6.12.v20130726]
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:978) ~[jetty-webapp-7.6.12.v20130726.jar:7.6.12.v20130726]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135) ~[jetty-webapp-7.6.12.v20130726.jar:7.6.12.v20130726]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116) ~[jetty-webapp-7.6.12.v20130726.jar:7.6.12.v20130726]
+	at org.eclipse.jetty.server.Server.handle(Server.java:369) ~[jetty-webapp-7.6.12.v20130726.jar:7.6.12.v20130726]
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:486) ~[jetty-webapp-7.6.12.v20130726.jar:7.6.12.v20130726]
+	at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:933) ~[jetty-webapp-7.6.12.v20130726.jar:7.6.12.v20130726]
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:995) ~[jetty-webapp-7.6.12.v20130726.jar:7.6.12.v20130726]
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:644) ~[jetty-webapp-7.6.12.v20130726.jar:7.6.12.v20130726]
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235) ~[jetty-webapp-7.6.12.v20130726.jar:7.6.12.v20130726]
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82) ~[jetty-webapp-7.6.12.v20130726.jar:7.6.12.v20130726]
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:668) ~[jetty-webapp-7.6.12.v20130726.jar:7.6.12.v20130726]
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:52) ~[jetty-webapp-7.6.12.v20130726.jar:7.6.12.v20130726]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608) ~[jetty-webapp-7.6.12.v20130726.jar:7.6.12.v20130726]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543) ~[jetty-webapp-7.6.12.v20130726.jar:7.6.12.v20130726]
+	at java.lang.Thread.run(Thread.java:724) ~[na:1.7.0_25]
+12:37:25.389 [qtp15956463-22] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:37:25.389 [qtp15956463-20] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+12:37:25.390 [qtp15956463-22] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/plugins/data-tables/images/sort_desc.png
+12:37:25.390 [qtp15956463-20] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/web/fillrecords/grid
+12:37:25.397 [qtp15956463-20] ERROR 500.jsp - Page size must not be less than zero!
+java.lang.IllegalArgumentException: Page size must not be less than zero!
+	at org.springframework.data.domain.PageRequest.<init>(PageRequest.java:72) ~[spring-data-commons-1.6.1.RELEASE.jar:na]
+	at com.dlh.clpgx.freamwork.domain.DatatablesQuery.buildPageRequest(DatatablesQuery.java:55) ~[classes/:na]
+	at com.dlh.clpgx.freamwork.domain.DatatablesQuery.buildPageRequest(DatatablesQuery.java:45) ~[classes/:na]
+	at com.dlh.clpgx.freamwork.service.DcoreJpaService.findPageByFieldsOrCriteria(DcoreJpaService.java:146) ~[classes/:na]
+	at com.dlh.clpgx.web.FillRecordsController.grid(FillRecordsController.java:100) ~[classes/:na]
+	at sun.reflect.GeneratedMethodAccessor70.invoke(Unknown Source) ~[na:na]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.7.0_25]
+	at java.lang.reflect.Method.invoke(Method.java:606) ~[na:1.7.0_25]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:219) ~[spring-web-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:132) ~[spring-web-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104) ~[spring-webmvc-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandleMethod(RequestMappingHandlerAdapter.java:745) ~[spring-webmvc-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:686) ~[spring-webmvc-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:80) ~[spring-webmvc-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:925) [spring-webmvc-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:856) [spring-webmvc-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:936) ~[spring-webmvc-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:827) ~[spring-webmvc-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:707) ~[servlet-api-2.5.jar:2.5]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:812) ~[spring-webmvc-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820) ~[servlet-api-2.5.jar:2.5]
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:654) ~[jetty-webapp-7.6.12.v20130726.jar:7.6.12.v20130726]
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1320) ~[jetty-webapp-7.6.12.v20130726.jar:7.6.12.v20130726]
+	at org.springside.modules.web.filter.SiteMeshWrapperFilter.doFilter(SiteMeshWrapperFilter.java:32) ~[classes/:na]
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1291) ~[jetty-webapp-7.6.12.v20130726.jar:7.6.12.v20130726]
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:61) ~[shiro-web-1.2.2.jar:1.2.2]
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108) ~[shiro-web-1.2.2.jar:1.2.2]
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137) ~[shiro-web-1.2.2.jar:1.2.2]
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125) ~[shiro-web-1.2.2.jar:1.2.2]
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66) ~[shiro-web-1.2.2.jar:1.2.2]
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449) ~[shiro-web-1.2.2.jar:1.2.2]
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365) ~[shiro-web-1.2.2.jar:1.2.2]
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90) ~[shiro-core-1.2.2.jar:1.2.2]
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83) ~[shiro-core-1.2.2.jar:1.2.2]
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:383) ~[shiro-core-1.2.2.jar:1.2.2]
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362) ~[shiro-web-1.2.2.jar:1.2.2]
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125) ~[shiro-web-1.2.2.jar:1.2.2]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:343) ~[spring-web-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:260) ~[spring-web-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1291) ~[jetty-webapp-7.6.12.v20130726.jar:7.6.12.v20130726]
+	at org.springframework.orm.jpa.support.OpenEntityManagerInViewFilter.doFilterInternal(OpenEntityManagerInViewFilter.java:180) ~[spring-orm-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1291) ~[jetty-webapp-7.6.12.v20130726.jar:7.6.12.v20130726]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:88) ~[spring-web-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1291) ~[jetty-webapp-7.6.12.v20130726.jar:7.6.12.v20130726]
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:443) ~[jetty-webapp-7.6.12.v20130726.jar:7.6.12.v20130726]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137) ~[jetty-webapp-7.6.12.v20130726.jar:7.6.12.v20130726]
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:556) ~[jetty-webapp-7.6.12.v20130726.jar:7.6.12.v20130726]
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:227) ~[jetty-webapp-7.6.12.v20130726.jar:7.6.12.v20130726]
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1044) ~[jetty-webapp-7.6.12.v20130726.jar:7.6.12.v20130726]
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:372) ~[jetty-webapp-7.6.12.v20130726.jar:7.6.12.v20130726]
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:189) ~[jetty-webapp-7.6.12.v20130726.jar:7.6.12.v20130726]
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:978) ~[jetty-webapp-7.6.12.v20130726.jar:7.6.12.v20130726]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135) ~[jetty-webapp-7.6.12.v20130726.jar:7.6.12.v20130726]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116) ~[jetty-webapp-7.6.12.v20130726.jar:7.6.12.v20130726]
+	at org.eclipse.jetty.server.Server.handle(Server.java:369) ~[jetty-webapp-7.6.12.v20130726.jar:7.6.12.v20130726]
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:486) ~[jetty-webapp-7.6.12.v20130726.jar:7.6.12.v20130726]
+	at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:933) ~[jetty-webapp-7.6.12.v20130726.jar:7.6.12.v20130726]
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:995) ~[jetty-webapp-7.6.12.v20130726.jar:7.6.12.v20130726]
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:644) ~[jetty-webapp-7.6.12.v20130726.jar:7.6.12.v20130726]
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235) ~[jetty-webapp-7.6.12.v20130726.jar:7.6.12.v20130726]
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82) ~[jetty-webapp-7.6.12.v20130726.jar:7.6.12.v20130726]
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:668) ~[jetty-webapp-7.6.12.v20130726.jar:7.6.12.v20130726]
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:52) ~[jetty-webapp-7.6.12.v20130726.jar:7.6.12.v20130726]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608) ~[jetty-webapp-7.6.12.v20130726.jar:7.6.12.v20130726]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543) ~[jetty-webapp-7.6.12.v20130726.jar:7.6.12.v20130726]
+	at java.lang.Thread.run(Thread.java:724) ~[na:1.7.0_25]
+12:37:51.029 [qtp15956463-21] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+12:37:51.030 [qtp15956463-21] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/web/fillrecords/grid
+12:37:51.036 [qtp15956463-21] ERROR 500.jsp - Page index must not be less than zero!
+java.lang.IllegalArgumentException: Page index must not be less than zero!
+	at org.springframework.data.domain.PageRequest.<init>(PageRequest.java:68) ~[spring-data-commons-1.6.1.RELEASE.jar:na]
+	at com.dlh.clpgx.freamwork.domain.DatatablesQuery.buildPageRequest(DatatablesQuery.java:55) ~[classes/:na]
+	at com.dlh.clpgx.freamwork.domain.DatatablesQuery.buildPageRequest(DatatablesQuery.java:45) ~[classes/:na]
+	at com.dlh.clpgx.freamwork.service.DcoreJpaService.findPageByFieldsOrCriteria(DcoreJpaService.java:146) ~[classes/:na]
+	at com.dlh.clpgx.web.FillRecordsController.grid(FillRecordsController.java:100) ~[classes/:na]
+	at sun.reflect.GeneratedMethodAccessor70.invoke(Unknown Source) ~[na:na]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.7.0_25]
+	at java.lang.reflect.Method.invoke(Method.java:606) ~[na:1.7.0_25]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:219) ~[spring-web-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:132) ~[spring-web-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104) ~[spring-webmvc-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandleMethod(RequestMappingHandlerAdapter.java:745) ~[spring-webmvc-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:686) ~[spring-webmvc-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:80) ~[spring-webmvc-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:925) [spring-webmvc-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:856) [spring-webmvc-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:936) ~[spring-webmvc-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:827) ~[spring-webmvc-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:707) ~[servlet-api-2.5.jar:2.5]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:812) ~[spring-webmvc-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820) ~[servlet-api-2.5.jar:2.5]
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:654) ~[jetty-webapp-7.6.12.v20130726.jar:7.6.12.v20130726]
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1320) ~[jetty-webapp-7.6.12.v20130726.jar:7.6.12.v20130726]
+	at org.springside.modules.web.filter.SiteMeshWrapperFilter.doFilter(SiteMeshWrapperFilter.java:32) ~[classes/:na]
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1291) ~[jetty-webapp-7.6.12.v20130726.jar:7.6.12.v20130726]
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:61) ~[shiro-web-1.2.2.jar:1.2.2]
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108) ~[shiro-web-1.2.2.jar:1.2.2]
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137) ~[shiro-web-1.2.2.jar:1.2.2]
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125) ~[shiro-web-1.2.2.jar:1.2.2]
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66) ~[shiro-web-1.2.2.jar:1.2.2]
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449) ~[shiro-web-1.2.2.jar:1.2.2]
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365) ~[shiro-web-1.2.2.jar:1.2.2]
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90) ~[shiro-core-1.2.2.jar:1.2.2]
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83) ~[shiro-core-1.2.2.jar:1.2.2]
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:383) ~[shiro-core-1.2.2.jar:1.2.2]
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362) ~[shiro-web-1.2.2.jar:1.2.2]
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125) ~[shiro-web-1.2.2.jar:1.2.2]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:343) ~[spring-web-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:260) ~[spring-web-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1291) ~[jetty-webapp-7.6.12.v20130726.jar:7.6.12.v20130726]
+	at org.springframework.orm.jpa.support.OpenEntityManagerInViewFilter.doFilterInternal(OpenEntityManagerInViewFilter.java:180) ~[spring-orm-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1291) ~[jetty-webapp-7.6.12.v20130726.jar:7.6.12.v20130726]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:88) ~[spring-web-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1291) ~[jetty-webapp-7.6.12.v20130726.jar:7.6.12.v20130726]
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:443) ~[jetty-webapp-7.6.12.v20130726.jar:7.6.12.v20130726]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137) ~[jetty-webapp-7.6.12.v20130726.jar:7.6.12.v20130726]
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:556) ~[jetty-webapp-7.6.12.v20130726.jar:7.6.12.v20130726]
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:227) ~[jetty-webapp-7.6.12.v20130726.jar:7.6.12.v20130726]
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1044) ~[jetty-webapp-7.6.12.v20130726.jar:7.6.12.v20130726]
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:372) ~[jetty-webapp-7.6.12.v20130726.jar:7.6.12.v20130726]
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:189) ~[jetty-webapp-7.6.12.v20130726.jar:7.6.12.v20130726]
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:978) ~[jetty-webapp-7.6.12.v20130726.jar:7.6.12.v20130726]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135) ~[jetty-webapp-7.6.12.v20130726.jar:7.6.12.v20130726]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116) ~[jetty-webapp-7.6.12.v20130726.jar:7.6.12.v20130726]
+	at org.eclipse.jetty.server.Server.handle(Server.java:369) ~[jetty-webapp-7.6.12.v20130726.jar:7.6.12.v20130726]
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:486) ~[jetty-webapp-7.6.12.v20130726.jar:7.6.12.v20130726]
+	at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:933) ~[jetty-webapp-7.6.12.v20130726.jar:7.6.12.v20130726]
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:995) ~[jetty-webapp-7.6.12.v20130726.jar:7.6.12.v20130726]
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:644) ~[jetty-webapp-7.6.12.v20130726.jar:7.6.12.v20130726]
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235) ~[jetty-webapp-7.6.12.v20130726.jar:7.6.12.v20130726]
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82) ~[jetty-webapp-7.6.12.v20130726.jar:7.6.12.v20130726]
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:668) ~[jetty-webapp-7.6.12.v20130726.jar:7.6.12.v20130726]
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:52) ~[jetty-webapp-7.6.12.v20130726.jar:7.6.12.v20130726]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608) ~[jetty-webapp-7.6.12.v20130726.jar:7.6.12.v20130726]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543) ~[jetty-webapp-7.6.12.v20130726.jar:7.6.12.v20130726]
+	at java.lang.Thread.run(Thread.java:724) ~[na:1.7.0_25]
+12:37:57.268 [qtp15956463-18] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+12:37:57.269 [qtp15956463-18] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/web/fillrecords/grid
+12:38:53.791 [qtp15956463-18] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:38:53.791 [qtp15956463-18] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/admin/index
+12:38:53.892 [qtp15956463-23] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:38:53.892 [qtp15956463-23] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/plugins/font-awesome/css/font-awesome.min.css
+12:38:53.895 [qtp15956463-23] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:38:53.895 [qtp15956463-23] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/plugins/bootstrap/css/bootstrap.min.css
+12:38:53.895 [qtp15956463-21] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:38:53.895 [qtp15956463-21] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/plugins/uniform/css/uniform.default.css
+12:38:53.898 [qtp15956463-20] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:38:53.898 [qtp15956463-21] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:38:53.899 [qtp15956463-20] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/plugins/data-tables/DT_bootstrap.css
+12:38:53.899 [qtp15956463-21] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/plugins/select2/select2_metro.css
+12:38:53.901 [qtp15956463-21] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:38:53.901 [qtp15956463-21] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/css/style-metronic.css
+12:38:53.904 [qtp15956463-21] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:38:53.904 [qtp15956463-21] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/css/style.css
+12:38:53.907 [qtp15956463-20] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:38:53.907 [qtp15956463-20] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/css/style-responsive.css
+12:38:53.907 [qtp15956463-21] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:38:53.907 [qtp15956463-21] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/css/plugins.css
+12:38:53.913 [qtp15956463-20] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:38:53.913 [qtp15956463-20] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/css/themes/light.css
+12:38:53.914 [qtp15956463-18] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:38:53.914 [qtp15956463-18] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/css/custom.css
+12:38:53.917 [qtp15956463-22] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:38:53.917 [qtp15956463-22] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/img/logo.png
+12:38:53.922 [qtp15956463-17] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:38:53.923 [qtp15956463-17] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/plugins/jquery-1.10.2.min.js
+12:38:53.923 [qtp15956463-20] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:38:53.923 [qtp15956463-20] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/plugins/bootstrap-hover-dropdown/twitter-bootstrap-hover-dropdown.min.js
+12:38:53.926 [qtp15956463-17] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:38:53.926 [qtp15956463-17] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/plugins/jquery-slimscroll/jquery.slimscroll.min.js
+12:38:53.927 [qtp15956463-20] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:38:53.927 [qtp15956463-20] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/plugins/bootstrap/js/bootstrap.min.js
+12:38:53.929 [qtp15956463-17] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:38:53.929 [qtp15956463-17] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/plugins/jquery.cookie.min.js
+12:38:53.931 [qtp15956463-21] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:38:53.931 [qtp15956463-20] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:38:53.931 [qtp15956463-21] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/img/avatar1_small.jpg
+12:38:53.931 [qtp15956463-20] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/plugins/jquery-ui/jquery-ui-1.10.3.custom.min.js
+12:38:53.935 [qtp15956463-21] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:38:53.935 [qtp15956463-21] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/plugins/select2/select2.min.js
+12:38:53.935 [qtp15956463-20] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:38:53.935 [qtp15956463-20] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/plugins/jquery.blockui.min.js
+12:38:53.937 [qtp15956463-17] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:38:53.939 [qtp15956463-17] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/fonts/font.css
+12:38:53.938 [qtp15956463-23] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:38:53.940 [qtp15956463-23] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/plugins/jquery-migrate-1.2.1.min.js
+12:38:53.942 [qtp15956463-17] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:38:53.942 [qtp15956463-17] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/plugins/data-tables/DT_bootstrap.js
+12:38:53.939 [qtp15956463-22] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:38:53.944 [qtp15956463-22] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/plugins/data-tables/jquery.dataTables.min.js
+12:38:53.939 [qtp15956463-21] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:38:53.944 [qtp15956463-21] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/plugins/uniform/jquery.uniform.min.js
+12:38:53.949 [qtp15956463-20] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:38:53.949 [qtp15956463-20] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/scripts/app.js
+12:38:53.952 [qtp15956463-23] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:38:53.952 [qtp15956463-23] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/scripts/table-advanced.js
+12:38:53.955 [qtp15956463-18] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:38:53.955 [qtp15956463-18] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/img/avatar1.jpg
+12:38:53.954 [qtp15956463-22] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:38:53.964 [qtp15956463-22] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/img/avatar3.jpg
+12:38:53.954 [qtp15956463-21] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:38:53.967 [qtp15956463-21] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/img/avatar2.jpg
+12:38:53.953 [qtp15956463-20] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:38:53.971 [qtp15956463-20] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/img/menu-toggler.png
+12:38:54.008 [qtp15956463-23] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:38:54.008 [qtp15956463-23] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/img/search-icon-white.png
+12:38:54.008 [qtp15956463-17] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:38:54.008 [qtp15956463-17] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/img/sidebar-toggler-light.jpg
+12:38:54.056 [qtp15956463-18] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:38:54.056 [qtp15956463-18] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/img/icon-color.png
+12:38:57.337 [qtp15956463-23] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:38:57.338 [qtp15956463-23] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/img/sidebar-menu-arrow-green.png
+12:38:57.338 [qtp15956463-22] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+12:38:57.339 [qtp15956463-22] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/admin/index
+12:38:57.337 [qtp15956463-18] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:38:57.342 [qtp15956463-18] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/admin/assets/img/ajax-loading.gif
+12:38:58.776 [qtp15956463-22] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+12:38:58.776 [qtp15956463-23] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:38:58.776 [qtp15956463-22] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/web/fillrecords
+12:38:58.776 [qtp15956463-23] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/admin/assets/img/ajax-loading.gif
+12:38:59.070 [qtp15956463-18] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:38:59.070 [qtp15956463-18] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/plugins/data-tables/images/sort_asc.png
+12:38:59.071 [qtp15956463-20] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:38:59.071 [qtp15956463-20] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/plugins/data-tables/images/sort_both.png
+12:38:59.074 [qtp15956463-20] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+12:38:59.074 [qtp15956463-20] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/web/fillrecords/grid
+12:39:00.785 [qtp15956463-21] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+12:39:00.786 [qtp15956463-21] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/web/fillrecords/grid
+12:39:03.814 [qtp15956463-17] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+12:39:03.814 [qtp15956463-17] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/web/fillrecords/grid
+12:39:09.439 [qtp15956463-18] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+12:39:09.440 [qtp15956463-18] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/web/fillrecords/grid
+12:39:11.255 [qtp15956463-17] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+12:39:11.256 [qtp15956463-17] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/web/fillrecords/grid
+12:39:12.979 [qtp15956463-23] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+12:39:12.980 [qtp15956463-23] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/web/fillrecords/grid
+12:39:14.356 [qtp15956463-20] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+12:39:14.357 [qtp15956463-20] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/web/fillrecords/grid
+12:39:43.690 [qtp15956463-22] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+12:39:43.690 [qtp15956463-22] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/web/fillrecords/grid
+12:39:44.497 [qtp15956463-17] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+12:39:44.497 [qtp15956463-17] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/web/fillrecords/grid
+12:39:45.582 [qtp15956463-23] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+12:39:45.583 [qtp15956463-23] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/web/fillrecords/grid
+12:39:46.220 [qtp15956463-21] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+12:39:46.220 [qtp15956463-21] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/web/fillrecords/grid
+12:39:46.797 [qtp15956463-20] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+12:39:46.797 [qtp15956463-20] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/web/fillrecords/grid
+12:44:36.286 [qtp15956463-20] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+12:44:36.286 [qtp15956463-20] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/web/fillrecords/grid
+12:44:37.297 [qtp15956463-17] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+12:44:37.297 [qtp15956463-17] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/web/fillrecords/grid
+12:49:15.129 [qtp15956463-22] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:49:15.130 [qtp15956463-22] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/admin/assets/img/ajax-loading.gif
+12:49:15.137 [qtp15956463-22] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+12:49:15.137 [qtp15956463-22] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/web/fillrecords
+12:49:15.451 [qtp15956463-23] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+12:49:15.451 [qtp15956463-23] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/web/fillrecords/grid
+12:49:18.294 [qtp15956463-20] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:49:18.294 [qtp15956463-20] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/admin/index
+12:49:18.298 [qtp15956463-20] WARN  o.s.web.servlet.PageNotFound - Request method 'POST' not supported
+12:49:28.199 [qtp15956463-18] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:49:28.199 [qtp15956463-18] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/admin/index
+12:49:28.533 [qtp15956463-20] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:49:28.533 [qtp15956463-20] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/img/menu-toggler.png
+12:49:28.536 [qtp15956463-20] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:49:28.542 [qtp15956463-20] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/img/avatar2.jpg
+12:49:28.552 [qtp15956463-21] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:49:28.552 [qtp15956463-21] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/img/avatar3.jpg
+12:49:28.555 [qtp15956463-21] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:49:28.556 [qtp15956463-21] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/img/avatar1.jpg
+12:49:28.589 [qtp15956463-23] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:49:28.589 [qtp15956463-21] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:49:28.589 [qtp15956463-23] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/img/sidebar-toggler.jpg
+12:49:28.589 [qtp15956463-21] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/img/search-icon.png
+12:49:59.025 [qtp15956463-18] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:49:59.025 [qtp15956463-21] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+12:49:59.025 [qtp15956463-18] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/admin/assets/img/ajax-loading.gif
+12:49:59.025 [qtp15956463-21] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/img/sidebar-menu-arrow.png
+12:49:59.027 [qtp15956463-22] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+12:49:59.027 [qtp15956463-22] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/manager/desk

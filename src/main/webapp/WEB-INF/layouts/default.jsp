@@ -46,7 +46,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
    <link href="${ctx}/static/assets/css/style.css" rel="stylesheet" type="text/css"/>
    <link href="${ctx}/static/assets/css/style-responsive.css" rel="stylesheet" type="text/css"/>
    <link href="${ctx}/static/assets/css/plugins.css" rel="stylesheet" type="text/css"/>
-   <link href="${ctx}/static/assets/css/themes/light.css" rel="stylesheet" type="text/css" id="style_color"/>
+   <link href="${ctx}/static/assets/css/themes/default.css" rel="stylesheet" type="text/css" id="style_color"/>
    <link href="${ctx}/static/assets/css/custom.css" rel="stylesheet" type="text/css"/>
    <!-- END THEME STYLES -->
    <link rel="shortcut icon" href="${ctx}/static/images/favicon.ico" />
