@@ -9,12 +9,18 @@
 package com.dlh.clpgx.web;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import javax.servlet.ServletRequest;
+import java.util.HashMap;
+import java.util.Map;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
+
+import org.json.JSONException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.propertyeditors.CustomDateEditor;
+import org.springframework.data.domain.Page;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
@@ -23,9 +29,12 @@ import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import org.springside.modules.domain.BaseQuery;
+
+import com.dlh.clpgx.freamwork.domain.DatatablesQuery;
 import com.dlh.clpgx.freamwork.web.BaseController;
 import com.dlh.clpgx.entity.FillRecords;
 import com.dlh.clpgx.service.FillRecordsService;
@@ -69,20 +78,55 @@ public class FillRecordsController extends BaseController{
 		return "/fillrecords/base";
 	}
 	
-	/** 列表 */
+	
+	
+	/** 列表 
+	 * @throws JSONException */
 	@RequestMapping(method = RequestMethod.GET)
 	public String index(ModelMap model,FillRecords vo,
-			HttpServletRequest request) {
-		model.addAttribute("pages",fillRecordsService.findPage(BaseQuery.newBase(request, vo)));
+			HttpServletRequest request) throws JSONException {
+	//	Page page =fillRecordsService.findPage(BaseQuery.newBase(request, vo));
+		model.addAttribute("pages",fillRecordsService.findPage(new BaseQuery(request, vo)));
 		return "/fillrecords/index";
 	}
 	
 	
+	/** 列表 
+	 * @throws JSONException */
+	@RequestMapping(value = "/grid" ,method = RequestMethod.GET)
+	@ResponseBody
+	public ResponseEntity<Map> grid(ModelMap model,FillRecords vo,
+			HttpServletRequest request) throws JSONException {
+		Page page =fillRecordsService.findPageByFieldsOrCriteria(new DatatablesQuery(request, vo));
+		ResponseEntity<Map> responseResult = new ResponseEntity<Map>(ConversPage(page,request), org.springframework.http.HttpStatus.OK);     
+		return responseResult;
+		
+	//	model.addAttribute("pages",fillRecordsService.findPage(BaseQuery.newBase(request, vo)));
+		//return "/fillrecords/index";
+	}
+	
+	
+	public  Map ConversPage(Page page,HttpServletRequest request){
+		int pagesize = Integer.parseInt(request.getParameter("iDisplayLength"));
+		Map m = new HashMap();
+		int current =  page.getNumber() + 1;
+		int begin = Math.max(1, current - pagesize/2);
+		int end = Math.min(begin + (pagesize - 1), page.getTotalPages());
+//		int begin = Math.max(1, current - 20/2);
+//		int end = Math.min(begin + (20 - 1), page.getTotalPages());
+	//	m.put("sEcho",request.getParameter("sEcho"));
+		m.put("iTotalRecords",page.getTotalElements());
+		m.put("iTotalDisplayRecords",page.getTotalElements());
+		m.put("aaData", page.getContent());
+		
+		return m;
+	}
 	
 	
 	/** 进入新增 */
 	@RequestMapping(value="/new")
 	public String _new(ModelMap model,FillRecords fillRecords,HttpServletRequest request,HttpServletResponse response) throws Exception {
+		
 		model.addAttribute("fillRecords",fillRecords);
 		return "/fillrecords/new";
 	}

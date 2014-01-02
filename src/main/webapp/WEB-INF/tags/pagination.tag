@@ -4,6 +4,12 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <c:set var="ctx" value="${pageContext.request.contextPath}"/>
 <%
+
+tocat/pagesize = page;
+
+
+
+
 int current =  page.getNumber() + 1;
 int begin = Math.max(1, current - paginationSize/2);
 int end = Math.min(begin + (paginationSize - 1), page.getTotalPages());

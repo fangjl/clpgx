@@ -3,6 +3,8 @@
 	<excludes>
 		<pattern>/static/*</pattern>
 		<pattern>/api/*</pattern>
+		<pattern>/login</pattern>
+		<pattern>/admin/index/lock</pattern>
 	</excludes>
 	
 	
@@ -12,4 +14,9 @@
 		<pattern>/*</pattern>
 	</decorator>
 	-->
+	
+	<decorator name="default" page="default.jsp">
+		<pattern>/*</pattern>
+	</decorator>
+	
 </decorators>

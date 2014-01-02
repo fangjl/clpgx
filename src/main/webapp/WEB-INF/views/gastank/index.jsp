@@ -2,391 +2,69 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="tags" tagdir="/WEB-INF/tags"%>
 <c:set var="ctx" value="${pageContext.request.contextPath}"/>
-<div class="col-md-12">
-	<!-- top -->
-	<form  onsubmit="return Dcore.validateGetCallback(this)" action="${ctx}${action}"  ref="gastank-container-id" class="form-horizontal" role="form">
-	<div class="row">
-		<div class=col-md-10 col-md-offset-1" style="padding-top: 20px">
-				<div class="row">
-					
-					<div class="col-md-4">
-						<div class="form-group">
-							<label  class="col-sm-4 control-label">abarcode</label>
-							<div class="col-sm-8">
-								<input name="abarcode"  class="form-control">
-							</div>
-						</div>
-					</div>
-					
-					<div class="col-md-4">
-						<div class="form-group">
-							<label  class="col-sm-4 control-label">barcode</label>
-							<div class="col-sm-8">
-								<input name="barcode"  class="form-control">
-							</div>
-						</div>
-					</div>
-					
-					<div class="col-md-4">
-						<div class="form-group">
-							<label  class="col-sm-4 control-label">czsj</label>
-							<div class="col-sm-8">
-								<input name="czsj"  class="form-control">
-							</div>
-						</div>
-					</div>
-					
-					<div class="col-md-4">
-						<div class="form-group">
-							<label  class="col-sm-4 control-label">fpr</label>
-							<div class="col-sm-8">
-								<input name="fpr"  class="form-control">
-							</div>
-						</div>
-					</div>
-				</div>	
-				<div class="row">
-					
-					<div class="col-md-4">
-						<div class="form-group">
-							<label  class="col-sm-4 control-label">fpsj</label>
-							<div class="col-sm-8">
-								<input name="fpsj"  class="form-control">
-							</div>
-						</div>
-					</div>
-					
-					<div class="col-md-4">
-						<div class="form-group">
-							<label  class="col-sm-4 control-label">ggxh</label>
-							<div class="col-sm-8">
-								<input name="ggxh"  class="form-control">
-							</div>
-						</div>
-					</div>
-					
-					<div class="col-md-4">
-						<div class="form-group">
-							<label  class="col-sm-4 control-label">gpbm</label>
-							<div class="col-sm-8">
-								<input name="gpbm"  class="form-control">
-							</div>
-						</div>
-					</div>
-					
-					<div class="col-md-4">
-						<div class="form-group">
-							<label  class="col-sm-4 control-label">gpid</label>
-							<div class="col-sm-8">
-								<input name="gpid"  class="form-control">
-							</div>
-						</div>
-					</div>
-				</div>	
-				<div class="row">
-					
-					<div class="col-md-4">
-						<div class="form-group">
-							<label  class="col-sm-4 control-label">gplx</label>
-							<div class="col-sm-8">
-								<input name="gplx"  class="form-control">
-							</div>
-						</div>
-					</div>
-					
-					<div class="col-md-4">
-						<div class="form-group">
-							<label  class="col-sm-4 control-label">jdfs</label>
-							<div class="col-sm-8">
-								<input name="jdfs"  class="form-control">
-							</div>
-						</div>
-					</div>
-					
-					<div class="col-md-4">
-						<div class="form-group">
-							<label  class="col-sm-4 control-label">jdr</label>
-							<div class="col-sm-8">
-								<input name="jdr"  class="form-control">
-							</div>
-						</div>
-					</div>
-					
-					<div class="col-md-4">
-						<div class="form-group">
-							<label  class="col-sm-4 control-label">jdsj</label>
-							<div class="col-sm-8">
-								<input name="jdsj"  class="form-control">
-							</div>
-						</div>
-					</div>
-				</div>	
-				<div class="row">
-					
-					<div class="col-md-4">
-						<div class="form-group">
-							<label  class="col-sm-4 control-label">khbm</label>
-							<div class="col-sm-8">
-								<input name="khbm"  class="form-control">
-							</div>
-						</div>
-					</div>
-					
-					<div class="col-md-4">
-						<div class="form-group">
-							<label  class="col-sm-4 control-label">lastCheckTime</label>
-							<div class="col-sm-8">
-								<input name="lastCheckTime"  class="form-control">
-							</div>
-						</div>
-					</div>
-					
-					<div class="col-md-4">
-						<div class="form-group">
-							<label  class="col-sm-4 control-label">medium</label>
-							<div class="col-sm-8">
-								<input name="medium"  class="form-control">
-							</div>
-						</div>
-					</div>
-					
-					<div class="col-md-4">
-						<div class="form-group">
-							<label  class="col-sm-4 control-label">nextCheckTime</label>
-							<div class="col-sm-8">
-								<input name="nextCheckTime"  class="form-control">
-							</div>
-						</div>
-					</div>
-				</div>	
-				<div class="row">
-					
-					<div class="col-md-4">
-						<div class="form-group">
-							<label  class="col-sm-4 control-label">pz</label>
-							<div class="col-sm-8">
-								<input name="pz"  class="form-control">
-							</div>
-						</div>
-					</div>
-					
-					<div class="col-md-4">
-						<div class="form-group">
-							<label  class="col-sm-4 control-label">qjzq</label>
-							<div class="col-sm-8">
-								<input name="qjzq"  class="form-control">
-							</div>
-						</div>
-					</div>
-					
-					<div class="col-md-4">
-						<div class="form-group">
-							<label  class="col-sm-4 control-label">qybm</label>
-							<div class="col-sm-8">
-								<input name="qybm"  class="form-control">
-							</div>
-						</div>
-					</div>
-					
-					<div class="col-md-4">
-						<div class="form-group">
-							<label  class="col-sm-4 control-label">sccj</label>
-							<div class="col-sm-8">
-								<input name="sccj"  class="form-control">
-							</div>
-						</div>
-					</div>
-				</div>	
-				<div class="row">
-					
-					<div class="col-md-4">
-						<div class="form-group">
-							<label  class="col-sm-4 control-label">scrq</label>
-							<div class="col-sm-8">
-								<input name="scrq"  class="form-control">
-							</div>
-						</div>
-					</div>
-					
-					<div class="col-md-4">
-						<div class="form-group">
-							<label  class="col-sm-4 control-label">sscs</label>
-							<div class="col-sm-8">
-								<input name="sscs"  class="form-control">
-							</div>
-						</div>
-					</div>
-					
-					<div class="col-md-4">
-						<div class="form-group">
-							<label  class="col-sm-4 control-label">ssqy</label>
-							<div class="col-sm-8">
-								<input name="ssqy"  class="form-control">
-							</div>
-						</div>
-					</div>
-					
-					<div class="col-md-4">
-						<div class="form-group">
-							<label  class="col-sm-4 control-label">sssf</label>
-							<div class="col-sm-8">
-								<input name="sssf"  class="form-control">
-							</div>
-						</div>
-					</div>
-				</div>	
-				<div class="row">
-					
-					<div class="col-md-4">
-						<div class="form-group">
-							<label  class="col-sm-4 control-label">synx</label>
-							<div class="col-sm-8">
-								<input name="synx"  class="form-control">
-							</div>
-						</div>
-					</div>
-					
-					<div class="col-md-4">
-						<div class="form-group">
-							<label  class="col-sm-4 control-label">xpbm</label>
-							<div class="col-sm-8">
-								<input name="xpbm"  class="form-control">
-							</div>
-						</div>
-					</div>
-					
-					<div class="col-md-4">
-						<div class="form-group">
-							<label  class="col-sm-4 control-label">ywzt</label>
-							<div class="col-sm-8">
-								<input name="ywzt"  class="form-control">
-							</div>
-						</div>
-					</div>
-					
-					<div class="col-md-4">
-						<div class="form-group">
-							<label  class="col-sm-4 control-label">zdbm</label>
-							<div class="col-sm-8">
-								<input name="zdbm"  class="form-control">
-							</div>
-						</div>
-					</div>
-				</div>	
-			
-		</div>
-	</div>
-	
-	<!-- m button-->
-	<div class="row">
-		<div class="col-md-11 col-md-offset-1">
-			<button type="submit" class="btn btn-primary">查询</button>
-			<button href="${ctx}/web/gastank/new" target="ajax" ref="gastank-container-id" type="button" class="btn btn-primary">添加</button>
-			<button type="button" class="btn btn-primary">删除</button>|
-			<div class="btn-group">
-				  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-				   	排序|<span class="caret"></span>
-				  </button>
-				  <ul class="dropdown-menu" role="menu">
-				  
-				   	<c:forEach items="${fields}" var="field">
-				   		<li><a target="ajax" ref="gastank-container-id" href="${ctx}${action}?sortFiled=${field.name}&${searchParams}">${field.name}</a></li>
-					</c:forEach>
-				    
-				  </ul>
-			</div>
-		</div>
-	</div>
-	</form>
-	
-	
-	<!-- grid -->
-	<div class="row">
-		<div class="col-md-10 col-md-offset-1 " style="padding-top: 5px">
-			<table class="table table-responsive table-striped table-bordered table-condensed">
-				<thead>
-					<tr>
-						<th>序号</th>
-						<th>abarcode</th>
-						<th>barcode</th>
-						<th>czsj</th>
-						<th>fpr</th>
-						<th>fpsj</th>
-						<th>ggxh</th>
-						<th>gpbm</th>
-						<th>gpid</th>
-						<th>gplx</th>
-						<th>jdfs</th>
-						<th>jdr</th>
-						<th>jdsj</th>
-						<th>khbm</th>
-						<th>lastCheckTime</th>
-						<th>medium</th>
-						<th>nextCheckTime</th>
-						<th>pz</th>
-						<th>qjzq</th>
-						<th>qybm</th>
-						<th>sccj</th>
-						<th>scrq</th>
-						<th>sscs</th>
-						<th>ssqy</th>
-						<th>sssf</th>
-						<th>synx</th>
-						<th>xpbm</th>
-						<th>ywzt</th>
-						<th>zdbm</th>
-					</tr>
-				</thead>
- 				<tbody>
- 				
- 				
- 				
- 					<c:forEach items="${pages.content}" var="content"  varStatus="status">
-						<tr>
-							<td>${status.index + 1}</td>
-									<td>${content.abarcode}</td>
-									<td>${content.barcode}</td>
-									<td>${content.czsj}</td>
-									<td>${content.fpr}</td>
-									<td>${content.fpsj}</td>
-									<td>${content.ggxh}</td>
-									<td>${content.gpbm}</td>
-									<td>${content.gpid}</td>
-									<td>${content.gplx}</td>
-									<td>${content.jdfs}</td>
-									<td>${content.jdr}</td>
-									<td>${content.jdsj}</td>
-									<td>${content.khbm}</td>
-									<td>${content.lastCheckTime}</td>
-									<td>${content.medium}</td>
-									<td>${content.nextCheckTime}</td>
-									<td>${content.pz}</td>
-									<td>${content.qjzq}</td>
-									<td>${content.qybm}</td>
-									<td>${content.sccj}</td>
-									<td>${content.scrq}</td>
-									<td>${content.sscs}</td>
-									<td>${content.ssqy}</td>
-									<td>${content.sssf}</td>
-									<td>${content.synx}</td>
-									<td>${content.xpbm}</td>
-									<td>${content.ywzt}</td>
-									<td>${content.zdbm}</td>
-							<td>
-								<a target="ajax" ref="gastank-container-id" href="${ctx}${action}/delete/${content.id}">删除</a>
-								<a target="ajax" ref="gastank-container-id" href="${ctx}${action}/${content.id}/edit">修改</a>
-							</td>
-						</tr>
-					</c:forEach>
- 				</tbody>
-			</table>
-		</div>
-	</div>
-	<!-- pagebar -->
-	<div class="row">
-		<div class="col-md-10 col-md-offset-1 " >
-			<tags:pagination page="${pages}" paginationSize="5"/>
-		</div>
-	</div>
-	<!-- end -->
-</div>
+<div class="portlet box blue">
+                  <div class="portlet-title">
+                     <div class="caption"><i class="icon-globe"></i>Show/Hide Columns</div>
+                     <div class="actions">
+                        <div class="btn-group">
+                           <a data-toggle="dropdown" href="#" class="btn default">
+                           Columns
+                           <i class="icon-angle-down"></i>
+                           </a>
+                           <div class="dropdown-menu hold-on-click dropdown-checkboxes pull-right" id="sample_2_column_toggler">
+                               	<c:forEach items="${fields}" var="field" varStatus="status">
+								    <label><div class="checker"><span class="checked"><input type="checkbox" data-column="${status }" checked=""></span></div>${field.name}</label>
+								</c:forEach>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="portlet-body">
+                     <div role="grid" class="dataTables_wrapper form-inline" id="sample_2_wrapper"><div class="row"><div class="col-md-6 col-sm-12"><div id="sample_2_length" class="dataTables_length"><label><div class="select2-container form-control input-small" id="s2id_autogen3"><a tabindex="-1" class="select2-choice" onclick="return false;" href="javascript:void(0)">   <span class="select2-chosen">5</span><abbr class="select2-search-choice-close"></abbr>   <span class="select2-arrow"><b></b></span></a><input type="text" class="select2-focusser select2-offscreen" id="s2id_autogen4"><div class="select2-drop select2-display-none select2-with-searchbox">   <div class="select2-search">       <input type="text" class="select2-input" spellcheck="false" autocapitalize="off" autocorrect="off" autocomplete="off">   </div>   <ul class="select2-results">   </ul></div></div><select name="sample_2_length" size="1" aria-controls="sample_2" class="form-control input-small select2-offscreen" tabindex="-1"><option value="5">5</option><option value="15">15</option><option value="20">20</option><option value="-1">All</option></select> records</label></div></div><div class="col-md-12 col-sm-12"><div class="dataTables_filter" id="sample_2_filter"><label>Search: <input type="text" aria-controls="sample_2" class="form-control input-small"></label></div></div></div><div class="table-scrollable"><table id="sample_2" class="table table-striped table-bordered table-hover table-full-width dataTable" aria-describedby="sample_2_info">
+                        <thead>
+                           <tr role="row">
+                           	<c:forEach items="${fields}" var="field" varStatus="status">
+								     <th class="sorting" role="columnheader" tabindex="0" aria-controls="sample_2" rowspan="1" colspan="1" style="width: 189px;" aria-label="Rendering engine: activate to sort column ascending">${field.name}</th>
+							</c:forEach>
+                           </tr>
+                        </thead>
+                        
+                     <tbody role="alert" aria-live="polite" aria-relevant="all">
+                     
+                     
+                     
+                     <c:forEach items="${fields}" var="field" varStatus="status">
+                     	   		<tr class="odd">
+                     	   		<c:forEach items="${pages.content}" var="content" varStatus="status">
+                     	   		    <td class="">${ content.field.name}</td>
+								</c:forEach>
+                     	   		</tr>
+							</c:forEach>
+                     
+                     
+                     
+                           
+                           
+                           </tbody>
+                           </table>
+                           </div>
+                           
+                           
+                           
+                           <div class="row">
+                           <div class="col-md-5 col-sm-12">
+                           <div class="dataTables_info" id="sample_2_info">Showing 1 to 10 of 43 entries</div>
+                           </div><div class="col-md-7 col-sm-12">
+                           <div class="dataTables_paginate paging_bootstrap">
+                           <ul class="pagination">
+                           <li class="prev disabled">
+                           <a title="Previous" href="#">
+                           <i class="icon-angle-left">
+                           </i></a></li>
+                           <li class="active">
+                           <a href="#">1</a>
+                           </li><li><a href="#">2
+                           </a></li><li><a href="#">3</a></li><li>
+                           <a href="#">4</a></li><li><a href="#">5</a></li><li class="next"><a title="Next" href="#"><i class="icon-angle-right"></i></a></li></ul></div></div></div></div>
+                  </div>
+               </div>

@@ -12,101 +12,16 @@
 <meta http-equiv="Cache-Control" content="no-store" />
 <meta http-equiv="Pragma" content="no-cache" />
 <meta http-equiv="Expires" content="0" />
-
-<link type="image/x-icon" href="${ctx}/static/images/favicon.ico"
-	rel="shortcut icon">
-<link href="${ctx}/static/bootstrap/3.0.3/css/bootstrap.min.css"
-	type="text/css" rel="stylesheet" />
-<link href="${ctx}/static/jquery-validation/1.11.1/validate.css"
-	type="text/css" rel="stylesheet" />
-<link href="${ctx}/static/styles/css.css" type="text/css"
-	rel="stylesheet" />
-
+<link type="image/x-icon" href="${ctx}/static/images/favicon.ico" rel="shortcut icon">
+<link href="${ctx}/static/bootstrap/3.0.3/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+<link href="${ctx}/static/jquery-validation/1.11.1/validate.css" type="text/css" rel="stylesheet" />
+<link href="${ctx}/static/styles/css.css" type="text/css" rel="stylesheet" />
 <script src="${ctx}/static/jquery/jquery-1.9.1.min.js" type="text/javascript"></script>
 <script src="${ctx}/static/jquery-validation/1.11.1/jquery.validate.min.js" type="text/javascript"></script>
 <script src="${ctx}/static/jquery-validation/1.11.1/messages_bs_zh.js" type="text/javascript"></script>
 
 <script type="text/javascript">
-	function indexOf($tab) {
-		return $("#clpg-tabs li").index($tab);
-	}
-	function _indexOfPanels($tab) {
-		return _getTabPanels.index($tab)
-	}
-	function _getTabPanels() {
-		return $("#gloab-container").children();
-	}
-
-	$(document)
-			.ready(
-					function() {
-						$.get("${ctx}/admin/index/desk", {}, function(data,
-								textStatus, jqXHR) {
-							var tabpanel = $("<div id='clpg-tabpanel-id-0'>");
-							$("#gloab-container").append(tabpanel);
-							tabpanel.html(data);
-						}, "html")
-
-						$("#clpg-tabs")
-								.find("li")
-								.each(
-										function(i) {
-											$(this)
-													.unbind("click")
-													.click(
-															function(event) {
-																$("#clpg-tabs")
-																		.find(
-																				"li")
-																		.removeClass();
-																$(this)
-																		.addClass(
-																				"hover");
-																_getTabPanels()
-																		.hide();
-																var _index = indexOf($(this));
-																var tabps = $(
-																		"#clpg-tabpanel-id-"
-																				+ _index)
-																		.attr(
-																				"id");
-																if (tabps) {
-																	$(
-																			"#clpg-tabpanel-id-"
-																					+ _index)
-																			.show();
-																} else {
-																	var tabpanel = $("<div id=clpg-tabpanel-id-"
-																			+ indexOf($(this))
-																			+ ">");
-																	$
-																			.get(
-																					$(
-																							this)
-																							.attr(
-																									"url"),
-																					{},
-																					function(
-																							data,
-																							textStatus,
-																							jqXHR) {
-																						$(
-																								"#gloab-container")
-																								.append(
-																										tabpanel);
-																						tabpanel
-																								.html(
-																										data)
-																								.initUI();
-
-																					},
-																					"html")
-
-																}
-															});
-
-										});
-					});
+	
 </script>
 
 

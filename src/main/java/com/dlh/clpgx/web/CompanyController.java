@@ -55,7 +55,7 @@ public class CompanyController extends BaseController {
 	@RequestMapping(method = RequestMethod.GET)
 	public String index(Model model,Company vo,
 			ServletRequest request) {
-		model.addAttribute("pages", companyService.findPage(BaseQuery.newBase(request, vo)));
+		model.addAttribute("pages", companyService.findPage(new BaseQuery(request, vo)));
 		return "/sysset/company/index";
 	}
 	

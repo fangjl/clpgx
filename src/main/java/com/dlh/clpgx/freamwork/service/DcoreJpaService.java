@@ -10,11 +10,14 @@ import org.springframework.stereotype.Service;
 import org.springside.modules.domain.BaseQuery;
 import org.springside.modules.persistence.DcoreJpaRepository;
 @Service
+@SuppressWarnings("rawtypes")
 public class DcoreJpaService  implements IDcoreJpaService {
 	private DcoreJpaRepository<Object, Serializable> dcoreJpaRepository;
+	@SuppressWarnings("unchecked")
 	public DcoreJpaService(DcoreJpaRepository dcoreJpaRepository){
 		this.dcoreJpaRepository = dcoreJpaRepository;
 	} 
+	
 	@Override
 	public List findAll() {
 		// TODO Auto-generated method stub
@@ -129,8 +132,18 @@ public class DcoreJpaService  implements IDcoreJpaService {
 	@SuppressWarnings("unchecked")
 	@Override
 	public Page<Object> findPage(BaseQuery Vo) {
-		
-		return dcoreJpaRepository.findAll(Vo.buildSpecification(), Vo.buildPageRequest());
+	
+		return findPageByFieldsAndCriteria(Vo);
+	}
+	@Override
+	public Page findPageByFieldsAndCriteria(BaseQuery Vo) {
+		// TODO Auto-generated method stub
+		return dcoreJpaRepository.findAll(Vo.buildAndSpecification(), Vo.buildPageRequest());
+	}
+	@Override
+	public Page findPageByFieldsOrCriteria(BaseQuery Vo) {
+		// TODO Auto-generated method stub
+		return dcoreJpaRepository.findAll(Vo.buildOrSpecification(), Vo.buildPageRequest());
 	}
 	
 	

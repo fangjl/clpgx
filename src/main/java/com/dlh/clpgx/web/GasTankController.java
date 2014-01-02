@@ -72,7 +72,7 @@ public class GasTankController extends BaseController{
 	@RequestMapping(method = RequestMethod.GET)
 	public String index(ModelMap model,GasTank vo,
 			HttpServletRequest request) {
-		model.addAttribute("pages",gasTankService.findPage(BaseQuery.newBase(request, vo)));
+		model.addAttribute("pages",gasTankService.findPage(new BaseQuery(request, vo)));
 		return "/gastank/index";
 	}
 	

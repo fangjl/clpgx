@@ -22,7 +22,8 @@
 	<!--log4jdbc -->
 	<logger name="jdbc.sqltiming" level="INFO"/>
 	<logger name="org.hibernate" level="INFO"/>
-	<logger name="org.spring "    level="INFO"/>
+	<logger name="org.spring"    level="INFO"/>
+	<logger name="org.springside"    level="INFO"/>
 
 	<root level="WARN">
 		<appender-ref ref="console" />
