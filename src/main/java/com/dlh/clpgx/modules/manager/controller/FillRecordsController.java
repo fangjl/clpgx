@@ -11,7 +11,6 @@ import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
-import org.json.JSONException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.propertyeditors.CustomDateEditor;
 import org.springframework.data.domain.Page;
@@ -67,7 +66,7 @@ public class FillRecordsController extends BaseController{
 	 * @throws JSONException */
 	@RequestMapping(method = RequestMethod.GET)
 	public String index(ModelMap model,FillRecords vo,
-			HttpServletRequest request) throws JSONException {
+			HttpServletRequest request){
 		return BASE_PATH+"/index";
 	}
 	/** 列表 
@@ -75,7 +74,7 @@ public class FillRecordsController extends BaseController{
 	@RequestMapping(value = "/list" ,method = RequestMethod.GET)
 	@ResponseBody
 	public ResponseEntity<Map> list(ModelMap model,FillRecords vo,
-			HttpServletRequest request) throws JSONException {
+			HttpServletRequest request)  {
 		Page page =fillRecordsService.findPageByFieldsOrCriteria(new DatatablesQuery(request, vo));
 		ResponseEntity<Map> responseResult = new ResponseEntity<Map>(TransformationDataTableMap(page,request), org.springframework.http.HttpStatus.OK);     
 		return responseResult;

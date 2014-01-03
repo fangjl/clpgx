@@ -11,7 +11,7 @@ import org.springframework.data.domain.Page;
 import com.dlh.clpgx.modules.sys.security.ShiroDbRealm.ShiroUser;
 
 public class BaseController {
- 
+  
 	public Long getCurrentUserId(){
 		ShiroUser user = (ShiroUser) SecurityUtils.getSubject().getPrincipal();
 		if(user!=null){

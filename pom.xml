@@ -5,7 +5,7 @@
 	<artifactId>clpgx</artifactId>
 	<version>1.0-SNAPSHOT</version>
 	<packaging>war</packaging>
-	<name>Springside :: Example :: QuickStart</name>
+	<name>clpgx</name>
 
 	<properties>
 		
@@ -32,7 +32,7 @@
 
 		<!-- Plugin的属性定义 -->
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<jdk.version>1.6</jdk.version>
+		<jdk.version>1.7</jdk.version>
 
 		<!-- 项目属性 -->
 		<jdbc.driver.groupId>com.h2database</jdbc.driver.groupId>
@@ -42,21 +42,56 @@
 			<jdbc.driver.groupId>mysql</jdbc.driver.groupId>
 			<jdbc.driver.artifactId>mysql-connector-java</jdbc.driver.artifactId>
 			<jdbc.driver.version>5.1.2</jdbc.driver.version>
-		
 	</properties>
-
-	<!-- 设定插件仓库 如有Nexus私服, 取消注释并指向正确的服务器地址. 
+		
+		
+		
+	<repositories>
+		    <repository>
+		      <id>central</id>
+		      <name>Releases Repository</name>
+		      <url>http://192.168.1.108:8081/nexus/content/repositories/central/</url>
+		      <layout>default</layout>
+		      <snapshots>
+		        <enabled>true</enabled>
+		        <updatePolicy>daily</updatePolicy>
+		      </snapshots>
+		    </repository>
+		    
+		     <repository>
+		      <id>releases</id>
+		      <name>Releases Repository</name>
+		      <url>http://192.168.1.108:8081/nexus/content/repositories/releases</url>
+		      <snapshots>
+		        <enabled>true</enabled>
+		        <updatePolicy>always</updatePolicy>
+		      </snapshots>
+		    </repository>
+		    
+		    <repository>
+		      <id>snapshots</id>
+		      <name>Releases Repository</name>
+		      <url>http://192.168.1.108:8081/nexus/content/repositories/snapshots/</url>
+		      <snapshots>
+		        <enabled>true</enabled>
+		        <updatePolicy>always</updatePolicy>
+		      </snapshots>
+		    </repository>
+	  </repositories>	
+		
+		   
+	<!-- 设定插件仓库 如有Nexus私服, 取消注释并指向正确的服务器地址. -->
 	<pluginRepositories> 
 		<pluginRepository> 
 			<id>nexus</id>
 			<name>Team Nexus Repository</name>
-			<url>http://localhost:8081/nexus/content/groups/public</url> 
+			<url>http://192.168.1.108:8081/nexus/content/groups/public</url> 
 			<snapshots>
 				<enabled>false</enabled>
 			</snapshots>
 		</pluginRepository>
 	</pluginRepositories>
-	-->
+	
 
 	<!-- 依赖项定义 -->
 	<dependencies>
