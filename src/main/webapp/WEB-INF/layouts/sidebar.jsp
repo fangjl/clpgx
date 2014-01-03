@@ -22,7 +22,7 @@
                <!-- END RESPONSIVE QUICK SEARCH FORM -->
             </li>
             <li class="start">
-               <a class="ajaxify start" href="${ctx}/manager/desk">
+               <a class="ajaxify start" href="${ctx}/manager/home">
                <i class="icon-home"></i> 
                <span class="title">工作台</span>
                <span class="selected"></span>
@@ -37,7 +37,7 @@
                </a>
                <ul class="sub-menu">
                   <li>
-                     <a class="ajaxify" href="${ctx}/web/fillrecords">
+                     <a class="ajaxify" href="${ctx}/manager/fillrecords">
                      钢瓶检索                  
                      </a>
                   </li>
@@ -53,7 +53,7 @@
                   </li>
                   <li>
                      <a class="ajaxify" href="#">
-查询报表                     </a>
+	查询报表                     </a>
                   </li>
                </ul>
             </li>
@@ -96,22 +96,22 @@
                </a>
                <ul class="sub-menu">
                   <li>
-                     <a class="ajaxify" href="#">
+                     <a class="ajaxify" href="${ctx}/manager/sys/company">
                     企业设置                    
                      </a>
                   </li>
                   <li>
-                     <a class="ajaxify" href="#">
+                     <a class="ajaxify" href="${ctx}/manager/sys/org">
                     机构设置                   
                      </a>
                   </li>
                   <li>
-                     <a class="ajaxify" href="#">
+                     <a class="ajaxify" href="${ctx}/manager/sys/role">
                      角色设置                    
                      </a>
                   </li>
                   <li>
-                     <a class="ajaxify" href="#">
+                     <a class="ajaxify" href="${ctx}/manager/sys/module">
                     应用设置                   
                      </a>
                   </li>

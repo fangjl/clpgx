@@ -510,6 +510,7 @@ var App = function () {
         //activate tab if tab id provided in the URL
         if (location.hash) {
             var tabid = location.hash.substr(1);
+            alert(tabid);
             $('a[href="#' + tabid + '"]').click();
         }
     }
@@ -923,7 +924,7 @@ var App = function () {
                 centerY = true;
             }
             el.block({
-                message: '<img src="./assets/img/ajax-loading.gif" align="">',
+                message: '<img src="/clpgx/static/assets/img/ajax-loading.gif" align="">',
                 centerY: centerY != undefined ? centerY : true,
                 css: {
                     top: '10%',

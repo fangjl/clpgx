@@ -18,7 +18,9 @@
  */
 package com.dlh.clpgx.modules.sys.security;
 import java.io.Serializable;
+
 import javax.annotation.PostConstruct;
+
 import org.apache.shiro.authc.AuthenticationException;
 import org.apache.shiro.authc.AuthenticationInfo;
 import org.apache.shiro.authc.AuthenticationToken;
@@ -35,13 +37,16 @@ import com.dlh.clpgx.modules.sys.entity.User;
 import com.dlh.clpgx.modules.sys.service.UserService;
 import com.google.common.base.Objects;
 public class ShiroDbRealm extends AuthorizingRealm {
-	protected UserService userService;
+	
+	private  UserService userService;
 	/**
 	 * 认证回调函数,登录时调用.
 	 */
 	@Override
 	protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken authcToken) throws AuthenticationException {
 		UsernamePasswordToken token = (UsernamePasswordToken) authcToken;
+		
+		
 		User user = userService.findUserByLoginName(token.getUsername());
 		if (user != null) {
 			byte[] salt = Encodes.decodeHex(user.getSalt());
@@ -50,6 +55,13 @@ public class ShiroDbRealm extends AuthorizingRealm {
 		} else {
 			return null;
 		}
+	}
+	public UserService getUserService() {
+		return userService;
+	}
+	
+	public void setUserService(UserService userService) {
+		this.userService = userService;
 	}
 
 	/**
@@ -75,9 +87,7 @@ public class ShiroDbRealm extends AuthorizingRealm {
 		setCredentialsMatcher(matcher);
 	}
 
-	public void setAccountService(UserService userService) {
-		this.userService = userService;
-	}
+	
 
 	/**
 	 * 自定义Authentication对象，使得Subject除了携带用户的登录名外还可以携带更多信息.

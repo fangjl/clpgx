@@ -24,14 +24,12 @@ public class DatatablesQuery extends BaseQuery {
 		this.pageSize =   StringUtils.isBlank(request.getParameter("iDisplayLength"))?10:Integer.parseInt(request.getParameter("iDisplayLength"));
 		int start = StringUtils.isBlank(request.getParameter("iDisplayStart"))?1:Integer.parseInt(request.getParameter("iDisplayStart"));
 		pageNumber = start/this.pageSize+1;
-		this.sortFiled =(String) (StringUtils.isBlank(request.getParameter("sortFiled"))?"id":request.getParameter("sortFiled"));
-		this.sortType = (String) (StringUtils.isBlank(request.getParameter("sortType"))?"DESC":request.getParameter("sortType"));
+		String iSortCol_0 =(String) (StringUtils.isBlank(request.getParameter("iSortCol_0"))?"0":request.getParameter("iSortCol_0"));
+		this. sortFiled =(String) (StringUtils.isBlank( request.getParameter(prefix+iSortCol_0 ))?"id":request.getParameter(prefix+iSortCol_0));
+		this.sortType = (String) (StringUtils.isBlank( request.getParameter("sSortDir_0"))?"DESC":request.getParameter("sSortDir_0"));
 		this.request = request;
-
 		// TODO Auto-generated constructor stub
 	}
-	
-	
 	@Override
 	public PageRequest buildPageRequest(){
 		return  buildPageRequest(pageNumber, pageSize, sortType);
@@ -39,15 +37,13 @@ public class DatatablesQuery extends BaseQuery {
 	@Override
 	public PageRequest buildPageRequest(int pageNumber, int pagzSize, String sortType){
 		Sort sort = null;
-		if("ASC".equals(sortType)){
+		if("ASC".equals(sortType)||"asc".equals(sortType)){
 			sort = new Sort(Direction.ASC, sortFiled);
 		}else{
 			sort = new Sort(Direction.DESC, sortFiled);
 		}
 		return new PageRequest(pageNumber - 1, pagzSize, sort);
 	}
-	
-	
 	@Override
 	public Specification buildOrSpecification() {
 		// TODO Auto-generated method stub
@@ -57,10 +53,11 @@ public class DatatablesQuery extends BaseQuery {
 			String paramName = (String) paramNames.nextElement();
 			if ("".equals(prefix) || paramName.startsWith(prefix)) {
 				String value = request.getParameter(paramName);
-				searchParams.put("LIKE_"+value, request.getParameter(sSearch_value_params));
+				if(!value.equals("id")){
+					searchParams.put("LIKE_"+value, request.getParameter(sSearch_value_params));
+				}
 			}
 		};
-		
 		Map<String, SearchFilter> filters = SearchFilter.parse(searchParams);
 		return DynamicSpecifications.byOrSearchFilter(filters.values(), getVo().getClass());
 	}

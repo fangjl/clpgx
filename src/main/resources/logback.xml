@@ -24,6 +24,7 @@
 	<logger name="org.hibernate" level="INFO"/>
 	<logger name="org.spring"    level="INFO"/>
 	<logger name="org.springside"    level="INFO"/>
+	<logger name="org.apache.shiro"    level="WARN"/>
 
 	<root level="WARN">
 		<appender-ref ref="console" />

@@ -314,9 +314,9 @@
                   <li class="divider"></li>
                   <li><a href="javascript:;" id="trigger_fullscreen"><i class="icon-move"></i> 全屏</a>
                   </li>
-                  <li><a href="${ctx}/admin/index/lock"><i class="icon-lock"></i> 锁屏</a>
+                  <li><a href="${ctx}/manager/lock"><i class="icon-lock"></i> 锁屏</a>
                   </li>
-                  <li><a href="${ctx}/logout"><i class="icon-key"></i> 注销</a>
+                  <li><a href="${ctx}/manager/logout"><i class="icon-key"></i> 注销</a>
                   </li>
                </ul>
             </li>

@@ -1,5 +1,6 @@
 package com.dlh.clpgx.modules.sys.service;
 import java.util.List;
+
 import org.apache.commons.lang3.StringUtils;
 import org.apache.shiro.SecurityUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,26 +9,33 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springside.modules.security.utils.Digests;
 import org.springside.modules.utils.Clock;
 import org.springside.modules.utils.Encodes;
-import com.dlh.clpgx.freamwork.service.DcoreJpaService;
+
+import com.dlh.clpgx.modules.sys.entity.Company;
 import com.dlh.clpgx.modules.sys.entity.User;
+import com.dlh.clpgx.modules.sys.repository.CompanyDao;
 import com.dlh.clpgx.modules.sys.repository.UserDao;
 import com.dlh.clpgx.modules.sys.security.ShiroDbRealm.ShiroUser;
 import com.dlh.clpgx.rest.ServiceException;
 
 @Service
 @Transactional
-public class UserService extends DcoreJpaService{
+public class UserService{
 	public static final String HASH_ALGORITHM = "SHA-1";
 	public static final int HASH_INTERATIONS = 1024;
 	private static final int SALT_SIZE = 8;
 	private UserDao userDao;
 	private Clock clock = Clock.DEFAULT;	
-	
 	@Autowired
-	public UserService(UserDao userDao) {
-		super(userDao);
-		// TODO Auto-generated constructor stub
+	private CompanyDao companyDao;
+	@Autowired
+	public void setUserDao(UserDao userDao) {
+		this.userDao = userDao;
 	}
+
+
+
+
+	
 	
 	
 	
@@ -48,9 +56,9 @@ public class UserService extends DcoreJpaService{
 		entryptPassword(user);
 		user.setRoles("user");
 		user.setRegisterDate(clock.getCurrentDate());
-//		Company company = new Company();
-//		companyDao.save(company);
-//		user.setCompany(company);
+		Company company = new Company();
+		companyDao.save(company);
+		user.setCompany(company);
 		userDao.save(user);
 	}
 
@@ -62,7 +70,7 @@ public class UserService extends DcoreJpaService{
 	}
 	public void deleteUser(Long id) {
 		if (isSupervisor(id)) {
-			logger.warn("操作员{}尝试删除超级管理员用户", getCurrentUserName());
+		//	logger.warn("操作员{}尝试删除超级管理员用户", getCurrentUserName());
 			throw new ServiceException("不能删除超级管理员用户");
 		}
 		userDao.delete(id);

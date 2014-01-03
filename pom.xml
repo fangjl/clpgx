@@ -62,6 +62,12 @@
 	<dependencies>
 	
 	
+	<dependency>
+			<groupId>org.dcore</groupId>
+			<artifactId>generator</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+			<scope>test</scope>
+		</dependency>
 	
 		<!-- SPRINGSIDE -->
 		<dependency>

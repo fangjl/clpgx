@@ -2,21 +2,15 @@
 <decorators defaultdir="/WEB-INF/layouts/">
 	<excludes>
 		<pattern>/static/*</pattern>
-		<pattern>/api/*</pattern>
-		<pattern>/login</pattern>
-		<pattern>/admin/index/lock</pattern>
+		<!--过滤条买家版登入页面-->
+		<pattern>/manager/login</pattern>
+		<!--过滤条买家版锁定页面-->
+		<pattern>/manager/lock</pattern>
 	</excludes>
 	
 	
-	
-	<!--
 	<decorator name="default" page="default.jsp">
-		<pattern>/*</pattern>
-	</decorator>
-	-->
-	
-	<decorator name="default" page="default.jsp">
-		<pattern>/*</pattern>
+		<pattern>/manager/*</pattern>
 	</decorator>
 	
 </decorators>

@@ -1,6 +1,5 @@
 package com.dlh.clpgx.modules.sys.controller;
 import javax.validation.Valid;
-
 import org.apache.shiro.SecurityUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -25,7 +24,6 @@ import com.dlh.clpgx.modules.sys.service.UserService;
 public class ProfileController {
 	@Autowired
 	private UserService userService;
-
 	@RequestMapping(method = RequestMethod.GET)
 	public String updateForm(Model model) {
 		Long id = getCurrentUserId();

@@ -1,13 +1,16 @@
 package com.dlh.clpgx.modules.sys.entity;
 import java.util.Date;
 import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Transient;
+
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.hibernate.validator.constraints.NotBlank;
+
 import com.dlh.clpgx.freamwork.domain.IdEntity;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -27,7 +30,7 @@ public class User extends IdEntity {
 	public Company getCompany() {
 		return company;
 	}
-
+	
 	public void setCompany(Company company) {
 		this.company = company;
 	}

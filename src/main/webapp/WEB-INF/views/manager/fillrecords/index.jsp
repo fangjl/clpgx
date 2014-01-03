@@ -40,15 +40,18 @@
 <!-- BEGIN PAGE CONTENT-->          
 <div class="row">
 <div class="col-md-12">
-
+				
 <!-- BEGIN EXAMPLE TABLE PORTLET-->
+				
+				
+				
                <div class="portlet box blue">
                   <div class="portlet-title">
-                     <div class="caption"><i class="icon-globe"></i>Show/Hide Columns</div>
+                     <div class="caption"><i class="icon-globe"></i>充值记录</div>
                      <div class="actions">
                         <div class="btn-group">
                            <a class="btn default" href="#" data-toggle="dropdown">
-                           Columns
+                           		显示列
                            <i class="icon-angle-down"></i>
                            </a>
                            <div id="sample_2_column_toggler" class="dropdown-menu hold-on-click dropdown-checkboxes pull-right">
@@ -75,7 +78,6 @@
                            </tr>
                         </thead>
                         <tbody>
-                           
                         </tbody>
                      </table>
                   </div>
@@ -84,23 +86,19 @@
             </div>
          </div>
 <!-- END PAGE CONTENT-->
-
 <script type="text/javascript">
-	
 $('#sample_2').dataTable( {
-	 "bProcessing": true,
+	"bProcessing": true,
     "bServerSide": true,
-    "sAjaxSource": "/clpgx/web/fillrecords/grid",
+    "sAjaxSource": "/clpgx/manager/fillrecords/list",
     "oLanguage": {
 	     "sInfo": "第 _START_ 到 _END_条  共 _TOTAL_ 条记录"
 	 },
-	 "iDisplayLength": 10,
-	
+	 "iDisplayLength": 10,  //每页10；
      "aLengthMenu": [
-        [5, 15, 20],
-        [5, 15, 20] // change per page values here
+        [10, 15, 20,25],
+        [10, 15, 20,25] // change per page values here
     ],
-	
 	//"id":1,"cindex":"1","starttime":"","duration":"","normalfill":"111111111111111","chipcode":"1111111111","gascylindercode":"","departcode":"","producdate":"11111111111","clientcode":"11111111111","filltype":"","worker":"","initweight":"1111111111111","fillweight":"1111111111","desweight":"","revdata":
     "aoColumns": [
 		{ "mData": "id" },

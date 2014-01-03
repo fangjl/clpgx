@@ -10,7 +10,6 @@ import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 import org.springside.modules.domain.BaseQuery;
 import org.springside.modules.persistence.DcoreJpaRepository;
-
 @Service
 @SuppressWarnings("rawtypes")
 public class DcoreJpaService  implements IDcoreJpaService {

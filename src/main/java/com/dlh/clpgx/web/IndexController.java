@@ -3,16 +3,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
-@RequestMapping(value="admin/index")
+@RequestMapping(value="/index")
 public class IndexController {
 	@RequestMapping(method = RequestMethod.GET)
 	public String index(){
-		return "manager/desk";
+		return "index";
 	}
-	
-	@RequestMapping(value="lock" ,method = RequestMethod.GET)
-	public String lock(){
-		return "manager/lock";
-	}
-	
 }
