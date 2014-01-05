@@ -25,7 +25,9 @@ public class RegisterController {
 	private UserService userService;
 
 	@RequestMapping(method = RequestMethod.POST)
-	public String register(@Valid User user, RedirectAttributes redirectAttributes) {
+	public String register( User user,RedirectAttributes redirectAttributes) {
+		
+		
 		userService.registerUser(user);
 		redirectAttributes.addFlashAttribute("username", user.getLoginName());
 		return "redirect:/manager/login";

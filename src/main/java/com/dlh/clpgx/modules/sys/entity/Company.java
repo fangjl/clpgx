@@ -4,9 +4,13 @@ import javax.persistence.Entity;
 import javax.persistence.Table;
 import com.dlh.clpgx.freamwork.domain.IdEntity;
 @Entity
-@Table(name = "clpgx_company")
+@Table(name = "sys_company")
 public class Company  extends IdEntity{
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private String fullName;
 	private String shortName;
 	private byte[] Logo;
@@ -20,6 +24,8 @@ public class Company  extends IdEntity{
 	private String sscs;
 	private String address;
 	private String netAdress;
+	
+	
 	public String getFullName() {
 		return fullName;
 	}

@@ -12,7 +12,7 @@ var SysTree=function(){
                 data: function (options, callback) {
                     var self = this;
 
-                   alert(options.id);
+                  // alert(options.id);
                     if(options.id){
                     	alert(options.id);
                   

@@ -31,9 +31,18 @@
                         <thead>
                            <tr>
                           	  <th>序号</th> 
-								<th class="hidden-xs">code</th>
+								<th class="hidden-xs">createDate</th>
+								<th class="hidden-xs">delFlag</th>
+								<th class="hidden-xs">remarks</th>
+								<th class="hidden-xs">updateDate</th>
+								<th class="hidden-xs">dataScope</th>
+								<th class="hidden-xs">enname</th>
 								<th class="hidden-xs">name</th>
-								<th class="hidden-xs">remark</th>
+								<th class="hidden-xs">roleType</th>
+								<th class="hidden-xs">companyId</th>
+								<th class="hidden-xs">createBy</th>
+								<th class="hidden-xs">updateBy</th>
+								<th class="hidden-xs">officeId</th>
                            </tr>
                         </thead>
                         <tbody>
@@ -61,9 +70,18 @@ $('#com.dlh.clpgx.modules.sys.entity.Role_list_dom_id').dataTable( {
     ],
 	//"id":1,"cindex":"1","starttime":"","duration":"","normalfill":"111111111111111","chipcode":"1111111111","gascylindercode":"","departcode":"","producdate":"11111111111","clientcode":"11111111111","filltype":"","worker":"","initweight":"1111111111111","fillweight":"1111111111","desweight":"","revdata":
     "aoColumns": [
-		{ "mData": "code" },
+		{ "mData": "createDate" },
+		{ "mData": "delFlag" },
+		{ "mData": "remarks" },
+		{ "mData": "updateDate" },
+		{ "mData": "dataScope" },
+		{ "mData": "enname" },
 		{ "mData": "name" },
-		{ "mData": "remark" },
+		{ "mData": "roleType" },
+		{ "mData": "companyId" },
+		{ "mData": "createBy" },
+		{ "mData": "updateBy" },
+		{ "mData": "officeId" },
 		
     ]
 } );

@@ -12,12 +12,61 @@
 					
 					<div class="col-md-4">
 						<div class="form-group">
-							<label  class="col-sm-4 control-label">code</label>
+							<label  class="col-sm-4 control-label">createDate</label>
 							<div class="col-sm-8">
-								<input name="code"  class="form-control">
+								<input name="createDate"  class="form-control">
 							</div>
 						</div>
 					</div>
+					
+					<div class="col-md-4">
+						<div class="form-group">
+							<label  class="col-sm-4 control-label">delFlag</label>
+							<div class="col-sm-8">
+								<input name="delFlag"  class="form-control">
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-4">
+						<div class="form-group">
+							<label  class="col-sm-4 control-label">remarks</label>
+							<div class="col-sm-8">
+								<input name="remarks"  class="form-control">
+							</div>
+						</div>
+					</div>
+				</div>	
+				<div class="row">
+					
+					<div class="col-md-4">
+						<div class="form-group">
+							<label  class="col-sm-4 control-label">updateDate</label>
+							<div class="col-sm-8">
+								<input name="updateDate"  class="form-control">
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-4">
+						<div class="form-group">
+							<label  class="col-sm-4 control-label">dataScope</label>
+							<div class="col-sm-8">
+								<input name="dataScope"  class="form-control">
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-4">
+						<div class="form-group">
+							<label  class="col-sm-4 control-label">enname</label>
+							<div class="col-sm-8">
+								<input name="enname"  class="form-control">
+							</div>
+						</div>
+					</div>
+				</div>	
+				<div class="row">
 					
 					<div class="col-md-4">
 						<div class="form-group">
@@ -30,9 +79,47 @@
 					
 					<div class="col-md-4">
 						<div class="form-group">
-							<label  class="col-sm-4 control-label">remark</label>
+							<label  class="col-sm-4 control-label">roleType</label>
 							<div class="col-sm-8">
-								<input name="remark"  class="form-control">
+								<input name="roleType"  class="form-control">
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-4">
+						<div class="form-group">
+							<label  class="col-sm-4 control-label">companyId</label>
+							<div class="col-sm-8">
+								<input name="companyId"  class="form-control">
+							</div>
+						</div>
+					</div>
+				</div>	
+				<div class="row">
+					
+					<div class="col-md-4">
+						<div class="form-group">
+							<label  class="col-sm-4 control-label">createBy</label>
+							<div class="col-sm-8">
+								<input name="createBy"  class="form-control">
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-4">
+						<div class="form-group">
+							<label  class="col-sm-4 control-label">updateBy</label>
+							<div class="col-sm-8">
+								<input name="updateBy"  class="form-control">
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-4">
+						<div class="form-group">
+							<label  class="col-sm-4 control-label">officeId</label>
+							<div class="col-sm-8">
+								<input name="officeId"  class="form-control">
 							</div>
 						</div>
 					</div>

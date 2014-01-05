@@ -42,44 +42,7 @@
 <!-- BEGIN PAGE CONTENT-->
 <div class="row">
 	<div class="col-md-12">
-<div class="portlet box purple">
-	<div class="portlet-title">
-		<div class="caption">
-			<i class="icon-reorder"></i>公司信息
-		</div>
-		<div class="tools">
-			<a class="config" data-toggle="modal" href="#portlet-config"></a> <a
-				class="reload" href="javascript:;"></a>
-		</div>
-	</div>
-	<div class="portlet-body form">
-		<!-- BEGIN FORM-->
-		<form class="form-horizontal" action="#">
-			<div class="form-body">
-				<div class="form-group">
-							<label  class="col-md-3 control-label">code</label>
-							<div class="col-md-4">
-								<input name="code"   placeholder="Enter text" class="form-control">
-							</div>
-							<label  class="col-md-3 control-label">name</label>
-							<div class="col-md-4">
-								<input name="name"   placeholder="Enter text" class="form-control">
-							</div>
-							<label  class="col-md-3 control-label">remark</label>
-							<div class="col-md-4">
-								<input name="remark"   placeholder="Enter text" class="form-control">
-							</div>
-				</div>	
-				<div class="form-actions nobg fluid">
-					<div class="col-md-offset-6 col-md-3">
-						<button class="btn green" type="submit">提交</button>
-					</div>
-				</div>
-		</form>
-		<!-- END FORM-->
-	</div>
-</div>
-<!-- porlet end -->
+
 
 		<!--page-->
 
@@ -95,7 +58,7 @@
                            		显示列
                            <i class="icon-angle-down"></i>
                            </a>
-                           <div id="Role_list_dom_id_column_toggler" class="dropdown-menu hold-on-click dropdown-checkboxes pull-right">
+                           <div id="id="com.dlh.clpgx.modules.sys.entity.Role_list_dom_id_column_toggler" class="dropdown-menu hold-on-click dropdown-checkboxes pull-right">
                               <label><input type="checkbox" checked data-column="0">Rendering engine</label>
                               <label><input type="checkbox" checked data-column="1">Browser</label>
                               <label><input type="checkbox" checked data-column="2">Platform(s)</label>
@@ -107,13 +70,22 @@
                   </div>
                   <div class="portlet-body">
                   
-                     <table class="table table-striped table-bordered table-hover table-full-width" id="Role_list_dom_id">
+                     <table class="table table-striped table-bordered table-hover table-full-width" id="com.dlh.clpgx.modules.sys.entity.Role_list_dom_id">
                         <thead>
                            <tr>
                           	  <th>序号</th> 
-								<th class="hidden-xs">code</th>
+								<th class="hidden-xs">createDate</th>
+								<th class="hidden-xs">delFlag</th>
+								<th class="hidden-xs">remarks</th>
+								<th class="hidden-xs">updateDate</th>
+								<th class="hidden-xs">dataScope</th>
+								<th class="hidden-xs">enname</th>
 								<th class="hidden-xs">name</th>
-								<th class="hidden-xs">remark</th>
+								<th class="hidden-xs">roleType</th>
+								<th class="hidden-xs">companyId</th>
+								<th class="hidden-xs">createBy</th>
+								<th class="hidden-xs">updateBy</th>
+								<th class="hidden-xs">officeId</th>
                            </tr>
                         </thead>
                         <tbody>
@@ -136,10 +108,10 @@
 
 <!-- new Grid -->
 <script type="text/javascript">
-$('#Role_list_dom_id').dataTable( {
+$('#com.dlh.clpgx.modules.sys.entity.Role_list_dom_id').dataTable( {
 	"bProcessing": true,
     "bServerSide": true,
-    "sAjaxSource": "/clpgx/manager/sys/role/list",
+    "sAjaxSource": "${ctx}${action}/list",
     "oLanguage": {
 	     "sInfo": "第 _START_ 到 _END_条  共 _TOTAL_ 条记录"
 	 },
@@ -150,10 +122,18 @@ $('#Role_list_dom_id').dataTable( {
     ],
 	//"id":1,"cindex":"1","starttime":"","duration":"","normalfill":"111111111111111","chipcode":"1111111111","gascylindercode":"","departcode":"","producdate":"11111111111","clientcode":"11111111111","filltype":"","worker":"","initweight":"1111111111111","fillweight":"1111111111","desweight":"","revdata":
     "aoColumns": [
-         {"mData":"id"},
-		{ "mData": "code" },
+		{ "mData": "createDate" },
+		{ "mData": "delFlag" },
+		{ "mData": "remarks" },
+		{ "mData": "updateDate" },
+		{ "mData": "dataScope" },
+		{ "mData": "enname" },
 		{ "mData": "name" },
-		{ "mData": "remark" }
+		{ "mData": "roleType" },
+		{ "mData": "companyId" },
+		{ "mData": "createBy" },
+		{ "mData": "updateBy" },
+		{ "mData": "officeId" },
 		
     ]
 } );

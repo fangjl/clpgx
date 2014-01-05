@@ -4,15 +4,15 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 import com.dlh.clpgx.freamwork.domain.IdEntity;
-
 /**
  * 钢瓶档案
  * @author wqh
  *
  */
 @Entity
-@Table(name="GAS_TANK")
+@Table(name="gas_tank")
 public class GasTank extends IdEntity {
+	
 	//RFID芯片编码
 	@Column(name="XPBM",length=80)
 	private String xpbm; 

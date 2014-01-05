@@ -74,7 +74,7 @@ public class RoleController extends BaseController{
 	@RequestMapping(method = RequestMethod.GET)
 	public String index(ModelMap model,Role vo,
 			HttpServletRequest request) {
-		model.addAttribute("pages",roleService.findPageByFieldsAndCriteria(new BaseQuery(request, vo)));
+	//	model.addAttribute("pages",roleService.findPageByFieldsAndCriteria(new BaseQuery(request, vo)));
 		return BASE_PATH+"/index";
 	}
 	

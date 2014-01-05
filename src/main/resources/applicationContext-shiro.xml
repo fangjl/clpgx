@@ -24,7 +24,7 @@
 				/manager/login = authc
 				/manager/logout = logout
 				/static/** = anon
-				/sys/register = anon
+				/sys/register/** = anon
 				/site/** = anon
 				/sys/**  = user
 				/manager/** = user

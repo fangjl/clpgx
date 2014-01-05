@@ -40,6 +40,8 @@
 		<jdbc.driver.groupId>com.h2database</jdbc.driver.groupId>
 		<jdbc.driver.artifactId>h2</jdbc.driver.artifactId>
 		<jdbc.driver.version>${h2.version}</jdbc.driver.version>
+		
+		<ehcache.version>2.6.6</ehcache.version>
 		<!---->	
 			<jdbc.driver.groupId>mysql</jdbc.driver.groupId>
 			<jdbc.driver.artifactId>mysql-connector-java</jdbc.driver.artifactId>
@@ -260,7 +262,15 @@
 			<artifactId>hibernate-validator</artifactId>
 			<version>${hibernate-validator.version}</version>
 		</dependency>
+	
+		<!-- EHCACHE begin -->
 		
+		<dependency>
+            <groupId>net.sf.ehcache</groupId>  
+            <artifactId>ehcache-web</artifactId>  
+            <version>2.0.4</version>
+        </dependency>
+		<!-- EHCACHE end -->
 		<!-- JSON begin -->
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
@@ -443,14 +453,14 @@
   <version>0.0.1-SNAPSHOT</version>
 </dependency>
 
-<!-- 
+<!-- -->
 	<dependency>
   <groupId>org.springside</groupId>
   <artifactId>springside-core</artifactId>
   <version>${springside.version}</version>
    
 </dependency>
--->
+
 	</dependencies>
 	
 	<dependencyManagement>

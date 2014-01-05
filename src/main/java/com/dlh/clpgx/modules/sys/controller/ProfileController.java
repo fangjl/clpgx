@@ -17,23 +17,22 @@ import com.dlh.clpgx.modules.sys.service.UserService;
 /**
  * 用户修改自己资料的Controller.
  * 
- * @author calvin
  */
 @Controller
-@RequestMapping(value = "/profile")
+@RequestMapping(value = "/sys/profile")
 public class ProfileController {
 	@Autowired
 	private UserService userService;
 	@RequestMapping(method = RequestMethod.GET)
 	public String updateForm(Model model) {
 		Long id = getCurrentUserId();
-		model.addAttribute("user", userService.getUser(id));
+		model.addAttribute("user", userService.findOne(id));
 		return "account/profile";
 	}
 
 	@RequestMapping(method = RequestMethod.POST)
 	public String update(@Valid @ModelAttribute("user") User user) {
-		userService.updateUser(user);
+		userService.save(user);
 		updateCurrentUserName(user.getName());
 		return "redirect:/";
 	}
@@ -45,7 +44,7 @@ public class ProfileController {
 	@ModelAttribute
 	public void getUser(@RequestParam(value = "id", defaultValue = "-1") Long id, Model model) {
 		if (id != -1) {
-			model.addAttribute("user", userService.getUser(id));
+			model.addAttribute("user", userService.findOne(id));
 		}
 	}
 

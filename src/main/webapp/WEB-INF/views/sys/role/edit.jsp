@@ -17,17 +17,59 @@
 		<form class="form-horizontal" action="#">
 			<div class="form-body">
 				<div class="form-group">
-							<label  class="col-md-3 control-label">code</label>
+							<label  class="col-md-3 control-label">createDate</label>
 							<div class="col-md-4">
-								<input name="code"   placeholder="Enter text" class="form-control">
+								<input name="createDate"   placeholder="Enter text" class="form-control">
 							</div>
+							<label  class="col-md-3 control-label">delFlag</label>
+							<div class="col-md-4">
+								<input name="delFlag"   placeholder="Enter text" class="form-control">
+							</div>
+							<label  class="col-md-3 control-label">remarks</label>
+							<div class="col-md-4">
+								<input name="remarks"   placeholder="Enter text" class="form-control">
+							</div>
+				</div>	
+				<div class="form-group">
+							<label  class="col-md-3 control-label">updateDate</label>
+							<div class="col-md-4">
+								<input name="updateDate"   placeholder="Enter text" class="form-control">
+							</div>
+							<label  class="col-md-3 control-label">dataScope</label>
+							<div class="col-md-4">
+								<input name="dataScope"   placeholder="Enter text" class="form-control">
+							</div>
+							<label  class="col-md-3 control-label">enname</label>
+							<div class="col-md-4">
+								<input name="enname"   placeholder="Enter text" class="form-control">
+							</div>
+				</div>	
+				<div class="form-group">
 							<label  class="col-md-3 control-label">name</label>
 							<div class="col-md-4">
 								<input name="name"   placeholder="Enter text" class="form-control">
 							</div>
-							<label  class="col-md-3 control-label">remark</label>
+							<label  class="col-md-3 control-label">roleType</label>
 							<div class="col-md-4">
-								<input name="remark"   placeholder="Enter text" class="form-control">
+								<input name="roleType"   placeholder="Enter text" class="form-control">
+							</div>
+							<label  class="col-md-3 control-label">companyId</label>
+							<div class="col-md-4">
+								<input name="companyId"   placeholder="Enter text" class="form-control">
+							</div>
+				</div>	
+				<div class="form-group">
+							<label  class="col-md-3 control-label">createBy</label>
+							<div class="col-md-4">
+								<input name="createBy"   placeholder="Enter text" class="form-control">
+							</div>
+							<label  class="col-md-3 control-label">updateBy</label>
+							<div class="col-md-4">
+								<input name="updateBy"   placeholder="Enter text" class="form-control">
+							</div>
+							<label  class="col-md-3 control-label">officeId</label>
+							<div class="col-md-4">
+								<input name="officeId"   placeholder="Enter text" class="form-control">
 							</div>
 				</div>	
 				<div class="form-actions nobg fluid">
