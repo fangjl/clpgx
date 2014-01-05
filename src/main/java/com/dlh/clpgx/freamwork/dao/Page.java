@@ -1,8 +1,4 @@
-/**
- * Copyright &copy; 2012-2013 <a href="https://github.com/thinkgem/jeesite">JeeSite</a> All rights reserved.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- */
+
 package com.dlh.clpgx.freamwork.dao;
 import java.util.ArrayList;
 import java.util.List;
@@ -19,8 +15,6 @@ import com.dlh.clpgx.freamwork.common.CookieUtils;
   
 /**
  * 分页类
- * @author ThinkGem
- * @version 2013-7-2
  * @param <T>
  */
 public class Page<T> {

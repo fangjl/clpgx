@@ -7496,3 +7496,296 @@ java.lang.NoClassDefFoundError: Could not initialize class org.apache.commons.be
 01:00:13.825 [qtp16857234-24] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/
 01:00:13.876 [qtp16857234-20] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
 01:00:13.876 [qtp16857234-20] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/index
+01:17:21.666 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+01:17:21.678 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {4.2.5.Final}
+01:17:21.680 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+01:17:21.682 [main] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+01:17:21.708 [main] INFO  org.hibernate.ejb.Ejb3Configuration - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+01:17:21.853 [main] INFO  o.h.s.j.c.i.ConnectionProviderInitiator - HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+01:17:21.897 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+01:17:21.907 [main] INFO  o.h.e.j.internal.LobCreatorBuilder - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+01:17:22.160 [main] INFO  o.h.e.t.i.TransactionFactoryInitiator - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+01:17:22.166 [main] INFO  o.h.h.i.a.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+01:17:22.262 [main] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 4.3.1.Final
+01:17:22.549 [main] INFO  org.hibernate.search.Version - HSEARCH000034: Hibernate Search 4.2.0.Final
+01:17:22.592 [main] WARN  o.h.search.impl.ConfigContext - HSEARCH000075: Configuration setting hibernate.search.lucene_version was not specified, using LUCENE_CURRENT.
+01:17:22.997 [main] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000228: Running hbm2ddl schema update
+01:17:22.997 [main] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000102: Fetching database metadata
+01:17:22.999 [main] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000396: Updating schema
+01:17:23.021 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000261: Table found: lpgx.fill_records
+01:17:23.021 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [company_id, starttime, create_by, clientcode, revdata, desweight, remarks, del_flag, normalfill, initweight, c_index, update_by, id, departcode, duration, create_date, filltype, worker, update_date, chipcode, producdate, gascylindercode, fillweight]
+01:17:23.021 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: [fk_ewstqjsfpgxn24njtdwqnvora, fk_5y84ey83oi9fjone2ssd97e0d, fk_jwspifojy01eefq6vsqggcs86]
+01:17:23.021 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [fk_ewstqjsfpgxn24njtdwqnvora, fk_5y84ey83oi9fjone2ssd97e0d, fk_jwspifojy01eefq6vsqggcs86, primary]
+01:17:23.031 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000261: Table found: lpgx.gas_tank
+01:17:23.031 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [company_id, gpid, gplx, jdsj, create_by, remarks, update_by, id, xpbm, create_date, ywzt, last_check_time, ggxh, ssqy, sssf, gpbm, fpr, czsj, barcode, qjzq, sscs, del_flag, medium, jdr, khbm, pz, jdfs, qybm, zdbm, update_date, scrq, abarcode, next_check_time, synx, sccj, fpsj]
+01:17:23.031 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: [fk_mef0f6q8qlggbghj62t5mv6rk, fk_319sx4c350lwa1rnmdw96ye5d, fk_shwkfwnhfhs3q82ykqsjnnfr5]
+01:17:23.031 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [primary, fk_mef0f6q8qlggbghj62t5mv6rk, fk_319sx4c350lwa1rnmdw96ye5d, fk_shwkfwnhfhs3q82ykqsjnnfr5]
+01:17:23.039 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000261: Table found: lpgx.sys_area
+01:17:23.039 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [company_id, create_by, parent_ids, remarks, del_flag, code, type, update_by, id, create_date, name, update_date, parent_id]
+01:17:23.039 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: [fk_r8iw4yr01wrami81gs9vix8qh, fk_mjgpqp2y0tindtg5xtb4eshgd, fk_4trjk3ewms2v0taeht5hc1kyp, fk_bq15gnsoqpuk7m74aao7fjhi3]
+01:17:23.039 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [fk_r8iw4yr01wrami81gs9vix8qh, primary, fk_mjgpqp2y0tindtg5xtb4eshgd, fk_4trjk3ewms2v0taeht5hc1kyp, fk_bq15gnsoqpuk7m74aao7fjhi3]
+01:17:23.048 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000261: Table found: lpgx.sys_company
+01:17:23.048 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [company_id, logo, sssf, clsj, fax, create_by, net_adress, remarks, sscs, del_flag, short_name, update_by, lx, id, lxr, create_date, address, email, lxdh, update_date, full_name]
+01:17:23.048 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: [fk_he890ipm1wna7oeb10jhsvaf, fk_p138al9hjbmr1ylvm811lerfm, fk_ovjg7ryo1sc91t3c47r6wgcw5]
+01:17:23.048 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [fk_he890ipm1wna7oeb10jhsvaf, primary, fk_p138al9hjbmr1ylvm811lerfm, fk_ovjg7ryo1sc91t3c47r6wgcw5]
+01:17:23.057 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000261: Table found: lpgx.sys_dict
+01:17:23.057 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [id, company_id, sort, create_date, create_by, description, value, update_date, label, remarks, del_flag, type, update_by]
+01:17:23.057 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: [fk_1wxgj5f6ctd9qlai6c8cup6qq, fk_w37i6we6n67anwjwd89h5r30, fk_pletj6lw7lkmi2v75qf0ptfa3]
+01:17:23.057 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [fk_1wxgj5f6ctd9qlai6c8cup6qq, primary, fk_w37i6we6n67anwjwd89h5r30, fk_pletj6lw7lkmi2v75qf0ptfa3]
+01:17:23.065 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000261: Table found: lpgx.sys_log
+01:17:23.065 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [id, create_date, create_by, remote_addr, exception, user_agent, method, params, type, request_uri]
+01:17:23.065 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: [fk_5yqmukedkuti9qdm38cgn5qpo]
+01:17:23.065 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [primary, fk_5yqmukedkuti9qdm38cgn5qpo]
+01:17:23.072 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000261: Table found: lpgx.sys_menu
+01:17:23.072 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [company_id, icon, sort, create_by, parent_ids, remarks, permission, del_flag, update_by, id, is_show, create_date, name, target, update_date, href, parent_id]
+01:17:23.072 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: [fk_chmy2umajqqsxs72xupaw2bp2, fk_9ogfu2m8yudrxxnkpt17icdiv, fk_rprnvewcrr13xfe818dxitygq, fk_qpmp4gcxex623foonm8iatf2s]
+01:17:23.072 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [fk_chmy2umajqqsxs72xupaw2bp2, fk_9ogfu2m8yudrxxnkpt17icdiv, fk_rprnvewcrr13xfe818dxitygq, primary, fk_qpmp4gcxex623foonm8iatf2s]
+01:17:23.081 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000261: Table found: lpgx.sys_office
+01:17:23.081 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [company_id, area_id, phone, fax, zip_code, create_by, parent_ids, remarks, del_flag, code, type, master, update_by, id, create_date, address, email, name, update_date, grade, parent_id]
+01:17:23.081 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: [fk_ssfy7xx1k6xcu03wi2p48wbgb, fk_t0yaa3frs94mq94632o0unn7b, fk_oyg1e7xwd7mc9eniu8rsrg1es, fk_1qbpkx70t7s68ij4hsj0kptr2, fk_g8ptic5fpgiksmnq71n84n0j4]
+01:17:23.081 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [fk_ssfy7xx1k6xcu03wi2p48wbgb, fk_t0yaa3frs94mq94632o0unn7b, fk_oyg1e7xwd7mc9eniu8rsrg1es, primary, fk_1qbpkx70t7s68ij4hsj0kptr2, fk_g8ptic5fpgiksmnq71n84n0j4]
+01:17:23.088 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000261: Table found: lpgx.sys_role
+01:17:23.088 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [id, company_id, create_date, create_by, data_scope, name, update_date, remarks, del_flag, role_type, office_id, update_by, enname]
+01:17:23.088 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: [fk_9fhw9abenrp9xf4tapimn8h9u, fk_f1tuelx21febfjdks0dgbc00r, fk_8gspmw342b119vkfudsjhpa3j, fk_2hjbkh85c5fbl5arn83jfu2uf]
+01:17:23.088 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [primary, fk_9fhw9abenrp9xf4tapimn8h9u, fk_f1tuelx21febfjdks0dgbc00r, fk_8gspmw342b119vkfudsjhpa3j, fk_2hjbkh85c5fbl5arn83jfu2uf]
+01:17:23.095 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000261: Table found: lpgx.sys_role_menu
+01:17:23.095 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [menu_id, role_id]
+01:17:23.095 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: [fk_jhsm9r7fe3sqewprqnbkqo2dq, fk_mgkho4k9qv9oskd8uq5agwxc9]
+01:17:23.095 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [fk_mgkho4k9qv9oskd8uq5agwxc9, fk_jhsm9r7fe3sqewprqnbkqo2dq]
+01:17:23.102 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000261: Table found: lpgx.sys_role_office
+01:17:23.102 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [role_id, office_id]
+01:17:23.102 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: [fk_gjocdmvkp9y7r1m0bhno7ud48, fk_kn31tovue40dn5dqpyopeen4p]
+01:17:23.102 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [fk_gjocdmvkp9y7r1m0bhno7ud48, fk_kn31tovue40dn5dqpyopeen4p]
+01:17:23.113 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000261: Table found: lpgx.sys_user
+01:17:23.113 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [company_id, phone, user_type, create_by, no, remarks, del_flag, login_ip, password, office_id, update_by, id, create_date, email, login_name, name, update_date, salt, login_date, mobile]
+01:17:23.113 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: [fk_i0u174uptv5lf1ram5swmufy7, fk_b9bngbew7788y87fndhgadegj, fk_ca309nfaxnqmpf9vgnkmiaa1w, fk_lbf1d33uaefdj5u00700981d3]
+01:17:23.113 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [fk_i0u174uptv5lf1ram5swmufy7, fk_b9bngbew7788y87fndhgadegj, primary, fk_ca309nfaxnqmpf9vgnkmiaa1w, fk_lbf1d33uaefdj5u00700981d3]
+01:17:23.120 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000261: Table found: lpgx.sys_user_role
+01:17:23.120 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [role_id, user_id]
+01:17:23.120 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: [fk_fxu3td9m5o7qov1kbdvmn0g0x, fk_fethvr269t6stivlddbo5pxry]
+01:17:23.120 [main] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [fk_fxu3td9m5o7qov1kbdvmn0g0x, fk_fethvr269t6stivlddbo5pxry]
+01:17:23.126 [main] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000232: Schema update complete
+01:17:31.888 [qtp16857234-23] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+01:17:31.888 [qtp16857234-23] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/manager/login
+01:17:33.671 [qtp16857234-24] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+01:17:33.671 [qtp16857234-24] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/plugins/font-awesome/css/font-awesome.min.css
+01:17:33.677 [qtp16857234-25] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+01:17:33.677 [qtp16857234-25] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/plugins/bootstrap/css/bootstrap.min.css
+01:17:33.698 [qtp16857234-26] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+01:17:33.698 [qtp16857234-26] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/plugins/uniform/css/uniform.default.css
+01:17:33.698 [qtp16857234-21] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+01:17:33.698 [qtp16857234-21] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/plugins/select2/select2_metro.css
+01:17:33.703 [qtp16857234-23] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+01:17:33.704 [qtp16857234-23] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/css/style-metronic.css
+01:17:33.707 [qtp16857234-24] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+01:17:33.707 [qtp16857234-24] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/css/plugins.css
+01:17:33.712 [qtp16857234-22] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+01:17:33.712 [qtp16857234-22] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/css/style.css
+01:17:33.717 [qtp16857234-21] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+01:17:33.717 [qtp16857234-21] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/css/themes/default.css
+01:17:33.722 [qtp16857234-25] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+01:17:33.722 [qtp16857234-24] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+01:17:33.722 [qtp16857234-25] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/css/style-responsive.css
+01:17:33.722 [qtp16857234-24] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/css/custom.css
+01:17:33.724 [qtp16857234-22] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+01:17:33.724 [qtp16857234-22] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/css/pages/login.css
+01:17:33.726 [qtp16857234-26] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+01:17:33.726 [qtp16857234-26] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/img/logo-big.png
+01:17:33.750 [qtp16857234-23] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+01:17:33.751 [qtp16857234-23] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/fonts/font.css
+01:17:33.758 [qtp16857234-21] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+01:17:33.758 [qtp16857234-21] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/plugins/jquery-1.10.2.min.js
+01:17:33.761 [qtp16857234-26] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+01:17:33.762 [qtp16857234-26] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/plugins/jquery-migrate-1.2.1.min.js
+01:17:33.777 [qtp16857234-22] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+01:17:33.777 [qtp16857234-22] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/plugins/bootstrap-hover-dropdown/twitter-bootstrap-hover-dropdown.min.js
+01:17:33.778 [qtp16857234-24] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+01:17:33.778 [qtp16857234-25] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+01:17:33.778 [qtp16857234-24] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/plugins/jquery-slimscroll/jquery.slimscroll.min.js
+01:17:33.778 [qtp16857234-25] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/plugins/bootstrap/js/bootstrap.min.js
+01:17:33.778 [qtp16857234-21] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+01:17:33.778 [qtp16857234-21] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/plugins/jquery.blockui.min.js
+01:17:33.783 [qtp16857234-21] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+01:17:33.783 [qtp16857234-21] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/plugins/jquery.cookie.min.js
+01:17:33.787 [qtp16857234-21] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+01:17:33.788 [qtp16857234-21] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/plugins/jquery-validation/dist/jquery.validate.min.js
+01:17:33.790 [qtp16857234-22] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+01:17:33.790 [qtp16857234-22] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/plugins/uniform/jquery.uniform.min.js
+01:17:33.796 [qtp16857234-22] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+01:17:33.796 [qtp16857234-22] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/scripts/app.js
+01:17:33.797 [qtp16857234-26] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+01:17:33.797 [qtp16857234-26] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/img/syncfusion-icons-white.png
+01:17:33.797 [qtp16857234-23] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+01:17:33.797 [qtp16857234-23] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/scripts/login.js
+01:17:33.797 [qtp16857234-24] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+01:17:33.797 [qtp16857234-24] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/plugins/select2/select2.min.js
+01:17:33.911 [qtp16857234-26] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+01:17:33.911 [qtp16857234-26] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/assets/plugins/uniform/images/sprite.png
+01:17:43.543 [qtp16857234-22] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+01:17:43.543 [qtp16857234-22] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/sys/company
+01:17:44.372 [qtp16857234-26] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+01:17:44.380 [qtp16857234-24] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+01:17:44.392 [qtp16857234-26] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/img/avatar2.jpg
+01:17:44.373 [qtp16857234-25] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+01:17:44.393 [qtp16857234-25] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/img/avatar1.jpg
+01:17:44.373 [qtp16857234-21] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+01:17:44.393 [qtp16857234-21] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/img/avatar3.jpg
+01:17:44.372 [qtp16857234-23] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+01:17:44.401 [qtp16857234-23] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/img/menu-toggler.png
+01:17:44.393 [qtp16857234-24] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/static/js/Tree.js
+01:17:46.052 [qtp16857234-21] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+01:17:46.052 [qtp16857234-21] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/sys/office
+01:17:47.104 [qtp16857234-26] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+01:17:47.104 [qtp16857234-26] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/sys/role
+01:17:47.907 [qtp16857234-25] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+01:17:47.907 [qtp16857234-25] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/sys/menu
+01:17:48.798 [qtp16857234-22] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+01:17:48.799 [qtp16857234-22] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/sys/dict
+01:17:49.504 [qtp16857234-26] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+01:17:49.504 [qtp16857234-26] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/sys/log
+01:17:50.331 [qtp16857234-21] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+01:17:50.331 [qtp16857234-21] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/sys/dict
+01:17:50.839 [qtp16857234-23] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+01:17:50.839 [qtp16857234-23] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/sys/menu
+01:17:51.273 [qtp16857234-26] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+01:17:51.273 [qtp16857234-26] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/sys/role
+01:17:51.672 [qtp16857234-25] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+01:17:51.672 [qtp16857234-25] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/sys/office
+01:17:58.600 [qtp16857234-26] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+01:17:58.600 [qtp16857234-26] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/sys/office
+01:18:00.089 [qtp16857234-22] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+01:18:00.090 [qtp16857234-22] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/sys/role
+01:18:00.710 [qtp16857234-24] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+01:18:00.710 [qtp16857234-24] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/sys/menu
+01:18:01.274 [qtp16857234-21] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+01:18:01.274 [qtp16857234-21] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/sys/dict
+01:18:01.826 [qtp16857234-22] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+01:18:01.827 [qtp16857234-22] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/sys/log
+01:18:03.480 [qtp16857234-26] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+01:18:03.481 [qtp16857234-26] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/sys/dict
+01:18:04.273 [qtp16857234-22] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+01:18:04.273 [qtp16857234-22] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/sys/menu
+01:18:04.970 [qtp16857234-24] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+01:18:04.971 [qtp16857234-24] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/sys/role
+01:18:05.542 [qtp16857234-26] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+01:18:05.543 [qtp16857234-26] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/sys/office
+01:18:06.673 [qtp16857234-22] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+01:18:06.673 [qtp16857234-22] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/sys/office
+01:18:07.014 [qtp16857234-24] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+01:18:07.014 [qtp16857234-24] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/sys/role
+01:18:07.483 [qtp16857234-26] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+01:18:07.483 [qtp16857234-26] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/sys/menu
+01:18:07.916 [qtp16857234-23] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+01:18:07.917 [qtp16857234-23] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/sys/dict
+01:18:08.327 [qtp16857234-24] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+01:18:08.327 [qtp16857234-24] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/sys/log
+01:18:21.407 [qtp16857234-24] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+01:18:21.407 [qtp16857234-24] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/sys/dict
+01:18:22.272 [qtp16857234-25] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+01:18:22.272 [qtp16857234-25] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/sys/menu
+01:18:22.829 [qtp16857234-22] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+01:18:22.829 [qtp16857234-22] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/sys/role
+01:18:23.695 [qtp16857234-26] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+01:18:23.695 [qtp16857234-26] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/sys/menu
+01:18:24.363 [qtp16857234-21] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+01:18:24.364 [qtp16857234-21] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/sys/dict
+01:18:26.906 [qtp16857234-26] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+01:18:26.907 [qtp16857234-26] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/sys/log
+01:18:27.382 [qtp16857234-22] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+01:18:27.383 [qtp16857234-22] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/sys/dict
+01:18:27.768 [qtp16857234-24] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+01:18:27.768 [qtp16857234-24] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/sys/menu
+01:18:28.193 [qtp16857234-26] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+01:18:28.196 [qtp16857234-26] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/sys/role
+01:18:28.598 [qtp16857234-21] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+01:18:28.598 [qtp16857234-21] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/sys/office
+01:18:29.515 [qtp16857234-24] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+01:18:29.515 [qtp16857234-24] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/sys/office
+01:18:29.848 [qtp16857234-26] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+01:18:29.848 [qtp16857234-26] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/sys/role
+01:18:30.225 [qtp16857234-22] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+01:18:30.225 [qtp16857234-22] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/sys/menu
+01:18:30.623 [qtp16857234-23] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+01:18:30.623 [qtp16857234-23] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/sys/dict
+01:18:31.038 [qtp16857234-24] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+01:18:31.038 [qtp16857234-24] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/sys/log
+01:18:31.558 [qtp16857234-22] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+01:18:31.559 [qtp16857234-22] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/sys/dict
+01:18:31.933 [qtp16857234-23] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+01:18:31.933 [qtp16857234-23] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/sys/menu
+01:18:32.347 [qtp16857234-24] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+01:18:32.347 [qtp16857234-24] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/sys/office
+01:18:32.765 [qtp16857234-22] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+01:18:32.765 [qtp16857234-22] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/sys/office
+01:18:33.550 [qtp16857234-25] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+01:18:33.551 [qtp16857234-25] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/sys/office
+01:18:34.173 [qtp16857234-24] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+01:18:34.173 [qtp16857234-24] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/sys/role
+01:18:34.564 [qtp16857234-21] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+01:18:34.564 [qtp16857234-21] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/sys/menu
+01:18:34.990 [qtp16857234-25] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+01:18:34.990 [qtp16857234-25] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/sys/dict
+01:18:35.491 [qtp16857234-24] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+01:18:35.491 [qtp16857234-24] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/sys/log
+01:18:36.039 [qtp16857234-21] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+01:18:36.039 [qtp16857234-21] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/sys/dict
+01:18:36.406 [qtp16857234-23] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+01:18:36.407 [qtp16857234-23] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/sys/menu
+01:18:36.841 [qtp16857234-24] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+01:18:36.841 [qtp16857234-24] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/sys/role
+01:18:37.638 [qtp16857234-21] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+01:18:37.638 [qtp16857234-21] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/sys/office
+01:18:38.832 [qtp16857234-23] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+01:18:38.832 [qtp16857234-23] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/sys/office
+01:18:39.231 [qtp16857234-24] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+01:18:39.231 [qtp16857234-24] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/sys/role
+01:18:39.703 [qtp16857234-21] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+01:18:39.703 [qtp16857234-21] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/sys/menu
+01:18:46.785 [qtp16857234-22] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+01:18:46.785 [qtp16857234-22] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/sys/log
+01:18:47.287 [qtp16857234-21] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+01:18:47.287 [qtp16857234-21] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/sys/dict
+01:18:47.741 [qtp16857234-23] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+01:18:47.741 [qtp16857234-23] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/sys/menu
+01:18:48.239 [qtp16857234-22] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+01:18:48.239 [qtp16857234-22] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/sys/role
+01:18:48.774 [qtp16857234-21] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+01:18:48.774 [qtp16857234-21] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/sys/office
+01:18:49.868 [qtp16857234-23] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+01:18:49.868 [qtp16857234-23] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/sys/office
+01:18:50.281 [qtp16857234-25] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+01:18:50.281 [qtp16857234-25] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/sys/role
+01:18:50.831 [qtp16857234-26] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+01:18:50.832 [qtp16857234-26] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/sys/menu
+01:18:51.222 [qtp16857234-24] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+01:18:51.223 [qtp16857234-24] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/sys/dict
+01:18:51.622 [qtp16857234-22] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+01:18:51.622 [qtp16857234-22] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/sys/log
+01:19:02.219 [qtp16857234-23] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+01:19:02.219 [qtp16857234-23] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/sys/dict
+01:19:02.835 [qtp16857234-22] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+01:19:02.835 [qtp16857234-22] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/sys/log
+01:19:11.955 [qtp16857234-25] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+01:19:11.955 [qtp16857234-25] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/sys/dict
+01:19:12.364 [qtp16857234-26] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+01:19:12.364 [qtp16857234-26] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/sys/menu
+01:19:12.775 [qtp16857234-24] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+01:19:12.775 [qtp16857234-24] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/sys/role
+01:19:13.175 [qtp16857234-22] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+01:19:13.176 [qtp16857234-22] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/sys/office
+01:19:13.942 [qtp16857234-26] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+01:19:13.943 [qtp16857234-26] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/sys/office
+01:19:14.286 [qtp16857234-23] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+01:19:14.287 [qtp16857234-23] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/sys/role
+01:19:14.782 [qtp16857234-22] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+01:19:14.783 [qtp16857234-22] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/sys/menu
+01:19:15.185 [qtp16857234-21] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+01:19:15.185 [qtp16857234-21] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/sys/menu
+01:19:15.541 [qtp16857234-24] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+01:19:15.542 [qtp16857234-24] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/sys/dict
+01:19:16.033 [qtp16857234-25] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:true
+01:19:16.033 [qtp16857234-25] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/sys/log
+01:19:29.069 [qtp16857234-25] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - isAjax:false
+01:19:29.069 [qtp16857234-25] INFO  o.s.m.w.filter.SiteMeshWrapperFilter - url:/clpgx/manager/lock

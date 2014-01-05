@@ -1,19 +1,9 @@
-/*
- * Powered By [rapid-framework]
- * Web Site: http://www.rapid-framework.org.cn
- * Google Code: http://code.google.com/p/rapid-framework/
- * Since 2008 - 2013
- */
-
-
 package com.dlh.clpgx.modules.manager.controller;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.propertyeditors.CustomDateEditor;
 import org.springframework.stereotype.Controller;
@@ -26,12 +16,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
-import org.springside.modules.domain.BaseQuery;
-
 import com.dlh.clpgx.freamwork.web.BaseController;
 import com.dlh.clpgx.modules.manager.entity.GasTank;
 import com.dlh.clpgx.modules.manager.service.GasTankService;
-
 @Controller
 @RequestMapping("/web/gastank")
 public class GasTankController extends BaseController{

@@ -1,20 +1,14 @@
 package com.dlh.clpgx.freamwork.dao;
 import java.util.List;
 import javax.persistence.EntityManager;
-import org.apache.lucene.search.BooleanClause;
-import org.apache.lucene.search.BooleanQuery;
-import org.apache.lucene.search.Sort;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.criterion.Criterion;
 import org.hibernate.criterion.DetachedCriteria;
-import org.hibernate.search.FullTextSession;
 import org.hibernate.transform.ResultTransformer;
 /**
  * DAO支持接口
- * @author ThinkGem
- * @version 2013-05-15
- * @param <T>
+ * @author fjl
  */
 public interface BaseDao<T> {
 	/**
@@ -26,12 +20,10 @@ public interface BaseDao<T> {
 	 * 获取 Session
 	 */
 	public Session getSession();
-	
 	/**
 	 * 强制与数据库同步
 	 */
 	public void flush();
-
 	/**
 	 * 清除缓存数据
 	 */
@@ -181,47 +173,5 @@ public interface BaseDao<T> {
 	 */
 	public DetachedCriteria createDetachedCriteria(Criterion... criterions);
 	
-	// -------------- Hibernate search --------------
 	
-	/**
-	 * 获取全文Session
-	 */
-	public FullTextSession getFullTextSession();
-	
-	/**
-	 * 建立索引
-	 */
-	public void createIndex();
-	
-	/**
-	 * 全文检索
-	 * @param page 分页对象
-	 * @param query 关键字查询对象
-	 * @param queryFilter 查询过滤对象
-	 * @param sort 排序对象
-	 * @return 分页对象
-	 */
-	public Page<T> search(Page<T> page, BooleanQuery query, BooleanQuery queryFilter, Sort sort);
-	
-	/**
-	 * 获取全文查询对象
-	 */
-	public BooleanQuery getFullTextQuery(BooleanClause... booleanClauses);
-	
-	/**
-	 * 获取全文查询对象
-	 * @param q 查询关键字
-	 * @param fields 查询字段
-	 * @return 全文查询对象
-	 */
-	public BooleanQuery getFullTextQuery(String q, String... fields);
-	
-	/**
-	 * 设置关键字高亮
-	 * @param query 查询对象
-	 * @param list 设置高亮的内容列表
-	 * @param subLength 截取长度
-	 * @param fields 字段名
-	 */
-	public List<T> keywordsHighlight(BooleanQuery query, List<T> list, int subLength, String... fields);
 }

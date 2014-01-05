@@ -1,17 +1,8 @@
-/**
- * Copyright &copy; 2012-2013 <a href="https://github.com/thinkgem/jeesite">JeeSite</a> All rights reserved.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- */
 package com.dlh.clpgx.freamwork.common;
-
 import java.io.UnsupportedEncodingException;
-import java.util.Locale;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import javax.servlet.http.HttpServletRequest;
-
-
 /**
  * 字符串工具类, 继承org.apache.commons.lang3.StringUtils类
  * @author ThinkGem

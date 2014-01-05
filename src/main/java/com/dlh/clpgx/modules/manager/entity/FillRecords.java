@@ -186,43 +186,34 @@ public class FillRecords extends IdEntity{
 	public void setClientcode(java.lang.String value) {
 		this.clientcode = value;
 	}
-	
 	@Column(name = "filltype", unique = false, nullable = true, insertable = true, updatable = true, length = 255)
 	public java.lang.String getFilltype() {
 		return this.filltype;
 	}
-	
 	public void setFilltype(java.lang.String value) {
 		this.filltype = value;
 	}
-	
 	@Column(name = "worker", unique = false, nullable = true, insertable = true, updatable = true, length = 255)
 	public java.lang.String getWorker() {
 		return this.worker;
 	}
-	
 	public void setWorker(java.lang.String value) {
 		this.worker = value;
 	}
-	
 	@Column(name = "initweight", unique = false, nullable = true, insertable = true, updatable = true, length = 255)
 	public java.lang.String getInitweight() {
 		return this.initweight;
 	}
-	
 	public void setInitweight(java.lang.String value) {
 		this.initweight = value;
 	}
-	
 	@Column(name = "fillweight", unique = false, nullable = true, insertable = true, updatable = true, length = 255)
 	public java.lang.String getFillweight() {
 		return this.fillweight;
 	}
-	
 	public void setFillweight(java.lang.String value) {
 		this.fillweight = value;
 	}
-	
 	@Column(name = "desweight", unique = false, nullable = true, insertable = true, updatable = true, length = 255)
 	public java.lang.String getDesweight() {
 		return this.desweight;
@@ -236,12 +227,7 @@ public class FillRecords extends IdEntity{
 	public java.lang.String getRevdata() {
 		return this.revdata;
 	}
-	
 	public void setRevdata(java.lang.String value) {
 		this.revdata = value;
 	}
-	
-
-	
-
 }

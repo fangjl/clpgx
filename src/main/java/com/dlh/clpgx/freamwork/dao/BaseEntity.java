@@ -7,8 +7,6 @@ import javax.persistence.MappedSuperclass;
 
 /**
  * Entity支持类
- * @author ThinkGem
- * @version 2013-01-15
  */  
 @MappedSuperclass
 public abstract class BaseEntity implements Serializable {

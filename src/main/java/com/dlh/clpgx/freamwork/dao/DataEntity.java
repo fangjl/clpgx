@@ -3,7 +3,6 @@ package com.dlh.clpgx.freamwork.dao;
 
 import java.io.Serializable;
 import java.util.Date;
-
 import javax.persistence.FetchType;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -12,7 +11,6 @@ import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-
 import org.hibernate.annotations.NotFound;
 import org.hibernate.annotations.NotFoundAction;
 import org.hibernate.search.annotations.Analyze;
@@ -22,7 +20,6 @@ import org.hibernate.search.annotations.Index;
 import org.hibernate.search.annotations.Resolution;
 import org.hibernate.search.annotations.Store;
 import org.hibernate.validator.constraints.Length;
-
 import com.dlh.clpgx.modules.sys.entity.Company;
 import com.dlh.clpgx.modules.sys.entity.User;
 import com.fasterxml.jackson.annotation.JsonFormat;
@@ -31,8 +28,6 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * 数据Entity类
- * @author ThinkGem
- * @version 2013-05-28
  */
 @MappedSuperclass
 public abstract class DataEntity extends BaseEntity implements Serializable {

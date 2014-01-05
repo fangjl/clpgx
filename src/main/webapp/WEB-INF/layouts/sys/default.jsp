@@ -42,8 +42,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
    
    
    <!-- BEGIN THEME STYLES --> 
-      <link href="//code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" rel="stylesheet" type="text/css"/>
-   
+    
    <link href="${ctx}/static/assets/css/style-metronic.css" rel="stylesheet" type="text/css"/>
    <link href="${ctx}/static/assets/css/style.css" rel="stylesheet" type="text/css"/>
    <link href="${ctx}/static/assets/css/style-responsive.css" rel="stylesheet" type="text/css"/>
@@ -61,7 +60,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
    <div class="header navbar navbar-inverse navbar-fixed-top">
       <!-- BEGIN TOP NAVIGATION BAR -->
       <div class="container">
-      <%@ include file="/WEB-INF/layouts/sys/header.jsp"%>
+      <%@ include file="/WEB-INF/layouts/manager/header.jsp"%>
       </div>
       <!-- END TOP NAVIGATION BAR -->
    </div>
@@ -90,6 +89,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
  	</div>
  	 </div>
  	<!-- footer -->
+	<%@ include file="/WEB-INF/layouts/manager/footer.jsp"%>
 
 	<!-- footer -->
 	
