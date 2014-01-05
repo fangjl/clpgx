@@ -50,8 +50,7 @@
  	<jpa:repositories base-package="com.dlh.clpgx" 
  	 transaction-manager-ref="transactionManager" 
  	 entity-manager-factory-ref="entityManagerFactory"
- 	 repository-impl-postfix="impl"
- 	 factory-class="org.springside.modules.persistence.DcoreJpaRepositoryFactoryBean"
+ 	 repository-impl-postfix="Impl"
  	 />
 
 	<!-- Jpa 事务配置 -->

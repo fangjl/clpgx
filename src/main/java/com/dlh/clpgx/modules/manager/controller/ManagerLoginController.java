@@ -11,9 +11,15 @@ import com.dlh.clpgx.modules.sys.security.ShiroDbRealm.ShiroUser;
 @Controller
 @RequestMapping("/manager/login")
 public class ManagerLoginController extends BaseController{
-	
 	@RequestMapping(method = RequestMethod.GET)
 	public String login(){
+		ShiroUser user = (ShiroUser) SecurityUtils.getSubject().getPrincipal();
+		/**
+		 * 如果已经登入      
+		 */
+		if(user!=null&& user.getId()!=null){
+			return "redirect:/manager/home";
+		}
 		return "manager/login";
 	}
 	@RequestMapping(value="lock" ,method = RequestMethod.GET)
@@ -30,9 +36,12 @@ public class ManagerLoginController extends BaseController{
 	@RequestMapping(method = RequestMethod.POST)
 	public String fail(@RequestParam(FormAuthenticationFilter.DEFAULT_USERNAME_PARAM) String userName, Model model) {
 		ShiroUser user = (ShiroUser) SecurityUtils.getSubject().getPrincipal();
-//		if(user!=null &&!user.getName().equals("")){
-//			return "redirect:manager/home";
-//		}
+		/**
+		 * 如果已经登入      
+		 */
+		if(user!=null&& user.getId()!=null){
+			return "redirect:/manager/home";
+		}
 		model.addAttribute(FormAuthenticationFilter.DEFAULT_USERNAME_PARAM, userName);
 		return "manager/login";
 	}

@@ -10,7 +10,8 @@ var UITree = function () {
             };
 
             DataSourceTree.prototype = {
-
+ 
+ 
                 data: function (options, callback) {
                     var self = this;
 
@@ -89,36 +90,36 @@ var UITree = function () {
 
             $('#MyTree').tree({
                 dataSource: treeDataSource,
-                loadingHTML: '<img src="assets/img/input-spinner.gif"/>',
+                loadingHTML: '<img src="assets/img/input-spinner.gif"/>'
             });
 
 
             $('#MyTree2').tree({
                 dataSource: treeDataSource2,
-                loadingHTML: '<img src="assets/img/input-spinner.gif"/>',
+                loadingHTML: '<img src="assets/img/input-spinner.gif"/>'
             });
 
             $('#MyTree3').tree({
                 dataSource: treeDataSource3,
-                loadingHTML: '<img src="assets/img/input-spinner.gif"/>',
+                loadingHTML: '<img src="assets/img/input-spinner.gif"/>'
             });
 
             $('#MyTree4').tree({
                 selectable: false,
                 dataSource: treeDataSource4,
-                loadingHTML: '<img src="assets/img/input-spinner.gif"/>',
+                loadingHTML: '<img src="assets/img/input-spinner.gif"/>'
             });
 
             $('#MyTree5').tree({
                 selectable: false,
                 dataSource: treeDataSource5,
-                loadingHTML: '<img src="assets/img/input-spinner.gif"/>',
+                loadingHTML: '<img src="assets/img/input-spinner.gif"/>'
             });
 
             $('#MyTree6').tree({
                 selectable: false,
                 dataSource: treeDataSource6,
-                loadingHTML: '<img src="assets/img/input-spinner.gif"/>',
+                loadingHTML: '<img src="assets/img/input-spinner.gif"/>'
             });
         }
 

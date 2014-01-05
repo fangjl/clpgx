@@ -14,6 +14,7 @@ public class Module extends IdEntity{
 	private String css;
 	private Module parent;
 	private String remark;
+	
 	public String getCss() {
 		return css;
 	}

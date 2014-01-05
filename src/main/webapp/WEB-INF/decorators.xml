@@ -6,11 +6,16 @@
 		<pattern>/manager/login</pattern>
 		<!--过滤条买家版锁定页面-->
 		<pattern>/manager/lock</pattern>
+		<pattern>/sys/login</pattern>
 	</excludes>
 	
-	
-	<decorator name="default" page="default.jsp">
+	<decorator name="manager" page="manager/default.jsp">
 		<pattern>/manager/*</pattern>
 	</decorator>
-	
+	<decorator name="sys" page="sys/default.jsp" >
+		<pattern>/sys/*</pattern>
+	</decorator>
+	<decorator name="site" page="sys/default.jsp" >
+		<pattern>/site/*</pattern>
+	</decorator>
 </decorators>

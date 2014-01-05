@@ -1,4 +1,3 @@
-
 package com.dlh.clpgx.modules.sys.controller;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -28,15 +27,15 @@ import com.dlh.clpgx.modules.sys.entity.Role;
 import com.dlh.clpgx.modules.sys.service.RoleService;
 
 @Controller
-@RequestMapping("/manager/sys/role")
+@RequestMapping("/sys/role")
 public class RoleController extends BaseController{
 	
 	
 	//默认多列排序,example: username desc,createTime asc
 	
 	private RoleService roleService;
-	private final String LIST_ACTION = "redirect:/manager/sys/role";
-	private final String BASE_PATH = "/manager/sys/role";
+	private final String LIST_ACTION = "redirect:/sys/role";
+	private final String BASE_PATH = "/sys/role";
 
 	/** 
 	 * 增加setXXXX()方法,spring就可以通过autowire自动设置对象属性,注意大小写
@@ -44,7 +43,6 @@ public class RoleController extends BaseController{
 	@Autowired
 	public void setRoleService(RoleService service) {
 		this.roleService = service;
-		
 	}
 	
 	/** binder用于bean属性的设置 */
@@ -61,7 +59,6 @@ public class RoleController extends BaseController{
 		model.put("now", new java.sql.Timestamp(System.currentTimeMillis()));
 		model.put("action", BASE_PATH);
 		model.addAttribute("fields", Role.class.getDeclaredFields());
-	
 	}
 	
 	
@@ -87,7 +84,7 @@ public class RoleController extends BaseController{
 	@RequestMapping(value = "/list" ,method = RequestMethod.GET)
 	@ResponseBody
 	public ResponseEntity<Map> list(ModelMap model,Role vo,
-			HttpServletRequest request)  {
+			HttpServletRequest request){
 		Page page =roleService.findPageByFieldsOrCriteria(new DatatablesQuery(request, vo));
 		ResponseEntity<Map> responseResult = new ResponseEntity<Map>(TransformationDataTableMap(page,request), org.springframework.http.HttpStatus.OK);     
 		return responseResult;
@@ -119,7 +116,7 @@ public class RoleController extends BaseController{
 	
 	/** 编辑 */
 	@RequestMapping(value="/{id}/edit")
-	public String edit(ModelMap model,@PathVariable java.lang.Long id) throws Exception {
+	public String edit(ModelMap model,@PathVariable java.lang.Long id)  {
 		Role role = (Role)roleService.findOne(id);
 		model.addAttribute("role",role);
 		return BASE_PATH+"edit";

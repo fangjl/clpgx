@@ -1,4 +1,3 @@
-
 package com.dlh.clpgx.modules.sys.controller;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -24,17 +23,20 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import org.springside.modules.domain.BaseQuery;
 import com.dlh.clpgx.freamwork.domain.DatatablesQuery;
 import com.dlh.clpgx.freamwork.web.BaseController;
-import com.dlh.clpgx.modules.manager.entity.FillRecords;
 import com.dlh.clpgx.modules.sys.entity.Module;
 import com.dlh.clpgx.modules.sys.service.ModuleService;
 
 @Controller
-@RequestMapping("/manager/sys/module")
+@RequestMapping("/sys/module")
 public class ModuleController extends BaseController{
+	
+	
 	//默认多列排序,example: username desc,createTime asc
+	
 	private ModuleService moduleService;
-	private final String LIST_ACTION = "redirect:/manager/sys/module";
-	private final String BASE_PATH = "/manager/sys/module";
+	private final String LIST_ACTION = "redirect:/sys/module";
+	private final String BASE_PATH = "/sys/module";
+
 	/** 
 	 * 增加setXXXX()方法,spring就可以通过autowire自动设置对象属性,注意大小写
 	 **/
@@ -72,7 +74,7 @@ public class ModuleController extends BaseController{
 	@RequestMapping(method = RequestMethod.GET)
 	public String index(ModelMap model,Module vo,
 			HttpServletRequest request) {
-		model.addAttribute("pages",moduleService.findPageByFieldsAndCriteria(new BaseQuery(request, vo)));
+		//model.addAttribute("pages",moduleService.findPageByFieldsAndCriteria(new BaseQuery(request, vo)));
 		return BASE_PATH+"/index";
 	}
 	
@@ -82,8 +84,20 @@ public class ModuleController extends BaseController{
 	@RequestMapping(value = "/list" ,method = RequestMethod.GET)
 	@ResponseBody
 	public ResponseEntity<Map> list(ModelMap model,Module vo,
-			HttpServletRequest request) {
+			HttpServletRequest request){
 		Page page =moduleService.findPageByFieldsOrCriteria(new DatatablesQuery(request, vo));
+		ResponseEntity<Map> responseResult = new ResponseEntity<Map>(TransformationDataTableMap(page,request), org.springframework.http.HttpStatus.OK);     
+		return responseResult;
+	}
+	
+	/**转换成 DatatablesQuery  
+	 *  用异步Ajax表 
+	 * @throws JSONException */
+	@RequestMapping(value = "/tree" ,method = RequestMethod.GET)
+	@ResponseBody
+	public ResponseEntity<Map> tree(ModelMap model,Module vo,
+			HttpServletRequest request){
+		Page page =moduleService.f
 		ResponseEntity<Map> responseResult = new ResponseEntity<Map>(TransformationDataTableMap(page,request), org.springframework.http.HttpStatus.OK);     
 		return responseResult;
 	}
@@ -103,13 +117,18 @@ public class ModuleController extends BaseController{
 		if(errors.hasErrors()) {
 			return  BASE_PATH+"/new";
 		}
+		
 		moduleService.save(module);
 		redirectAttributes.addFlashAttribute("message", "保存成功！");
 		return LIST_ACTION;
 	}
+	
+	
+	
+	
 	/** 编辑 */
 	@RequestMapping(value="/{id}/edit")
-	public String edit(ModelMap model,@PathVariable java.lang.Long id) throws Exception {
+	public String edit(ModelMap model,@PathVariable java.lang.Long id)  {
 		Module module = (Module)moduleService.findOne(id);
 		model.addAttribute("module",module);
 		return BASE_PATH+"edit";

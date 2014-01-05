@@ -86,7 +86,7 @@ public class UserService{
 	 */
 	private String getCurrentUserName() {
 		ShiroUser user = (ShiroUser) SecurityUtils.getSubject().getPrincipal();
-		return user.loginName;
+		return user.getName();
 	}
 	/**
 	 * 设定安全的密码，生成随机的salt并经过1024次 sha-1 hash

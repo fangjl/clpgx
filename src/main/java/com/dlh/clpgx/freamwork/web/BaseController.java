@@ -16,7 +16,7 @@ public class BaseController {
 		ShiroUser user = (ShiroUser) SecurityUtils.getSubject().getPrincipal();
 		if(user!=null){
 
-			return user.id;
+			return user.getId();
 		}
 		return null;
 	}

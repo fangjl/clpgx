@@ -73,13 +73,13 @@ public class GasTankController extends BaseController{
 	}
 	
 	/** 列表 */
-	@RequestMapping(method = RequestMethod.GET)
-	public String index(ModelMap model,GasTank vo,
-			HttpServletRequest request) {
-		model.addAttribute("pages",gasTankService.findPage(new BaseQuery(request, vo)));
-		return "/gastank/index";
-	}
-	
+//	@RequestMapping(method = RequestMethod.GET)
+//	public String index(ModelMap model,GasTank vo,
+//			HttpServletRequest request) {
+//		model.addAttribute("pages",gasTankService.findPageByFieldsAndCriteria(new BaseQuery(request, vo)));
+//		return "/gastank/index";
+//	}
+//	
 	
 	
 	
@@ -98,7 +98,7 @@ public class GasTankController extends BaseController{
 			return  "/gastank/new";
 		}
 		
-		gasTankService.save(gasTank);
+	//	gasTankService.save(gasTank);
 		redirectAttributes.addFlashAttribute("message", "保存成功！");
 		return LIST_ACTION;
 	}
@@ -109,8 +109,8 @@ public class GasTankController extends BaseController{
 	/** 编辑 */
 	@RequestMapping(value="/{id}/edit")
 	public String edit(ModelMap model,@PathVariable java.lang.Long id) throws Exception {
-		GasTank gasTank = (GasTank)gasTankService.findOne(id);
-		model.addAttribute("gasTank",gasTank);
+	//	GasTank gasTank = (GasTank)gasTankService.findOne(id);
+	//	model.addAttribute("gasTank",gasTank);
 		return "/gastank/edit";
 	}
 	
@@ -125,7 +125,7 @@ public class GasTankController extends BaseController{
 			return "/gastank/edit";
 		}
 		
-		gasTankService.save(gasTank);
+	//	gasTankService.save(gasTank);
 		redirectAttributes.addFlashAttribute("message", "更新任务成功");
 		return LIST_ACTION;
 	}
@@ -136,7 +136,7 @@ public class GasTankController extends BaseController{
 	/** 删除 */
 	@RequestMapping(value="delete/{id}",method=RequestMethod.DELETE)
 	public String delete(@PathVariable java.lang.Long id,RedirectAttributes redirectAttributes) {
-		gasTankService.delete(id);
+	//	gasTankService.delete(id);
 		redirectAttributes.addFlashAttribute("message", "删除任务成功");
 		return LIST_ACTION;
 	}

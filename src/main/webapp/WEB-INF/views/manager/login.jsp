@@ -56,11 +56,9 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 		<!-- BEGIN LOGIN FORM -->
 		<form class="login-form" action="${ctx}/manager/login" method="post">
 			<h3 class="form-title">用你的账号登入.</h3>
-			
 			<%
 			String error = (String) request.getAttribute(FormAuthenticationFilter.DEFAULT_ERROR_KEY_ATTRIBUTE_NAME);
 			System.out.println("error:"+ 	error);
-			
 			if(error != null){
 			%>
 				<div class="alert alert-error">
@@ -70,9 +68,6 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 			<%
 			}
 			%>
-			
-			
-			
 			
 			<div class="form-group">
 				<!--ie8, ie9 does not support html5 placeholder, so we just show field title for that-->

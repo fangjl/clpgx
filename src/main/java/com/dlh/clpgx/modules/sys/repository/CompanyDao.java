@@ -1,6 +1,6 @@
 package com.dlh.clpgx.modules.sys.repository;
-import org.springside.modules.persistence.DcoreJpaRepository;
+import org.springframework.data.repository.PagingAndSortingRepository;
 import com.dlh.clpgx.modules.sys.entity.Company;
-public interface CompanyDao extends DcoreJpaRepository<Company, Long> {
+public interface CompanyDao extends PagingAndSortingRepository<Company, Long> {
 
 }

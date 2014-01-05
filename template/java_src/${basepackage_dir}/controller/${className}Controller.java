@@ -3,18 +3,13 @@
 <#assign classNameFirstLower = className?uncap_first>   
 <#assign classNameLowerCase = className?lower_case>   
 <#assign pkJavaType = table.idColumn.javaType>   
-
 package ${basepackage}.controller;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Map;
-
-import javax.servlet.ServletRequest;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
-
-import org.json.JSONException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.propertyeditors.CustomDateEditor;
 import org.springframework.data.domain.Page;
@@ -33,7 +28,6 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import org.springside.modules.domain.BaseQuery;
 import com.dlh.clpgx.freamwork.domain.DatatablesQuery;
 import com.dlh.clpgx.freamwork.web.BaseController;
-import com.dlh.clpgx.modules.manager.entity.FillRecords;
 import ${basepackage}.entity.${className};
 import ${basepackage}.service.${className}Service;
 
@@ -95,7 +89,7 @@ public class ${className}Controller extends BaseController{
 	@RequestMapping(value = "/list" ,method = RequestMethod.GET)
 	@ResponseBody
 	public ResponseEntity<Map> list(ModelMap model,${className} vo,
-			HttpServletRequest request) throws JSONException {
+			HttpServletRequest request){
 		Page page =${classNameFirstLower}Service.findPageByFieldsOrCriteria(new DatatablesQuery(request, vo));
 		ResponseEntity<Map> responseResult = new ResponseEntity<Map>(TransformationDataTableMap(page,request), org.springframework.http.HttpStatus.OK);     
 		return responseResult;
@@ -127,7 +121,7 @@ public class ${className}Controller extends BaseController{
 	
 	/** 编辑 */
 	@RequestMapping(value="/{id}/edit")
-	public String edit(ModelMap model,@PathVariable ${pkJavaType} id) throws Exception {
+	public String edit(ModelMap model,@PathVariable ${pkJavaType} id)  {
 		${className} ${classNameFirstLower} = (${className})${classNameFirstLower}Service.findOne(id);
 		model.addAttribute("${classNameFirstLower}",${classNameFirstLower});
 		return BASE_PATH+"edit";

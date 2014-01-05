@@ -54,7 +54,7 @@ public class ProfileController {
 	 */
 	private Long getCurrentUserId() {
 		ShiroUser user = (ShiroUser) SecurityUtils.getSubject().getPrincipal();
-		return user.id;
+		return user.getId();
 	}
 
 	/**
@@ -62,6 +62,6 @@ public class ProfileController {
 	 */
 	private void updateCurrentUserName(String userName) {
 		ShiroUser user = (ShiroUser) SecurityUtils.getSubject().getPrincipal();
-		user.name = userName;
+		user.setName(userName);
 	}
 }

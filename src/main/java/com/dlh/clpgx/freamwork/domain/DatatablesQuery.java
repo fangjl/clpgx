@@ -61,7 +61,6 @@ public class DatatablesQuery extends BaseQuery {
 		Map<String, SearchFilter> filters = SearchFilter.parse(searchParams);
 		return DynamicSpecifications.byOrSearchFilter(filters.values(), getVo().getClass());
 	}
-
 	/**
 	 * 
 	 */
