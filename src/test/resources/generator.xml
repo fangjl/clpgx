@@ -6,16 +6,14 @@
 		1.会为所有的property生成property_dir属性,如pkg=com.company => pkg_dir=com/company
 		2.可以引用环境变量: ${env.JAVA_HOME} or System.properties: ${user.home},property之间也可以相互引用
 	</comment>
-	
-	<entry key="basepackage">com.dlh.clpgx.modules.sys</entry>
-	
+	<entry key="basepackage">com.dlh.clpgx.modules.manager</entry>
 	<!-- jsp namespace: web/${namespace}/${className}/list.jsp -->
 	<entry key="namespace">views</entry>
 
-	<entry key="outRoot">d:\output</entry>
+	<entry key="outRoot">d:\output1</entry>
 	
 	<!-- 需要移除的表名前缀,使用逗号进行分隔多个前缀,示例值: t_,v_ -->
-	<entry key="tableRemovePrefixes">clpgx,sys</entry>
+	<entry key="tableRemovePrefixes">clpgx,sys,site</entry>
 	
 	<entry key="jdbc.username">root</entry>
 	<entry key="jdbc.password"></entry>

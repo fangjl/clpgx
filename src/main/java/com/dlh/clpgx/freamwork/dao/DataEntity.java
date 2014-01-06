@@ -13,12 +13,7 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import org.hibernate.annotations.NotFound;
 import org.hibernate.annotations.NotFoundAction;
-import org.hibernate.search.annotations.Analyze;
-import org.hibernate.search.annotations.DateBridge;
-import org.hibernate.search.annotations.Field;
-import org.hibernate.search.annotations.Index;
-import org.hibernate.search.annotations.Resolution;
-import org.hibernate.search.annotations.Store;
+
 import org.hibernate.validator.constraints.Length;
 import com.dlh.clpgx.modules.sys.entity.Company;
 import com.dlh.clpgx.modules.sys.entity.User;
@@ -132,8 +127,7 @@ public abstract class DataEntity extends BaseEntity implements Serializable {
 	}
 
 	@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-	@Field(index=Index.YES, analyze=Analyze.NO, store=Store.YES)
-	@DateBridge(resolution = Resolution.DAY)
+	
 	public Date getUpdateDate() {
 		return updateDate;
 	}
@@ -142,8 +136,7 @@ public abstract class DataEntity extends BaseEntity implements Serializable {
 		this.updateDate = updateDate;
 	}
 
-	@Length(min=1, max=1)
-	@Field(index=Index.YES, analyze=Analyze.NO, store=Store.YES)
+
 	public String getDelFlag() {
 		return delFlag;
 	}

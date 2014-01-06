@@ -1,12 +1,13 @@
-
 package com.dlh.clpgx.modules.sys.entity;
-
 import java.util.List;
+
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.OrderBy;
@@ -14,16 +15,14 @@ import javax.persistence.Table;
 import javax.persistence.Transient;
 import javax.validation.constraints.NotNull;
 
-
 import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
-import org.hibernate.annotations.Fetch;
-import org.hibernate.annotations.FetchMode;
 import org.hibernate.annotations.NotFound;
 import org.hibernate.annotations.NotFoundAction;
-import org.hibernate.annotations.Where;
 import org.hibernate.validator.constraints.Length;
-import com.dlh.clpgx.freamwork.domain.IdEntity;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.google.common.collect.Lists;
 
 /**
@@ -34,22 +33,30 @@ import com.google.common.collect.Lists;
 @Entity
 @Table(name = "sys_menu")
 @DynamicInsert @DynamicUpdate
-public class Menu extends IdEntity {
+@JsonIgnoreProperties(value = {"hibernateLazyInitializer", "parent","childList"})   
 
-	private static final long serialVersionUID = 1L;
-	private Menu parent;	// 父级菜单
-	private String parentIds; // 所有父级编号
-	private String name; 	// 名称
-	private String href; 	// 链接
-	private String target; 	// 目标（ mainFrame、_blank、_self、_parent、_top）
-	private String icon; 	// 图标
-	private Integer sort; 	// 排序
-	private String isShow; 	// 是否在菜单中显示（1：显示；0：不显示）
+public class Menu {
+	
+	private Long id;
+	private Menu parent;	   // 父级菜单
+	private String parentIds;  // 所有父级编号
+	private String name; 	   // 名称
+	private String href; 	   // 链接
+	private String target; 	   // 目标（ mainFrame、_blank、_self、_parent、_top）
+	private String icon; 	   // 图标
+	private Integer sort; 	   // 排序
+	private String isShow; 	   // 是否在菜单中显示（1：显示；0：不显示）
 	private String permission; // 权限标识
 	
 	private List<Menu> childList = Lists.newArrayList();// 拥有子菜单列表
-	private List<Role> roleList = Lists.newArrayList(); // 拥有角色列表
-
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	public Long getId() {
+		return id;
+	}
+	public void setId(Long id) {
+		this.id = id;
+	}
 	public Menu(){
 		super();
 		this.sort = 30;
@@ -65,7 +72,7 @@ public class Menu extends IdEntity {
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name="parent_id")
 	@NotFound(action = NotFoundAction.IGNORE)
-	@NotNull
+	@JsonIgnore
 	public Menu getParent() {
 		return parent;
 	}
@@ -74,6 +81,7 @@ public class Menu extends IdEntity {
 		this.parent = parent;
 	}
 
+	@JsonIgnore
 	@Length(min=1, max=255)
 	public String getParentIds() {
 		return parentIds;
@@ -119,7 +127,6 @@ public class Menu extends IdEntity {
 		this.icon = icon;
 	}
 	
-	@NotNull
 	public Integer getSort() {
 		return sort;
 	}
@@ -147,7 +154,6 @@ public class Menu extends IdEntity {
 	}
 
 	@OneToMany(cascade = {CascadeType.PERSIST,CascadeType.MERGE,CascadeType.REMOVE},fetch=FetchType.LAZY,mappedBy="parent")
-	@Where(clause="del_flag='"+DEL_FLAG_NORMAL+"'")
 	@OrderBy(value="sort")
 	@NotFound(action = NotFoundAction.IGNORE)
 	public List<Menu> getChildList() {
@@ -158,17 +164,7 @@ public class Menu extends IdEntity {
 		this.childList = childList;
 	}
 	
-	@ManyToMany(mappedBy = "menuList", fetch=FetchType.LAZY)
-	@Where(clause="del_flag='"+DEL_FLAG_NORMAL+"'")
-	@OrderBy("id") @Fetch(FetchMode.SUBSELECT)
-	@NotFound(action = NotFoundAction.IGNORE)
-	public List<Role> getRoleList() {
-		return roleList;
-	}
 	
-	public void setRoleList(List<Role> roleList) {
-		this.roleList = roleList;
-	}
 	
 	@Transient
 	public static void sortList(List<Menu> list, List<Menu> sourcelist, Long parentId){

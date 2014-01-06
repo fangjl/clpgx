@@ -31,6 +31,8 @@ public class BaseController {
 		m.put("iTotalRecords",page.getTotalElements());
 		m.put("iTotalDisplayRecords",page.getTotalElements());
 		m.put("aaData", page.getContent());
+		
+		System.out.println(m);
 		return m;
 	}
 }

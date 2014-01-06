@@ -20,7 +20,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
-import org.springside.modules.domain.BaseQuery;
 import com.dlh.clpgx.freamwork.domain.DatatablesQuery;
 import com.dlh.clpgx.freamwork.web.BaseController;
 import com.dlh.clpgx.modules.sys.entity.Menu;

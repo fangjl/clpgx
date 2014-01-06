@@ -1,3 +1,8 @@
+/**
+ * 系统模块专用
+ */
+
+
 var Sys=function(){
 	
 	var loadTabPanel=function(url,pageContentBody){

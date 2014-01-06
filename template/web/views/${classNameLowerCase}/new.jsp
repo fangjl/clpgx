@@ -4,7 +4,6 @@
 <#assign classNameLowerCase = className?lower_case>
 <%@ page contentType="text/html;charset=UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ taglib prefix="tags" tagdir="/WEB-INF/tags"%>
 <c:set var="ctx" value="<@jspEl 'pageContext.request.contextPath'/>"/>
 <div class="col-md-12">
 	<div class="row">

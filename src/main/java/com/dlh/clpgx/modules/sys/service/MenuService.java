@@ -4,7 +4,6 @@ import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Service;
 
 import com.dlh.clpgx.freamwork.service.BaseService;
-
 import com.dlh.clpgx.modules.sys.entity.Menu;
 import com.dlh.clpgx.modules.sys.repository.MenuDao;
 
@@ -61,6 +60,7 @@ public class  MenuService  extends  BaseService{
 	 * @param vo
 	 * @return
 	 */
+	@SuppressWarnings("unchecked")
 	public Page<Menu> findPageByFieldsOrCriteria(BaseQuery vo){
 		return menuDao.findAll(vo.buildOrSpecification(), vo.buildPageRequest());
 	}
